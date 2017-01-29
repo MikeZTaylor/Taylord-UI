@@ -1,0 +1,79 @@
+/*  Taylor'd UI Framework
+/*
+/* Copyright 2016 Michael Taylor
+/* Designed and built by @TaylorMikeZ
+/* The MIT License (MIT)
+/* http://opensource.org/licenses/MIT
+/*
+/* Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+/* and associated documentation files (the "Software"), to deal in the Software without restriction,
+/* including without limitation the rights to use, copy, modify, merge, publish, distribute,
+/* sublicense, and/or sell copies of the Software, and to permit persons to whom
+/* the Software is furnished to do so, subject to the following conditions:
+/*
+/* The above copyright notice and this permission notice shall be included in all copies
+/* or substantial portions of the Software.
+/*
+/* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+/* INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+/* COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+/* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+/* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+/*
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+/*------------------------------------*\
+  Global Color Variables
+/*------------------------------------*/
+$bg-color: #fff
+$bg-textcolour: #262626
+$link-color: #3474db
+$link-visited: #15557f
+$hr: #e0e0e0
+
+$font-stack: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+
+body
+  background-color: $bg-color
+  color: $bg-textcolour
+  font-family: $font-stack
+  font-weight: 400
+  font-size: 16px
+  font-size: 1rem
+  line-height: 1.5
+  margin: 0
+  padding: 0
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  /* Fix for webkit rendering
+  -webkit-text-size-adjust: 100%
+
+*,
+*:before,
+*:after
+  -moz-box-sizing: border-box
+  -o-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+a
+  color: $link-color
+  text-decoration: none
+  -webkit-transition: all 0.20s ease
+  -moz-transition: all 0.20s ease
+  transition: all 0.20s ease
+a:hover
+  color: $link-visited
+  text-decoration: underline
+
+hr
+  border-top: 1px solid $hr
+  border-left: none
+  border-right: none
+  border-bottom: none
+  height: 1px
+  margin: 1rem 0
+  box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  /*-o-box-sizing: border-box
