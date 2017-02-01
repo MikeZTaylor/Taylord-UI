@@ -1,0 +1,28 @@
+{
+  "name": "taylord-ui",
+  "version": "0.0.1",
+  "description": "fill this in laterTaylor'd UI Framework| A framework designed for entry level users with a focus on easy to understand terminology, introducing templating, and partials with clear, concise, customisable themes | built using SASS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeZTaylor/Taylor-d-UI-Framework.git"
+  },
+  "keywords": [
+    "UI",
+    "CSS",
+    "Framework",
+    "beginner"
+  ],
+  "author": "Mike Taylor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MikeZTaylor/Taylor-d-UI-Framework/issues"
+  },
+  "homepage": "https://github.com/MikeZTaylor/Taylor-d-UI-Framework#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
