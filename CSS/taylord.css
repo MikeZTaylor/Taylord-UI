@@ -175,6 +175,22 @@ p {
   font-size: 1.429rem;
   font-weight: bold; }
 
+blockquote {
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  margin-left: 50px;
+  margin-left: 3.125rem;
+  padding-left: 14px;
+  padding-left: 1rem;
+  border-left: 5px solid #3474db; }
+  blockquote cite {
+    font-weight: bold; }
+
 /*
  * a small mixin for easy use of rem with px as fallback
  * usage: @include x-rem(font-size, 14px)
