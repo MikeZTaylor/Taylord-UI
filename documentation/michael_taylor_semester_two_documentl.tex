@@ -1,0 +1,134 @@
+\documentclass[runningheads,a4paper]{llncs}
+%
+\usepackage{natbib} % bibliography stuff
+%
+\usepackage{graphicx} % allows for working with images
+\DeclareGraphicsExtensions{.pdf,.png,.jpeg} % configures latex to look for the following image extensions
+%
+\usepackage{setspace} % allows for configuring the linespacing in the document
+%\singlespacing
+\onehalfspacing
+%\doublespacing
+%
+\usepackage{amsmath}
+%
+\usepackage{appendix}
+%
+\usepackage{multirow}
+%
+\usepackage{booktabs,array,dcolumn}
+%
+\usepackage{eurosym}
+%
+\usepackage{caption}
+\captionsetup[table]{skip=10pt}
+\captionsetup{compatibility=false}
+\usepackage{subcaption}
+%
+\usepackage[toc]{glossaries}
+\makeglossaries
+%
+\usepackage{amssymb}
+\setcounter{tocdepth}{4}
+%
+\usepackage{url}
+\urldef{\mailsa}\path|20064376@mail.wit.ie|
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+%Optional Package to add PDF bookmarks and hypertext links
+\usepackage[pdftex,hypertexnames=false,linktocpage=true]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,urlcolor=black,bookmarksnumbered=true,pdfview=FitB}
+
+
+\begin{document}
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{Final Project Report}
+
+% a short form should be given in case it is too long for the running head
+\titlerunning{Final Project Report}
+
+% the name(s) of the author(s) follow(s) next
+%
+% NB: Chinese authors should write their first names(s) in front of
+% their surnames. This ensures that the names appear correctly in
+% the running heads and the author index.
+%
+\author{Michael Taylor,%
+%\thanks{Please note that the LNCS Editorial assumes that all authors have used
+%the western naming convention, with given names preceding surnames. This determines
+%the structure of the names in the running heads and the author index.}%
+\and Eamonn De'Leaster\thanks{Supervisor}}
+%
+\authorrunning{Enterprise Development Proposal}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+% the affiliations are given next; don't give your e-mail address
+% unless you accept that it will be published
+\institute{Waterford Institute of Technology,\\Dept of Computing and Mathematics,\\
+Cork Rd, Waterford City, Ireland\\
+\mailsa\\
+\url{http://www.wit.ie}}
+
+%
+% NB: a more complex sample for affiliations and the mapping to the
+% corresponding authors can be found in the file "llncs.dem"
+% (search for the string "\mainmatter" where a contribution starts).
+% "llncs.dem" accompanies the document class "llncs.cls".
+%
+%\toctitle{Thesis Proposal}
+\tocauthor{M. Taylor}
+\maketitle
+
+%
+\begin{abstract}
+A complete UI framework designed for entry level users with a focus on easy to understand terminology, introducing templating, and partials with clear, concise, customisable themes.
+\keywords{CSS, User Interface, framework, beginners, templates, partials, themes}
+\end{abstract}
+%
+
+%
+%\newpage
+%\include{preface/acknowledgements}
+%
+\newpage
+\tableofcontents
+%
+\renewcommand*{\glsclearpage}{}
+%\printglossaries
+%%
+%\newpage
+%\listoffigures
+%\addcontentsline{toc}{chapter}{List of Figures}
+%\newpage
+%\listoftables
+%\addcontentsline{toc}{chapter}{List of Tables}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+
+%
+
+\include{body/introduction}
+\include{body/framework}
+\include{body/boilerplate}
+\include{body/partials}
+\include{body/themes}
+\include{body/commandline}
+\include{body/conclusions}
+
+%
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+\bibliographystyle{plainnat}
+\bibliography{bibliography/bibtex}
+\addcontentsline{toc}{chapter}{Bibliography}
+%
+
+\end{document}
+
+
