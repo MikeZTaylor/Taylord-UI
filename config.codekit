@@ -137,6 +137,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": false
 		},
+	"\/SASS\/partials\/_buttons.sass": {
+		"createSourceMap": 1,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 2,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/SASS\/partials\/_buttons.sass",
+		"outputAbbreviatedPath": "\/SASS\/css\/_buttons.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": false
+		},
 	"\/SASS\/partials\/_mixins.scss": {
 		"createSourceMap": 1,
 		"debugStyle": 0,

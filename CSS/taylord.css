@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*  Taylor'd UI Framework */
 /* */
 /* Copyright 2016 Michael Taylor */
@@ -188,13 +187,30 @@ blockquote {
   margin-left: 3.125rem;
   padding-left: 14px;
   padding-left: 1rem;
-  border-left: 5px solid #3474db;
-  quotes: "“" "”" "‘" "’"; }
+  border-left: 5px solid #3474db; }
   blockquote cite {
     font-weight: bold; }
 
 blockquote p {
   display: inline; }
+
+button {
+  border: none; }
+  button .button {
+    padding: 0.5rem 0.875rem;
+    font-size: 1rem;
+    line-height: 1.3125;
+    border-radius: 6px;
+    color: #858585;
+    border: 1px solid transparent;
+    display: inline-block;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    transition: all 0.25s ease; }
 
 /*
  * a small mixin for easy use of rem with px as fallback
