@@ -1,21 +1,17 @@
 /*
-Error: Undefined variable: "$foundation-color-2121".
-        on line 35 of /Users/miketaylor/Documents/framework/SASS/partials/_typography.sass
+Error: Undefined variable: "$foundation-white".
+        on line 2 of /Users/miketaylor/Documents/framework/SASS/partials/_body.sass
 
-30:   margin: 1.125rem 0
-31: 
-32: h1, h2, h3, h4, h5, h6
-33:   font-family: inherit
-34:   text-rendering: auto
-35:   color: $foundation-color-2121
-36:   margin-bottom: 0
-37: 
-38: h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
-39:   font-weight: inherit
-40:   font-family: inherit
+1: body
+2:   background-color: $foundation-white
+3:   color: $text-color
+4:   font-family: $font-stack
+5:   font-weight: $font-weight-400
+6:   font-size: 14px
+7:   font-size: 1rem
 
 Backtrace:
-/Users/miketaylor/Documents/framework/SASS/partials/_typography.sass:35
+/Users/miketaylor/Documents/framework/SASS/partials/_body.sass:2
 /Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/node.rb:50:in `perform'
 /Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -60,4 +56,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$foundation-color-2121\".\A         on line 35 of /Users/miketaylor/Documents/framework/SASS/partials/_typography.sass\A \A 30:   margin: 1.125rem 0\A 31: \A 32: h1, h2, h3, h4, h5, h6\A 33:   font-family: inherit\A 34:   text-rendering: auto\A 35:   color: $foundation-color-2121\A 36:   margin-bottom: 0\A 37: \A 38: h1 a, h2 a, h3 a, h4 a, h5 a, h6 a\A 39:   font-weight: inherit\A 40:   font-family: inherit"; }
+  content: "Error: Undefined variable: \"$foundation-white\".\A         on line 2 of /Users/miketaylor/Documents/framework/SASS/partials/_body.sass\A \A 1: body\A 2:   background-color: $foundation-white\A 3:   color: $text-color\A 4:   font-family: $font-stack\A 5:   font-weight: $font-weight-400\A 6:   font-size: 14px\A 7:   font-size: 1rem"; }
