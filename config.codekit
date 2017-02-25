@@ -212,6 +212,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/SCSS\/partials\/_states.scss": {
+		"createSourceMap": 1,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/SCSS\/partials\/_states.scss",
+		"outputAbbreviatedPath": "\/SCSS\/css\/_states.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/SCSS\/partials\/_typography.scss": {
 		"createSourceMap": 1,
 		"debugStyle": 0,

@@ -247,7 +247,7 @@ blockquote p {
   border: 1px solid transparent;
   display: block;
   padding: 1rem;
-  background-color: white;
+  background-color: #40d17e;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -266,5 +266,48 @@ blockquote p {
       text-decoration: none; }
   .alert .btn {
     margin-top: 1.4rem; }
+
+/*------------------------------------*\
+ * States */
+/*------------------------------------ */
+.form-success {
+  border-color: #40d17e; }
+
+.form-primary {
+  border-color: #3474db; }
+
+.form-danger {
+  border-color: #f75140; }
+
+.form-warning {
+  border-color: #f27e11; }
+
+.form-info {
+  border-color: #25dbcb; }
+
+.alert-success {
+  color: #269e5a;
+  border-color: #40d17e;
+  background-color: #e4f9ed; }
+
+.alert-danger {
+  color: #e11d09;
+  border-color: #f75140;
+  background-color: #fdd7d3; }
+
+.alert-info {
+  color: #199a8f;
+  border-color: #25dbcb;
+  background-color: #d4f8f5; }
+
+.alert-warning {
+  color: #ad5909;
+  border-color: #f27e11;
+  background-color: #fde7d2; }
+
+.alert-primary {
+  color: #1d51a5;
+  border-color: #3474db;
+  background-color: #e1ebfa; }
 
 /*# sourceMappingURL=taylord.css.map */

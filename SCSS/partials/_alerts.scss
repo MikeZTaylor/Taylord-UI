@@ -7,7 +7,7 @@
   border: 1px solid transparent;
   display: block;
   padding: 1rem;
-  background-color: lighten($foundation-green, 46.5%);
+  background-color: $success-color;
   @include border-radius($border-radius);
 
   > h4 {
