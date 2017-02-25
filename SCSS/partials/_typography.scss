@@ -1,0 +1,132 @@
+/*  Taylor'd UI Framework */
+/* */
+/* Copyright 2016 Michael Taylor */
+/* Designed and built by @TaylorMikeZ */
+/* The MIT License (MIT) */
+/* http://opensource.org/licenses/MIT */
+/* */
+/* Permission is hereby granted, free of charge, to any person obtaining a copy of this software */
+/* and associated documentation files (the "Software"), to deal in the Software without restriction, */
+/* including without limitation the rights to use, copy, modify, merge, publish, distribute, */
+/* sublicense, and/or sell copies of the Software, and to permit persons to whom */
+/* the Software is furnished to do so, subject to the following conditions: */
+/* */
+/* The above copyright notice and this permission notice shall be included in all copies */
+/* or substantial portions of the Software. */
+/* */
+/* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, */
+/* INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, */
+/* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR */
+/* COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, */
+/* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, */
+/* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
+/* */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+/*------------------------------------*\
+ * Typography */
+/*------------------------------------ */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 1.125rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  text-rendering: auto;
+  color: $foundation-color-2121;
+  margin-bottom: 0;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+h1.title, h3.title, h1.heading, h3.heading {
+  font-family: inherit;
+  color: inherit;
+}
+
+h1, .h1 {
+  font-size: 34px;
+  font-size: 2.429rem;
+  line-height: 1.4;
+}
+
+h2, .h2 {
+  font-size: 30px;
+  font-size: 2.143rem;
+  line-height: 1.2;
+}
+
+h3, .h3 {
+  font-size: 22px;
+  font-size: 1.571rem;
+  line-height: 1;
+}
+
+h4, .h4 {
+  font-size: 14px;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+h5, .h5 {
+  font-size: 12px;
+  font-size: 0.8751rem;
+  line-height: 1;
+}
+
+h6, .h6 {
+  font-size: 11px;
+  font-size: 0.7857rem;
+  line-height: 0.875;
+}
+
+.subheader {
+  color: inherit;
+  text-transform: uppercase;
+}
+
+p {
+  color: inherit;
+  font-family: $font-stack;
+  font-size: 14px;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  &.lead {
+    font-size: 20px;
+    font-size: 1.429rem;
+    font-weight: bold;
+  }
+}
+
+.lead {
+  font-size: 20px;
+  font-size: 1.429rem;
+  font-weight: bold;
+}
+
+blockquote {
+  font-family: $font-stack;
+  font-size: 14px;
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  margin-left: 50px;
+  margin-left: 3.125rem;
+  padding-left: 14px;
+  padding-left: 1rem;
+  border-left: 5px solid $foundation-color;
+
+  cite {
+    font-weight: bold;
+  }
+}
+
+blockquote p {
+  display: inline;
+}

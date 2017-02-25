@@ -1,0 +1,25 @@
+.button {
+    @include button-size($foundation-padding-vertical, $foundation-padding-horizontal, $button-font-size, $foundation-line-height, $border-radius);
+  color: $foundation-color-2121;
+  border: 1px solid transparent;
+  display: inline-block;
+  font-family: $font-stack;
+  font-weight: $font-weight-400;
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.button-large {
+  @include button-size($foundation-padding-large-vertical, $foundation-padding-large-horizontal, $button-font-size-small, $line-height-large, $border-radius);
+
+}
+
+.button-small {
+  @include button-size($foundation-padding-small-vertical, $foundation-padding-small-horizontal, $button-font-size-small, $line-height-small, $border-radius);
+}
+
+.button-pill {
+@include border-radius($border-radius * 4);
+}
