@@ -1,3 +1,7 @@
+/*------------------------------------*\
+ * Buttons*/
+/*------------------------------------ */
+
 .button {
     @include button-size($foundation-padding-vertical, $foundation-padding-horizontal, $button-font-size, $foundation-line-height, $border-radius);
   color: $foundation-color-2121;
