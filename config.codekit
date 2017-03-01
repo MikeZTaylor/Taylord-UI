@@ -196,6 +196,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/SCSS\/partials\/_clearfix.scss": {
+		"createSourceMap": 1,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/SCSS\/partials\/_clearfix.scss",
+		"outputAbbreviatedPath": "\/SCSS\/css\/_clearfix.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/SCSS\/partials\/_mixins.scss": {
 		"createSourceMap": 1,
 		"debugStyle": 0,

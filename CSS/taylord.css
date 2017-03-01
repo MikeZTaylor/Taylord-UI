@@ -310,4 +310,13 @@ blockquote p {
   border-color: #3474db;
   background-color: #e1ebfa; }
 
+/*------------------------------------*\
+ * Clearfix */
+/*------------------------------------ */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+.clearfix:after {
+  clear: both; }
+
 /*# sourceMappingURL=taylord.css.map */
