@@ -319,4 +319,15 @@ blockquote p {
 .clearfix:after {
   clear: both; }
 
+/*------------------------------------*\
+ * Panel */
+/*------------------------------------ */
+.panel {
+  border: 1px solid transparent;
+  background-color: #fff;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px; }
+
 /*# sourceMappingURL=taylord.css.map */
