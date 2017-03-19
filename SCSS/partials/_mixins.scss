@@ -25,3 +25,9 @@
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   -ms-border-radius: $radius; }
+
+@mixin panel-title($bg, $color, $border-bottom-color ) {
+    background-color: $bg;
+    color: $color;
+    border-bottom-color: $border-bottom-color;
+  }

@@ -1,5 +1,5 @@
 /*------------------------------------*\
- * Panel */
+* Panel */
 /*------------------------------------ */
 
 .panel {
@@ -9,8 +9,81 @@
 
 }
 
-  .panel-title {
-  }
+.panel-title {
+  padding: $foundation-padding-large-horizontal, $foundation-padding-large-horizontal;
+  border-bottom: 1px solid transparent;
+  font-weight: $font-weight-700;
+}
 
-  .panel-body {
+.panel-body {
+  padding: $foundation-padding-large-horizontal, $foundation-padding-large-horizontal;
+}
+
+.panel-default {
+  border-color: $default-border-bottom-color;
+
+  .panel-title {
+    @include panel-title($default-color-background, $default-panel-text, $default-border-bottom-color);
   }
+}
+
+.panel-success {
+  border-color: $success-border-bottom-color;
+
+  .panel-title {
+    @include panel-title($default-color-background, $default-panel-text, $default-border-bottom-color);
+  }
+}
+
+.panel-info {
+  border-color: $info-border-bottom-color;
+
+  .panel-title {
+    @include panel-title($default-color-background, $default-panel-text, $default-border-bottom-color);
+  }
+}
+
+.panel-warning {
+  border-color: $warning-border-bottom-color;
+
+  .panel-title {
+    @include panel-title($default-color-background, $default-panel-text, $default-border-bottom-color);
+  }
+}
+
+.panel-danger {
+  border-color: $danger-border-bottom-color;
+
+  .panel-title {
+    @include panel-title($default-color-background, $default-panel-text, $default-border-bottom-color);
+  }
+}
+
+.panel-primary {
+  border-color: $primary-border-bottom-color;
+
+  .panel-title {
+    @include panel-title($default-color-background, $default-panel-text, $default-border-bottom-color);
+  }
+}
+
+
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4,
+.panel h5,
+.panel h6 {
+  margin-top: 0;
+  margin-bottom: $baseline-size / 2.5;
+}
+
+.panel a,
+.panel > .btn {
+  margin-top: $baseline-size / 2;
+  margin-bottom: 0;
+}
+
+.panel p {
+  margin: 1rem 0 0 0;
+}

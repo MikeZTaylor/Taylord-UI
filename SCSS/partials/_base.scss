@@ -161,3 +161,37 @@ $table-head-text-color: $foundation-color-4242;
 $table-text-color: $foundation-color-8585;
 
 $table-padding: ($baseline-size * 0.75); // 12px // 0.75rem;
+
+/*------------------------------------*\
+ * Panels */
+/*------------------------------------ */
+
+// Success Panel
+$default-panel-text: $foundation-color-2121;
+$default-border-bottom-color: $foundation-color-c7c7;
+$default-color-background: $foundation-off-white;
+
+// Success Panel
+$success-text: darken($success-color, 5%);
+$success-border-bottom-color: lighten($success-color, 25%);
+$success-color-background: lighten($success-color, 41.5%);
+
+// Info Panel
+$info-text: darken($info-color, 5%);
+$info-border-bottom-color: lighten($info-color, 25%);
+$info-color-background: lighten($info-color, 39.5%);
+
+//Primary
+$primary-text: darken($primary-color, 10%);
+$primary-border-bottom-color: lighten($primary-color, 10%);
+$primary-color-background: lighten($primary-color, 44.5%);
+
+// Warning Panel
+$warning-text: darken($warning-color, 5%);
+$warning-border-bottom-color: lighten($warning-color, 25%);
+$warning-color-background: lighten($warning-color, 40.5%);
+
+// Danger Alert
+$danger-text: darken($danger-color, 5%);
+$danger-border-bottom-color: lighten($danger-color, 25%);
+$danger-color-background: lighten($danger-color, 40.5%);

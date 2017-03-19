@@ -50,6 +50,9 @@
 /*------------------------------------*\
  * Tables */
 /*------------------------------------ */
+/*------------------------------------*\
+ * Panels */
+/*------------------------------------ */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 body {
   background-color: #fff;
@@ -372,7 +375,7 @@ blockquote p {
   background-color: #f75140;
   color: #fff; }
 
-.button-label .info {
+.button-label.info {
   background-color: #25dbcb;
   color: #fff; }
 
@@ -461,7 +464,7 @@ blockquote p {
   clear: both; }
 
 /*------------------------------------*\
- * Panel */
+* Panel */
 /*------------------------------------ */
 .panel {
   border: 1px solid transparent;
@@ -470,5 +473,72 @@ blockquote p {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px; }
+
+.panel-title {
+  padding: 1.5rem, 1.5rem;
+  border-bottom: 1px solid transparent;
+  font-weight: 700; }
+
+.panel-body {
+  padding: 1.5rem, 1.5rem; }
+
+.panel-default {
+  border-color: #c7c7c7; }
+  .panel-default .panel-title {
+    background-color: #f7f7f7;
+    color: #212121;
+    border-bottom-color: #c7c7c7; }
+
+.panel-success {
+  border-color: #a7eac3; }
+  .panel-success .panel-title {
+    background-color: #f7f7f7;
+    color: #212121;
+    border-bottom-color: #c7c7c7; }
+
+.panel-info {
+  border-color: #92ede5; }
+  .panel-info .panel-title {
+    background-color: #f7f7f7;
+    color: #212121;
+    border-bottom-color: #c7c7c7; }
+
+.panel-warning {
+  border-color: #f9c08a; }
+  .panel-warning .panel-title {
+    background-color: #f7f7f7;
+    color: #212121;
+    border-bottom-color: #c7c7c7; }
+
+.panel-danger {
+  border-color: #fcc0ba; }
+  .panel-danger .panel-title {
+    background-color: #f7f7f7;
+    color: #212121;
+    border-bottom-color: #c7c7c7; }
+
+.panel-primary {
+  border-color: #5f92e3; }
+  .panel-primary .panel-title {
+    background-color: #f7f7f7;
+    color: #212121;
+    border-bottom-color: #c7c7c7; }
+
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4,
+.panel h5,
+.panel h6 {
+  margin-top: 0;
+  margin-bottom: 0.4rem; }
+
+.panel a,
+.panel > .btn {
+  margin-top: 0.5rem;
+  margin-bottom: 0; }
+
+.panel p {
+  margin: 1rem 0 0 0; }
 
 /*# sourceMappingURL=taylord.css.map */
