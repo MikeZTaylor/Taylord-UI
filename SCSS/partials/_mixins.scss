@@ -8,9 +8,9 @@
 
 @mixin rem($property, $sizeValue) {
   $pxValue: $sizeValue;
-  $remValue: ($sizeValue / $rem-font-size);
-  #{$property}: "#{$pxValue}px";
-  #{$property}: "#{$remValue}rem";
+  $remValue: ($sizeValue / $rem-size);
+  #{$property}: #{$pxValue}px;
+  #{$property}: #{$remValue}rem;
 }
 
 @mixin button-size($foundation-padding-vertical, $foundation-padding-horizontal, $button-font-size, $foundation-line-height, $border-radius) {

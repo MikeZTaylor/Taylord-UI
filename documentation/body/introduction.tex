@@ -12,6 +12,24 @@
 %}
 %
 
-intro here
+User Interface (UI) and Cascading Stylesheets (CSS) frameworks are abundant and readily available and generally covered by permissible licence agreements \citep{CODY16}. This not only allows commercial use of the frameworks but ultimately encourages tie in to a particular framework. End users expect all websites to work across their devices, laptops, tablets and phones. This requirement of responsive web applications ensures that hand coding a solution is a daunting task for entry level developers.
+
+Using a framework allows the user to speed up the initial mock-up process, they offer clarification on common CSS issues, have wide browser support. Frameworks are good for responsive design, offer clean, and tidy code. There are disadvantages to using frameworks such as an abundance of unused code left over, this is seen more so in large front end frameworks such as Twitter Bootstrap. There is a slower learning curve with using frameworks, and the user does not learn to do it themselves through problem solving. 
+
+Frameworks such as Twitter Bootstrap \citep{SASS16}, and Zurb Foundation \citep{LESS16} offer complete solutions, with ready built code for forms, buttons, fluid layouts to popovers. Skeleton \citep{SKEL16} is an example of the other end of the spectrum. Skeleton is a boilerplate for responsive, and mobile first development. It is designed to be light, and is built with less than 400 lines of code. Unlike Bootstrap or Foundation, skeleton is designed to be the users starting point, not their full solution. 
+
+This project is being built to offer the end user a complete solution designed with an entry level user in mind. The framework will be non opinionated unlike frameworks such as Bootstrap who are very opinionated about their design \citet{KEMH16}. This framework will be designed to be the starting point for a user, for them to add in their custom styling. 
+
+Instead of the user building large complex websites with repeating code, one of the project goals is to get the user familiar with concepts such templates, and partials. Partials break up the html code into smaller more manageable fragments that can be used across multiple html files. The framework will be built with this in mind, creating classes, and id's that can be reused instead of having a bloated package with a lot of unused code \citep{KAR15}.
+
+\newpage
+
+A major benefit of a project, is the ability to customise or use prebuilt themes. A prebuilt theme can allow the user to concentrate on the aesthetics more so than the structure of the project. Using a prebuilt theme does have its negatives, the theme itself can be expensive costing hundreds if not thousands. Many shortcuts could be used in the development of themes, not adhering to W3S standards. These themes can also offer little customisation \citep{NATH16}.
+
+Further attempts to incorporate Bootstrap into projects demonstrated the syntax as very unfriendly, and noticeably more difficult than hand coded CSS. Bootstrap syntax such as: \begin{lstlisting}
+	 <div class="col-sm-4">\end{lstlisting} 
+	 does not describe in any form that it would be displayed as a three column layout in the browser. Changing this to a one column layout by the syntax was found to be problematic and the frameworks were also found to be opinionated.  
+	 
+Additionally while working as a web developer mentor at Coderdojo, students were observed to have similar experiences. Many were reluctant to learn frameworks such as Bootstrap as they were too confusing.
 
 %

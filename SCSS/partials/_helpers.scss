@@ -1,0 +1,72 @@
+/*------------------------------------*\
+ * Helpers */
+/*------------------------------------ */
+@media ($bp-desktop) {
+	.desktop-hidden {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+@media ($bp-tablet) {
+	.tablet-hidden {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+@media ($bp-mobile) {
+	.mobile-hidden {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+@media ($bp-mobile) {
+  .show-mobile {
+  	visibility: visible;
+  	display: block;
+  }
+}
+
+.show-mobile {
+	display: none;
+	visibility: hidden;
+
+	@media ($bp-mobile) {
+		display: block;
+		visibility: visible;
+	}
+}
+
+.show-tablet {
+  display: none;
+  visibility: hidden;
+
+  @media ($bp-tablet) {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.show-desktop {
+  display: none;
+  visibility: hidden;
+
+  @media ($bp-desktop) {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.hide {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+  @include transition(opacity .45s linear);
+}
+
+.fade {
+  opacity: 0;
+  @include transition(opacity .45s linear);
+}

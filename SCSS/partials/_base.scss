@@ -57,34 +57,34 @@ $font-weight-400: 400;
 $font-weight-700: 700;
 $font-weight-800: 800;
 
-$rem-size: 16;
+$rem-size: 14;
 $baseline-size: 1rem;
 
 // baseline-size is the base variable to all
 // calculations for all the things.
 $baseline-size: 1rem;
-$font-size-xl: $rem-size * 1.5;
-$font-size-large: $rem-size * 1.25;
+$font-size-xl: ($baseline-size * 1.5);
+$font-size-large: ($baseline-size * 1.25);
 $font-size: 1rem;
-$font-size-small: $rem-size * 0.875;
-$font-size-xs: $rem-size * 0.75;
+$font-size-small: ($baseline-size * 0.875);
+$font-size-xs: ($baseline-size * 0.75);
 
-$font-size-xl: $baseline-size * 1.5;
-$font-size-large: $baseline-size * 1.25;
-$font-size-small: $baseline-size * 0.875;
-$font-size-xs: $baseline-size * 0.75;
+$font-size-xl: ($baseline-size * 1.5);
+$font-size-large: ($baseline-size * 1.25);
+$font-size-small: ($baseline-size * 0.875);
+$font-size-xs: ($baseline-size * 0.75);
 
 $typeset-margin: 1.3125rem 0;
 
-$font-h1: $baseline-size * 2.25;
-$font-h2: $baseline-size * 1.875;
-$font-h3: $baseline-size * 1.5;
-$font-h4: $baseline-size * 1.125;
+$font-h1: ($baseline-size * 2.25);
+$font-h2: ($baseline-size * 1.875);
+$font-h3: ($baseline-size * 1.5);
+$font-h4: ($baseline-size * 1.125);
 $font-h5: $baseline-size;
 $font-h6: $font-size-small;
 
 $foundation-line-height: 1.3125;
-$foundation-line-height-computed: $baseline-size * $foundation-line-height * 1.575;
+$foundation-line-height-computed: ($baseline-size * $foundation-line-height * 1.575);
 
 $heading-font-family: inherit;
 $font-family-weight: 400;
@@ -96,6 +96,7 @@ $heading-line-height: $foundation-line-height / 1.125;
 $heading-font-color: inherit;
 
 $blockquote-border-color: $foundation-color;
+
 
 /*------------------------------------*\
  * Components */
@@ -136,3 +137,27 @@ $button-font-weight: $font-family-weight;
 $button-default-color: $foundation-color;
 $button-default-bg: $foundation-teal;
 $button-default-border: $foundation-color-a6a6;
+
+/*------------------------------------*\
+ * Media Query Breakpoints */
+/*------------------------------------ */
+
+$bp-desktop: "screen and (min-width: 75rem)"; // 1200px
+
+$bp-tablet: "screen and (min-width: 48rem) and (max-width: 61.1875rem)"; // 768px and 979px
+
+$bp-mobile: "screen and (max-width: 47.9375rem)"; // 767px
+
+/*------------------------------------*\
+ * Tables */
+/*------------------------------------ */
+
+$table-width: 100%;
+
+$table-bg-color: $foundation-white;
+$table-hover-color: $foundation-off-white;
+$table-border-color: $foundation-color-2121;
+$table-head-text-color: $foundation-color-4242;
+$table-text-color: $foundation-color-8585;
+
+$table-padding: ($baseline-size * 0.75); // 12px // 0.75rem;

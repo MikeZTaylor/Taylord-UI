@@ -44,6 +44,12 @@
 /*------------------------------------*\
  * border-radius */
 /*------------------------------------ */
+/*------------------------------------*\
+ * Media Query Breakpoints */
+/*------------------------------------ */
+/*------------------------------------*\
+ * Tables */
+/*------------------------------------ */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 body {
   background-color: #fff;
@@ -136,7 +142,7 @@ h1.title, h3.title, h1.heading, h3.heading {
 
 h1, .h1 {
   font-size: 34px;
-  font-size: 2.429rem;
+  font-size: 2.4285714286rem;
   line-height: 1.4; }
 
 h2, .h2 {
@@ -238,6 +244,141 @@ blockquote p {
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
   -ms-border-radius: 24px; }
+
+/*------------------------------------*\
+ * The grid */
+/*------------------------------------ */
+.table {
+  width: 100%;
+  max-width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: table;
+  color: #858585; }
+
+.table-bordered {
+  border: 1px solid #212121; }
+
+.table-stripe > tbody > tr:nth-child(odd) > td {
+  background-color: #f7f7f7; }
+
+.table-stripe.table-bordered > thead > tr > th {
+  background-color: #fff; }
+
+.table.table-condensed > thead > tr > th,
+.table.table-condensed > tbody > tr > td {
+  padding-top: 0.4166666667rem;
+  padding-bottom: 0.4166666667rem;
+  padding-left: 0.6666666667rem;
+  padding-right: 0.6666666667rem; }
+
+.table > tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit; }
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > td {
+  border: 1px solid #212121; }
+
+.table-bordered > thead > tr > th {
+  background-color: #f7f7f7;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.92); }
+
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #212121;
+  color: #424242; }
+
+.table-bordered > thead > tr > th {
+  border-bottom-width: 1px; }
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 0.75rem;
+  line-height: 1.3;
+  vertical-align: middle;
+  border-top: 1px solid #212121;
+  text-align: left; }
+
+.table-hover > tbody > tr:hover,
+.table-hover > tfoot > tr:hover,
+.table-hover > thead > tr:hover > td,
+.table-hover > tbody > tr:hover > td,
+.table-hover > tfoot > tr:hover > td,
+.table-hover > tbody > tr > td:hover,
+.table-hover > tfoot > tr > td:hover {
+  background-color: #f7f7f7; }
+
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0; }
+
+.table > tbody > tr.is-primary > td,
+.table > tbody > tr:hover.is-primary > td {
+  background-color: #eaf1fb;
+  color: #194790; }
+
+.table > tbody > tr.is-success > td,
+.table > tbody > tr:hover.is-success > td {
+  background-color: #f5fdf8;
+  color: #218a4e; }
+
+.table > tbody > tr.is-info > td,
+.table > tbody > tr:hover.is-info > td {
+  background-color: #e6fbf9;
+  color: #16847a; }
+
+.table > tbody > tr.is-warning > td,
+.table > tbody > tr:hover.is-warning > td {
+  background-color: #fef1e6;
+  color: #954c08; }
+
+.table > tbody > tr.is-danger > td,
+.table > tbody > tr:hover.is-danger > td {
+  background-color: white;
+  color: #f5240f; }
+
+/*------------------------------------*\
+ * Lbaels */
+/*------------------------------------ */
+.btn-label {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 0.025rem .25rem;
+  background-color: #3474db;
+  color: #fff;
+  font-size: 12px;
+  font-size: 0.8571428571rem;
+  margin: .5rem 0; }
+
+.button-label.primary {
+  background-color: #3474db;
+  color: #fff; }
+
+.button-label.success {
+  background-color: #40d17e;
+  color: #fff; }
+
+.button-label.danger {
+  background-color: #f75140;
+  color: #fff; }
+
+.button-label .info {
+  background-color: #25dbcb;
+  color: #fff; }
+
+.button-label.warning {
+  background-color: #f27e11;
+  color: #fff; }
 
 /*------------------------------------*\
  * Alerts */

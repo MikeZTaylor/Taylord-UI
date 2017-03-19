@@ -1,0 +1,38 @@
+/*------------------------------------*\
+ * Lbaels */
+/*------------------------------------ */
+
+.btn-label {
+	vertical-align: middle;
+	display: inline-block;
+	padding: 0.025rem .25rem;
+	background-color: $foundation-color;
+	color: $foundation-white;
+	@include rem(font-size, 12);
+	margin: .5rem 0;
+}
+
+  .button-label.primary {
+	  background-color: $primary-color;
+	  color: $foundation-white;
+  }
+
+  .button-label.success {
+	  background-color: $success-color;
+	  color: $foundation-white;
+  }
+
+  .button-label.danger {
+	  background-color: $danger-color;
+	  color: $foundation-white;
+  }
+
+  .button-label .info {
+	  background-color: $info-color;
+	  color: $foundation-white;
+  }
+
+  .button-label.warning {
+	  background-color: $warning-color;
+	  color: $foundation-white
+  }

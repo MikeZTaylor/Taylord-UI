@@ -25,13 +25,17 @@
 
 // Modules and Variables
 @import "partials/base";
+@import "partials/body";
+//@import "partials/grid";
 @import "partials/mixins";
+//@import "partials/helpers";
 
 // Partials
 //@import "partials/reset"
-@import "partials/body";
 @import "partials/typography";
 @import "partials/buttons";
+@import "partials/tables";
+@import "partials/labels";
 @import "partials/alerts";
 @import "partials/states";
 @import "partials/clearfix";
