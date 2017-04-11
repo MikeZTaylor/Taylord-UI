@@ -3,7 +3,7 @@
 /*------------------------------------ */
 
 .button {
-    @include button-size($foundation-padding-vertical, $foundation-padding-horizontal, $button-font-size, $foundation-line-height, $border-radius);
+    @include button-size($foundation-padding-vertical, $foundation-padding-horizontal, $button-font-size, $foundation-line-height);
   color: $foundation-color-2121;
   border: 1px solid transparent;
   display: inline-block;
@@ -16,12 +16,12 @@
 }
 
 .button-large {
-  @include button-size($foundation-padding-large-vertical, $foundation-padding-large-horizontal, $button-font-size-small, $line-height-large, $border-radius);
+  @include button-size($foundation-padding-large-vertical, $foundation-padding-large-horizontal, $button-font-size-small, $line-height-large);
 
 }
 
 .button-small {
-  @include button-size($foundation-padding-small-vertical, $foundation-padding-small-horizontal, $button-font-size-small, $line-height-small, $border-radius);
+  @include button-size($foundation-padding-small-vertical, $foundation-padding-small-horizontal, $button-font-size-small, $line-height-small);
 }
 
 .button-pill {

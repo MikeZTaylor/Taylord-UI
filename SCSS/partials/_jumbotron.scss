@@ -1,0 +1,18 @@
+.jumbotron {
+	padding: 2rem 1rem;
+	margin-bottom: 2rem;
+	background-color: $foundation-color-e8e8;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0.3rem;
+}
+
+.jumbotron-hr {
+	border-top-color: #e0e0e0;
+}
+
+.jumbotron-fluid {
+	padding-right: 0;
+	padding-left: 0;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}

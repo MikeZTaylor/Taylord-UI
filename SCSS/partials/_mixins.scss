@@ -13,11 +13,10 @@
   #{$property}: #{$remValue}rem;
 }
 
-@mixin button-size($foundation-padding-vertical, $foundation-padding-horizontal, $button-font-size, $foundation-line-height, $border-radius) {
+@mixin button-size($foundation-padding-vertical, $foundation-padding-horizontal, $button-font-size, $foundation-line-height) {
   padding: $foundation-padding-vertical $foundation-padding-horizontal;
   font-size: $button-font-size;
   line-height: $foundation-line-height;
-  border-radius: $border-radius;
 }
 
 @mixin border-radius($radius) {
@@ -30,4 +29,10 @@
     background-color: $bg;
     color: $color;
     border-bottom-color: $border-bottom-color;
+  }
+
+  @mixin box-sizing($value) {
+    -moz-box-sizing: $value;
+    -webkit-box-sizing: $value;
+    box-sizing: $value;
   }
