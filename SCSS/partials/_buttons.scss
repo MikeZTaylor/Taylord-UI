@@ -47,3 +47,22 @@ a.button-default {
   color: $foundation-color-2121;
   text-decoration: none;
 }
+
+//
+// Primary Button
+//
+.button-primary {
+	@include button-version($button-primary-color, $button-primary-background);
+}
+
+.button-danger {
+	@include button-version($button-danger-color, $button-danger-background);
+}
+
+.button-info {
+	@include button-version($button-info-color, $button-info-background);
+}
+
+.button-warning{
+	@include button-version($button-warning-color, $button-warning-background);
+}

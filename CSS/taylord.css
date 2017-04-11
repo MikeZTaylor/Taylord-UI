@@ -246,6 +246,22 @@ a.button-default {
   color: #212121;
   text-decoration: none; }
 
+.button-primary {
+  color: #fff;
+  background-color: #3474db; }
+
+.button-danger {
+  color: #fff;
+  background-color: #f75140; }
+
+.button-info {
+  color: #fff;
+  background-color: #25dbcb; }
+
+.button-warning {
+  color: #fff;
+  background-color: #f27e11; }
+
 /*------------------------------------*\
  * The grid */
 /*------------------------------------ */

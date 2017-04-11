@@ -20,6 +20,11 @@
   line-height: $foundation-line-height;
 }
 
+@mixin button-version($color, $background) {
+	color: $foundation-white;
+	background-color: $background;
+}
+
 @mixin border-radius($radius) {
   border-radius: $radius;
   -webkit-border-radius: $radius;

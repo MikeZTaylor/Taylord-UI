@@ -135,8 +135,24 @@ $border-radius-large: 8px;
 
 $button-font-weight: $font-family-weight;
 $button-default-color: $foundation-color;
-$button-default-bg: $foundation-teal;
+$button-default-background: $foundation-teal;
 $button-default-border: $foundation-color-a6a6;
+
+$button-primary-color: 	$foundation-color;
+$button-primary-background: $primary-color;
+
+$button-danger-color: $foundation-color;
+$button-danger-background: $danger-color;
+
+$button-info-color: $foundation-color;
+$button-info-background: $info-color;
+
+$button-warning-color: $foundation-color;
+$button-warning-background: $warning-color;
+
+$button-success-background: $foundation-color;
+
+
 
 /*------------------------------------*\
  * Media Query Breakpoints */
