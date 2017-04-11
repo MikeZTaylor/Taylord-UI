@@ -196,34 +196,55 @@ small {
  * Buttons*/
 /*------------------------------------ */
 .button {
+  border: none; }
+
+.button {
   padding: 0.5rem 0.875rem;
   font-size: 1rem;
+  text-transform: uppercase;
   line-height: 1.3;
   color: #212121;
-  border: 1px solid transparent;
+  border: none;
   display: inline-block;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   text-decoration: none;
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  transition: all 0.25s ease; }
-
-.button-large {
-  padding: 0.875rem 1.5rem;
-  font-size: 0.8rem;
-  line-height: 1.69; }
+  overflow: visible;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  transition: all 0.1s ease; }
 
 .button-small {
   padding: 0.5rem 0.1rem;
   font-size: 0.8rem;
+  text-transform: uppercase;
   line-height: 1rem; }
+
+.button-large {
+  padding: 0.875rem 1.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  line-height: 1.69; }
 
 .button-pill {
   border-radius: 24px;
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
   -ms-border-radius: 24px; }
+
+.button-link {
+  background: transparent;
+  background-color: transparent;
+  border-color: transparent;
+  color: inherit; }
+
+.button-full {
+  display: block;
+  width: 100%; }
+
+a.button-default {
+  color: #212121;
+  text-decoration: none; }
 
 /*------------------------------------*\
  * The grid */
