@@ -1,23 +1,35 @@
 /*------------------------------------*\
- * Buttons*/
+* Buttons*/
 /*------------------------------------ */
 .button
 {
   border: none;
 }
+
+a.button-success,
+a.button-warning,
+a.button-info,
+a.button-danger,
+a.button-primary {
+  text-decoration: none;
+  color: $foundation-color-e8e8;
+}
+
 .button {
-    @include button-size($foundation-padding-vertical, $foundation-padding-horizontal, $button-font-size, $foundation-line-height);
-  color: $foundation-color-2121;
+  @include button-size($foundation-padding-vertical, $foundation-padding-horizontal, $button-font-size, $foundation-line-height);
+  border: none;
+  color: $foundation-color-e8e8;
   border: none;
   display: inline-block;
   font-family: $font-stack;
   font-weight: $font-weight-400;
   text-decoration: none;
   overflow: visible;
-  -webkit-transition: all 0.1s ease;
-  -moz-transition: all 0.1s ease;
-  transition: all 0.1s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
+
 .button-small {
   @include button-size($foundation-padding-small-vertical, $foundation-padding-small-horizontal, $button-font-size-small, $line-height-small);
 }
@@ -28,7 +40,7 @@
 }
 
 .button-pill {
-@include border-radius($border-radius * 4);
+  @include border-radius($border-radius * 4);
 }
 
 .button-link {
@@ -43,26 +55,27 @@
   width: 100%;
 }
 
-a.button-default {
-  color: $foundation-color-2121;
+.button-default {
+  color: #fff;
   text-decoration: none;
 }
 
-//
-// Primary Button
-//
 .button-primary {
-	@include button-version($button-primary-color, $button-primary-background);
+  @include button-version($button-primary-color, $button-primary-background);
 }
 
 .button-danger {
-	@include button-version($button-danger-color, $button-danger-background);
+  @include button-version($button-danger-color, $button-danger-background);
 }
 
 .button-info {
-	@include button-version($button-info-color, $button-info-background);
+  @include button-version($button-info-color, $button-info-background);
 }
 
 .button-warning{
-	@include button-version($button-warning-color, $button-warning-background);
+  @include button-version($button-warning-color, $button-warning-background);
+}
+
+.button-success {
+  @include button-version($button-primary-color, $button-success-background);
 }
