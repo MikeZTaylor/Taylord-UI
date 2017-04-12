@@ -18,11 +18,11 @@
   background-color: $background;
 
   &:hover {
-    background-color: darken($background, 7%);
+    background-color: darken($background, 10%);
   }
   &:active {
     color: darken(#fff, 5%);
-    background-color: darken($background, 11%);
+    background-color: darken($background, 20%);
     /*     .transition(all .25s ease); */
     outline: 0;
   }
@@ -33,13 +33,15 @@
   font-size: $button-font-size;
   text-transform: uppercase;
   line-height: $foundation-line-height;
+  border: none;
 }
 
 @mixin border-radius($radius) {
   border-radius: $radius;
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
-  -ms-border-radius: $radius; }
+  -ms-border-radius: $radius;
+}
 
   @mixin panel-title($bg, $color, $border-bottom-color ) {
     background-color: $bg;
@@ -51,4 +53,9 @@
     -moz-box-sizing: $value;
     -webkit-box-sizing: $value;
     box-sizing: $value;
+  }
+
+  @mixin float-left {
+    float: left;
+    width: 25%;
   }

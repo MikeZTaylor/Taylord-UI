@@ -1,0 +1,93 @@
+/*------------------------------------*\
+* Buttons Groups || Pagination */
+/*------------------------------------ */
+
+.button-group,
+.button-group-large,
+.button-group-small,
+.pagination > ul > li,
+.pagination > ul > li > a {
+  float: left;
+
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  @include border-radius(0);
+}
+
+.pagination > ul {
+  padding-left: 0;
+}
+
+.pagination > ul > li > a {
+  border: 1px solid $foundation-color-e8e8;
+}
+
+.pagination > ul > li > a,
+.pagination > ul > li > button {
+  background-color: transparent;
+  background: transparent;
+}
+
+.button-group > .button,
+.button-group-large > .button,
+.button-group-small > .button,
+.pagination > ul > li > a {
+  @include float-left;
+  @include border-radius(0);
+}
+.button-group > .button + .button,
+.button-group-large > .button + .button,
+.button-group-small > .button + .button,
+.pagination > ul > li > a,
+.pagination > ul > li > .button  {
+  margin-left: -1px;
+}
+
+.pagination > ul > li:first-child > .button,
+.pagination > ul > li:first-child > button {
+  margin-left: 0;
+}
+
+/* .button-group > .button:last-child, */
+.pagination > ul > li:last-child > .button,
+.pagination > ul > li:last-child > button {
+  margin-left: 0;
+}
+// The active state
+.button-group > .button.active,
+.pagination > ul > li.active,
+.pagination > ul > li > .active {
+  background-color: $info-color;
+  color: $foundation-white;
+  border-color: $info-color;
+}
+
+/* Pagination Large Size */
+.button-group-large > .button,
+.pagination-large > ul > li > a.button {
+  padding: $foundation-padding-large-vertical $foundation-padding-large-horizontal;
+  @include border-radius(0);
+  float: left;
+  display: inline-block;
+}
+/* Pagination smallall Size */
+.button-group-small > .button,
+.pagination-small > ul > li > a.button {
+  padding: $foundation-padding-small-vertical $foundation-padding-small-horizontal;
+  @include border-radius(0);
+  float: left;
+  display: inline-block;
+}
+
+/* Removes the border */
+.button-group.no-b > .button,
+.button-group-large.no-b > .button,
+.button-group-small.no-b > .button,
+.pagination.no-b > ul > li > .button,
+.list-group.no-b > li,
+.list-group.no-b > li > a,
+.list-group.no-b > a.list-group-element {
+  border: none;
+  border-color: transparent;
+}

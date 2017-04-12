@@ -22,6 +22,8 @@
 /* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
 /* */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+$url_image_placeholder: url(../images/logo_placeholder.png);
+$url_menu_icon: url(../images/menu-icon.png);
 
 // Modules and Variables
 @import "partials/base";
@@ -32,8 +34,10 @@
 
 // Partials
 //@import "partials/reset"
+@import "partials/navigation";
 @import "partials/typography";
 @import "partials/buttons";
+@import "partials/pagination";
 @import "partials/tables";
 @import "partials/jumbotron";
 @import "partials/labels";

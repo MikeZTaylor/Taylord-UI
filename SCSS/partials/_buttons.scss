@@ -18,7 +18,8 @@ a.button-primary {
 .button {
   @include button-size($foundation-padding-vertical, $foundation-padding-horizontal, $button-font-size, $foundation-line-height);
   border: none;
-  color: $foundation-color-e8e8;
+  color: $foundation-color-c7c7;
+  background-color: #fff;
   border: none;
   display: inline-block;
   font-family: $font-stack;
@@ -56,8 +57,12 @@ a.button-primary {
 }
 
 .button-default {
-  color: #fff;
+  @include button-version($button-default-color, $button-default-background);
+  color: $foundation-color-a6a6;
   text-decoration: none;
+  border: $foundation-color-e8e8;
+  border-style: solid;
+  border-width: thin;
 }
 
 .button-primary {
