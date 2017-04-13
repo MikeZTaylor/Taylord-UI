@@ -4,6 +4,8 @@
 \addcontentsline{toc}{chapter}{Framework}
 The following section will detail the components that make up the Taylor'd UI framework. Each of the following components are what makes up the framework, and aid in the development of a website. All the components of the framework have been built in separate partial files, denoted by an underscore. The underscore also tells codekit, the compiler been used to not compile the files into their own css file. A separate file called taylord.scss was created, in this file the @include statement was used to pull all the separate partial files into one file and that file is then compiled to CSS. 
 
+\subsection{SASS}
+
 \subsection{Variables}
 At the start of framework development, a file called \_foundation.scss was created, in this file all the variables for the framework are defined. In this file, the foundation colour variable is set and using the HSL function called lighten, a range of colours are created to be used in the framework. Other colour variables were added and then used to set the background colour, alert colours, and link colours.
 
@@ -57,20 +59,125 @@ Five table variations were created for the framework, ranging from default table
 \end{lstlisting}
 
 
-\subsection{Buttons and Button Groups}
+\subsection{Buttons}
 Buttons are an integral part of a framework. The styling, and the functionality of the buttons are key in the end users goal of using a website. If a button does not look like a button or if the styling of a button is overdone, the user can get confused, and not know how to proceed. With this in mind, the development of the buttons continued throughout the development of the framework. Originally, the buttons had round corners but this was removed in trying to keep the design non opinionated. 
 
-Four button types were designed at the start of the project, these buttons are the basic buttons a developer would expect, and have minimal styling. From there 
+Five button types were designed at the start of the project. The default button, then large, and small buttons based off the default button, and lastly a pill shaped button. 
+
+Based off the default button type, six styles were created. Each of these button styles has a visual waiting to it such as the warning button. This button can tell the user to proceed with caution, it can also be used as a delete button. To create these buttons a mixin was used that takes the colour stored in the variable for each of these classes. The mixin also adds in the active and hover states, and calculates the colours to be used. 
+
+\begin{lstlisting}[language=CSS3]
+.button-default {
+  @include button-version($button-default-color, $button-default-background);
+  color: $foundation-color-a6a6;
+  text-decoration: none;
+  border: $foundation-color-e8e8;
+  border-style: solid;
+  border-width: thin;
+	}
+}
+\end{lstlisting}
+
+\subsection{Button Groups and Pagination}
+A button group is a series of buttons grouped together on a single line, this can be achieved by removing the margin attribute in CSS. Pagination is a series of numbers grouped together on a single line, this can be useful for when you have multiple pages in your website. As these two components can be used interchangeably, it was decided to include them together in the same partial.
+
+To get these components working correctly, the $>$ symbol was used, this allowed for only the direct children of an element to be selected, and modified. It won't effect any other element that is not a direct child of that element. In the code snippet below only the a element of unordered list item belonging to the class pagination gets a solid 1px border.   
+
+\begin{lstlisting}[language=CSS3]
+.pagination > ul > li > a {
+  border: 1px solid $foundation-color-e8e8;
+}
+\end{lstlisting}
+
+\subsection{Navigation}
+The navigation component of the framework is a simple responsive navigation menu  comprised of a non list style that becomes a drop down menu when the screen size is less than 640px.
+
+On a larger browser window size, the navigation is designed to stay at the top of the browser window when the user is scrolling down on a web page, this is achieved by making the navigation fixed to the web page. As screen real estate is a commodity on smaller browser window sizes such as mobile, the navigation bar changes to absolute. The navigation bar now stays at the top of web page, giving more screen real estate to the user. 
+
+\begin{lstlisting}[language=CSS3]
+///over 640px
+header {
+	background: $foundation-white;
+	width: 100%;
+	height: 80px;
+	position: fixed; 
+	
+///under 640px			
+	nav {
+		ul {
+			display: none;
+			position: absolute;
+			padding: 10px;
+\end{lstlisting}
 
 \subsection{Grid}
 \subsection{Alerts}
+Alert notifications can be used to alert the user that something is about to happen or has happened, this can be that their username or password is incorrect, their login was successful, something went wrong while trying to load content, et al.
+
+Five different alert types were created, each with their own significance. All the alerts are built using the same alert class, and through the use of the modifiers are changed into each alert type. 
+
+\begin{lstlisting}[language=CSS3]
+.alert {
+  color: inherit;
+  border: 0.5px solid transparent;
+  display: block;
+  padding: 1.5rem;
+  background-color: $success-color;
+  @include border-radius($border-radius);
+\end{lstlisting}
+
 \subsection{Mixins}
 \subsection{Labels}
+
+Button labels should be kept as simple as possible. Long labels take longer to read, and can also take up large sections of valuable real estate on mobile web pages. 
+
+The button element illustrates a clickable button. The button element can be quite adaptable, elements such as images, text, headers, and even paragraphs can be in the button. The button element can also contain pseudo-elements such as ::before, and ::after. 
+
+There is a clear difference between the label element, and a button created with an input element. An input element serves a data field, this is user data that you intend to dispatch to a server. There are several types of input related to a button, $<$input type="submit"$>$, $<$input type="image"$>$, $<$input type="file"$>$, $<$input type="reset"$>$, $<$input type="button"$>$. 
+
 \subsection{States}
 \subsection{Panels}
-\subsection{Tabs}
 
 \newpage
 \chapter*{Project Plan}
 \addcontentsline{toc}{section}{Project Plan}
-add stuff about what was built each week - similar to the engineering thing 
+\subsection{Engineering Release One (January, and February):}
+\begin{itemize}
+	\item Iteration One: (9th of January - 23rd of January)\begin{itemize} 
+	\item Met with Eamonn to discuss the best approach for the development in this semester
+	\item Changed how partials would be created, and displayed from a static site generator to using web components, and polymer to display the websites across browsers that don't support the web components import element
+	\end{itemize}
+	\item Iteration Two: (23rd of January - 6th of February) \begin{itemize}
+	\item Started development of the framework. Created the file structure, and a partial called base that will contain all the variables of the framework
+	\item Decided on the colours and fonts that will be used in the framework
+	\item Created the body partial that contains a generic layout for a html file
+	\end{itemize}
+	\item Iteration Three: (6th of February to 20th of February)\begin{itemize}
+	\item Created the button partial
+	\item Created the label partial to be used with the button partial
+	\item Created general layout of semester two document, broke the document into two sections; user manual, and development
+	\end{itemize}
+	\subsection{Engineering Release Two (March):}
+		\item Iteration Four: (20th of February - 6th of March)\begin{itemize} 
+	\item Rewrote all the SASS files to SCSS
+	\item Developed button mixins that would calculate all the button sizes
+	\item Created Alerts partial
+	\item Created States partial
+	\item Created Panel partial
+	\end{itemize}
+	\item Iteration Five: (6th of March - 20th of March) \begin{itemize}
+	\item Created Table partial
+	\item Created Form partial
+	\end{itemize}
+	\subsection{Engineering Release Three (April):}
+	\item Iteration Six: (20th of March - 3rd of April)\begin{itemize}
+	\item Started work on the development section of the document, broke the development section into smaller sections for each partial. 
+	\item Created Button Groups and Pagination partial
+	\item Created Navigation partial
+	\end{itemize}
+		\item Iteration Seven: (3rd of April - 17th of April)\begin{itemize}
+	\item Met with Eamonn, decided on final structure of report
+	\item Added in Engineering Releases section
+	\item Finalised all the sections of the report, reworded sections, ready for submission.
+	\end{itemize}	
+\end{itemize}

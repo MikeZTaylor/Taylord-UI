@@ -21,7 +21,7 @@
     background-color: darken($background, 10%);
   }
   &:active {
-    color: darken(#fff, 5%);
+    color: darken($foundation-white, 5%);
     background-color: darken($background, 20%);
     /*     .transition(all .25s ease); */
     outline: 0;

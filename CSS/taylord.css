@@ -674,15 +674,15 @@ a.button-primary {
 /*------------------------------------ */
 .alert {
   color: inherit;
-  border: 1px solid transparent;
+  border: 0.5px solid transparent;
   display: block;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #40d17e;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px; }
-  .alert > h4 {
+  .alert .alert > h4 {
     color: inherit;
     margin-top: 0; }
   .alert > p {
