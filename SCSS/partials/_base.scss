@@ -35,14 +35,13 @@ $foundation-background: $foundation-white;
 $foundation-background-off-white: $foundation-off-white;
 $white-accent: darken($foundation-background, 2.5%);
 
-/* Navigation Colors */
-$navigation-active-color: $primary-color;
-
 $text-color: $foundation-color-6363;
 
 /* Link Colors */
-$link-color: $primary-color;
-$link-color-hover: darken($primary-color, 18%);
+$link-color: $foundation-orange;
+$link-color-visited: darken($foundation-orange, 30%);
+$link-color-hover: darken($foundation-orange, 18%);
+$link-color-active: lighten($foundation-orange, 18%);
 
 /*------------------------------------*\
  * Typography */

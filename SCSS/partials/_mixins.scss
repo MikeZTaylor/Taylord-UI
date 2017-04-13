@@ -59,3 +59,18 @@
     float: left;
     width: 25%;
   }
+
+  @mixin links($link-color, $link-color-visited, $link-color-hover, $link-color-active) {
+    & {
+        color: $link-color;
+        &:visited {
+            color: $link-color-visited;
+        }
+        &:hover {
+            color: $link-color-hover;
+        }
+        &:active, &:focus {
+            color: $link-color-active;
+        }
+    }
+}

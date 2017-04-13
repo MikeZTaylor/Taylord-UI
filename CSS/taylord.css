@@ -29,7 +29,6 @@
 /* Colors */
 /* Colors */
 /* BAckground Colors */
-/* Navigation Colors */
 /* Link Colors */
 /*------------------------------------*\
  * Typography */
@@ -78,14 +77,14 @@ body {
   box-sizing: border-box; }
 
 a {
-  color: #3474db;
+  color: #f9791b;
   text-decoration: none;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease; }
 
 a:hover {
-  color: #1b4b98;
+  color: #b34f05;
   text-decoration: underline; }
 
 hr {
@@ -101,11 +100,13 @@ hr {
   /*-o-box-sizing: border-box */ }
 
 a {
-  color: #b8b8b8;
-  text-decoration: none;
-  font-weight: bold; }
+  color: #f9791b; }
+  a:visited {
+    color: #783503; }
   a:hover {
-    color: #858585; }
+    color: #b34f05; }
+  a:active, a:focus {
+    color: #fbae74; }
 
 img {
   width: 100%; }

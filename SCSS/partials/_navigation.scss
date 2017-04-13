@@ -1,11 +1,7 @@
 a {
-	color: lighten($foundation-color-8585, 20%);
-	text-decoration: none;
-	font-weight: bold;
-	&:hover {
-		color: $foundation-color-8585;
-	}
+	@include links($link-color, $link-color-visited, $link-color-hover, $link-color-active);
 }
+
 img {
 	width: 100%;
 }
@@ -90,7 +86,7 @@ a:hover#menu-icon {
 			padding: 10px 0;
 			margin: 0;
 		}
-    
+
 		&:active ul {
 			display: none;
 			position: absolute;
