@@ -1,11 +1,11 @@
-\newpage
-\part{Development}
-\chapter*{Framework}
-\addcontentsline{toc}{chapter}{Framework}
+\chapter*{Development}
+\addcontentsline{toc}{chapter}{Development}
+\section*{Framework}
+\addcontentsline{toc}{section}{Framework}
 The following section will detail the components that make up the Taylor'd UI framework. Each of the following components are what makes up the framework, and aid in the development of a website. All the components of the framework have been built in separate partial files, denoted by an underscore. The underscore also tells codekit, the compiler been used to not compile the files into their own css file. A separate file called taylord.scss was created, in this file the @include statement was used to pull all the separate partial files into one file and that file is then compiled to CSS. 
 
-\section*{SASS}
-\addcontentsline{toc}{section}{SASS}
+\subsection*{SASS}
+\addcontentsline{toc}{subsection}{SASS}
 
 Originally, the development of the framework started with the SASS language. SASS is a CSS preprocessor that has syntax advancements, the syntax uses indentation to format the code, and does not use semi-colons to indicate a new line. Stylesheets created in SASS have to be compiled into regular CSS stylesheets to be used. However, they do not extend the CSS standard itself. 
 
@@ -13,8 +13,8 @@ However as development continued, mixins were found to be an issue when written 
 
 SCSS (Sassy CSS) is an extension of the CSS syntax. This means that a correctly written CSS file is also valid SCSS. SCSS uses semi-colons and brackets to break up the code of an element. 
 
-\section*{Variables}
-\addcontentsline{toc}{section}{Variables}
+\subsection*{Variables}
+\addcontentsline{toc}{subsection}{Variables}
 At the start of framework development, a file called \_foundation.scss was created, in this file all the variables for the framework are defined. In this file, the foundation colour variable is set and using the HSL function called lighten, a range of colours are created to be used in the framework. Other colour variables were added and then used to set the background colour, alert colours, and link colours.
 
 \begin{lstlisting}[language=CSS3]
@@ -26,8 +26,8 @@ At the start of framework development, a file called \_foundation.scss was creat
   	color: $foundation-color-2121;
 \end{lstlisting}
 
-\section*{Font and Typography}
-\addcontentsline{toc}{section}{Font and Typography}
+\subsection*{Font and Typography}
+\addcontentsline{toc}{subsection}{Font and Typography}
 In keeping with the framework being non opinionated, it was crucial to pick a font, and to have the typography nondescript so that the end user can change it to suit their needs. A range of fonts were looked at, the readability of the font in regards to large sections to single lines of text was looked at. Next, viewing the font on a range of devices ranging from mobile to desktop was looked at ensuing it was legible across these devices. The last aspect that was looked at was the range of the font, did it allow for non latin characters, accents and symbols\cite{WORD16}.
 
 The font that passed these tests, and was a joy to look at was Open Sans. The next step was to determine the font sizing and how to calculate it. When decided on the best way to execute the font sizing, two methods were looked at, em and rem. Pixels was not looked at as early versions of Internet Explorer are not able to change the font size using browser functionality, a major usability issue. The em technique alters the base font size on the body element by using a percentage \cite{GUN16}.
@@ -36,14 +36,14 @@ This adapts the font so that 1em is equal to 10 pixels, instead of the default 1
 
 With the advent of CSS3, rem which means root element was added, as previously mentioned, em sizing was relative to the font size of the parent whereas rem is relative to the root or html element. This means that a single font size can be defined for the html element, and all rem units will be a percentage of that base unit. Safari 5, Chrome, Firefox 3.6+, and even Internet Explorer 9 have support for rem units. Opera up to version 11.10, and early versions of Internet Explorer have yet to implement rem units. In order to display font on these browsers, a fallback pixel size is calculated using a mixin. 
 
-\section*{Colour Scheme}
-\addcontentsline{toc}{section}{Colour Scheme}
+\subsection*{Colour Scheme}
+\addcontentsline{toc}{subsection}{Colour Scheme}
 When creating the colour scheme, it was important to keep design opinions to a minimum, to use colours that would get the frameworks point across. It was also key to use colours that the end user would recognise that they were for instructional purposes, and for them to change in their web development projects. The colour needed to look good when modified as well, this means if the hue, tone and vibrancy of the colour is modified, the resulting colour needed to look well. 
 
 Instead of researching colour theory and choosing the best colours, it was decided to use Google's Material Design \citet{Google17} colour palette, and choose from their wide range of colours. The palette  gave a variety of colours along with modifications of the colour such as different hues and saturations. The colours selected to use in the framework were kept to primary colours to keep it as non opinionated as possible.
 
-\section*{Tables}
-\addcontentsline{toc}{section}{Tables}
+\subsection*{Tables}
+\addcontentsline{toc}{subsection}{Tables}
 Tables in HTML should only be used for rendering data that naturally belongs in a grid based system. This is data where the data characterised is similar across a number of objects. Tables should not be used for the layout of content in a website, divs should be used for this. The key to designing the tables was to demonstrate to the end user that the tables were for data, and not for layout.
 
 Five table variations were created for the framework, ranging from default table to striped tables, and included is table modifiers. Table modifiers take the colours that are used to dictate success or warning, and add them to a row in the table. The tables were also designed to be responsive, to achieve this the padding of table is calculated by dividing the \$baseline height by a set value. 
@@ -59,8 +59,8 @@ Five table variations were created for the framework, ranging from default table
 \end{lstlisting}
 
 
-\section*{Buttons}
-\addcontentsline{toc}{section}{Buttons}
+\subsection*{Buttons}
+\addcontentsline{toc}{subsection}{Buttons}
 Buttons are an integral part of a framework. The styling, and the functionality of the buttons are key in the end users goal of using a website. If a button does not look like a button or if the styling of a button is overdone, the user can get confused, and not know how to proceed. With this in mind, the development of the buttons continued throughout the development of the framework. Originally, the buttons had round corners but this was removed in trying to keep the design non opinionated. 
 
 Five button types were designed at the start of the project. The default button, then large, and small buttons based off the default button, and lastly a pill shaped button. 
@@ -79,8 +79,8 @@ Based off the default button type, six styles were created. Each of these button
 }
 \end{lstlisting}
 
-\section*{Button Groups and Pagination}
-\addcontentsline{toc}{section}{Button Groups and Pagination}
+\subsection*{Button Groups and Pagination}
+\addcontentsline{toc}{subsection}{Button Groups and Pagination}
 A button group is a series of buttons grouped together on a single line, this can be achieved by removing the margin attribute in CSS. Pagination is a series of numbers grouped together on a single line, this can be useful for when you have multiple pages in your website. As these two components can be used interchangeably, it was decided to include them together in the same partial.
 
 To get these components working correctly, the $>$ symbol was used, this allowed for only the direct children of an element to be selected, and modified. It won't effect any other element that is not a direct child of that element. In the code snippet below only the a element of unordered list item belonging to the class pagination gets a solid 1px border.   
@@ -91,8 +91,8 @@ To get these components working correctly, the $>$ symbol was used, this allowed
 }
 \end{lstlisting}
 
-\section*{Navigation}
-\addcontentsline{toc}{section}{Navigation}
+\subsection*{Navigation}
+\addcontentsline{toc}{subsection}{Navigation}
 The navigation component of the framework is a simple responsive navigation menu  comprised of a non list style that becomes a drop down menu when the screen size is less than 640px.
 
 On a larger browser window size, the navigation is designed to stay at the top of the browser window when the user is scrolling down on a web page, this is achieved by making the navigation fixed to the web page. As screen real estate is a commodity on smaller browser window sizes such as mobile, the navigation bar changes to absolute. The navigation bar now stays at the top of web page, giving more screen real estate to the user. 
@@ -112,11 +112,11 @@ header {
 			position: absolute;
 			padding: 10px;
 \end{lstlisting}
-\section*{Grid}
-\addcontentsline{toc}{section}{Grid}
+\subsection*{Grid}
+\addcontentsline{toc}{subsection}{Grid}
 
-\section*{Alerts}
-\addcontentsline{toc}{section}{Alerts}
+\subsection*{Alerts}
+\addcontentsline{toc}{subsection}{Alerts}
 Alert notifications can be used to alert the user that something is about to happen or has happened, this can be that their username or password is incorrect, their login was successful, something went wrong while trying to load content, et al.
 
 Five different alert types were created, each with their own significance. All the alerts are built using the same alert class, and through the use of the modifiers are changed into each alert type. 
@@ -131,11 +131,11 @@ Five different alert types were created, each with their own significance. All t
   @include border-radius($border-radius);
 \end{lstlisting}
 
-\section*{Mixins}
-\addcontentsline{toc}{section}{Mixins}
+\subsection*{Mixins}
+\addcontentsline{toc}{subsection}{Mixins}
 
-\section*{Labels}
-\addcontentsline{toc}{section}{Labels}
+\subsection*{Labels}
+\addcontentsline{toc}{subsection}{Labels}
 Button labels should be kept as simple as possible. Long labels take longer to read, and can also take up large sections of valuable real estate on mobile web pages. 
 
 The button element illustrates a clickable button. The button element can be quite adaptable, elements such as images, text, headers, and even paragraphs can be in the button. The button element can also contain pseudo-elements such as ::before, and ::after. 
@@ -147,8 +147,8 @@ There is a clear difference between the label element, and a button created with
  <$input type="reset">, <input type="button">. 
 \end{lstlisting}
 
-\section*{States}
-\addcontentsline{toc}{section}{States}
+\subsection*{States}
+\addcontentsline{toc}{subsection}{States}
 A state is an object that augments, and alters all other styles. For example, A message can be in a success or error state. States are commonly applied to the same element as a layout rule or applied to the same element as a base module class. In the frameworks, the states are used to indicate success in both alerts, and in a form. 
 
 \begin{lstlisting}[language=CSS3]
@@ -159,8 +159,8 @@ A state is an object that augments, and alters all other styles. For example, A 
 }
 \end{lstlisting}
 
-\section*{Panels}
-\addcontentsline{toc}{section}{Panels}
+\subsection*{Panels}
+\addcontentsline{toc}{subsection}{Panels}
 A panel is a component that allows you to outline a section of a web page. This enables you to view sections on your page as you add content to them, allowing you to place emphasis where you need it or removing all content from a section. 
 
 \begin{lstlisting}[language=CSS3]
@@ -177,8 +177,8 @@ A panel is a component that allows you to outline a section of a web page. This 
 \newpage
 \section*{Project Plan}
 \addcontentsline{toc}{section}{Project Plan}
-\section*{Engineering Release One (January, and February):}
-\addcontentsline{toc}{section}{Engineering Release One (January, and February)}
+\subsection*{Engineering Release One (January, and February):}
+\addcontentsline{toc}{subsection}{Engineering Release One (January, and February)}
 \begin{itemize}
 	\item Iteration One: (9th of January - 23rd of January)\begin{itemize} 
 	\item Met with Eamonn to discuss the best approach for the development in this semester
@@ -194,8 +194,8 @@ A panel is a component that allows you to outline a section of a web page. This 
 	\item Created the label partial to be used with the button partial
 	\item Created general layout of semester two document, broke the document into two sections; user manual, and development
 	\end{itemize}
-	\section*{Engineering Release Two (March):}
-	\addcontentsline{toc}{section}{Engineering Release Two (March)}
+	\subsection*{Engineering Release Two (March):}
+	\addcontentsline{toc}{subsection}{Engineering Release Two (March)}
 	\item Iteration Four: (20th of February - 6th of March)\begin{itemize} 
 	\item Rewrote all the SASS files to SCSS
 	\item Developed button mixins that would calculate all the button sizes
@@ -207,8 +207,8 @@ A panel is a component that allows you to outline a section of a web page. This 
 	\item Created Table partial
 	\item Created Form partial
 	\end{itemize}
-	\section*{Engineering Release Three (April):}
-	\addcontentsline{toc}{section}{Engineering Release Three (April)}
+	\subsection*{Engineering Release Three (April):}
+	\addcontentsline{toc}{subsection}{Engineering Release Three (April)}
 	\item Iteration Six: (20th of March - 3rd of April)\begin{itemize}
 	\item Started work on the development section of the document, broke the development section into smaller sections for each partial. 
 	\item Created Button Groups and Pagination partial
