@@ -13,6 +13,7 @@ However as development continued, mixins were found to be an issue when written 
 
 SCSS (Sassy CSS) is an extension of the CSS syntax. This means that a correctly written CSS file is also valid SCSS. SCSS uses semi-colons and brackets to break up the code of an element. 
 
+\newpage
 \subsection*{Variables}
 \addcontentsline{toc}{subsection}{Variables}
 At the start of framework development, a file called \_foundation.scss was created, in this file all the variables for the framework are defined. In this file, the foundation colour variable is set and using the HSL function called lighten, a range of colours are created to be used in the framework. Other colour variables were added and then used to set the background colour, alert colours, and link colours.
@@ -79,6 +80,7 @@ Based off the default button type, six styles were created. Each of these button
 }
 \end{lstlisting}
 
+\newpage
 \subsection*{Button Groups and Pagination}
 \addcontentsline{toc}{subsection}{Button Groups and Pagination}
 A button group is a series of buttons grouped together on a single line, this can be achieved by removing the margin attribute in CSS. Pagination is a series of numbers grouped together on a single line, this can be useful for when you have multiple pages in your website. As these two components can be used interchangeably, it was decided to include them together in the same partial.
@@ -137,6 +139,36 @@ This allows for a grid system that is adaptable to the a screen layout of any sc
 
 The framework has three breakpoints; desktop, tablet, and mobile. Based on the viewpoint, the columns expand or collapse in size. 
 
+\begin{lstlisting}[language=CSS3]
+$breakpoint-desktop: "screen and (min-width: 48rem) and (max-width: 60rem)";
+$breakpoint-tablet: "screen and (min-width: 30rem) and (max-width: 47.9375rem)";
+$breakpoint-mobile: "screen and (max-width: 29.9375rem)";
+\end{lstlisting}
+
+
+\newpage
+The media queries were developed using the rem mixin that was also used for font sizing, this allowed for the rem value and pixel value to be stored. For the columns, a media query for each target was included. Desktop, and tablet views have a rem, and pixel value. For mobile, percentages are used to better scale the content.
+
+\begin{lstlisting}[language=CSS3]
+.col12 {
+	@include rem(width, 960);
+
+	@media #{$breakpoint-desktop} {
+		@include rem(width, 960);
+	}
+	@media #{$breakpoint-tablet} {
+		@include rem(width, 767);
+	}
+	@media #{$breakpoint-mobile} {
+		 width: 100%;
+	}
+}
+\end{lstlisting}
+
+Even though the framework is designed for 12 grids, when the media queries were designed, a query was not made for each column of the grid. Not every column has a media query attached for it, instead the column around the missing column do the guess work for that column. 
+
+The framework has been designed to be a starting point, for better control the user needs to add media queries for each column. The framework is intended as a teaching tool for the user, adding in the queries for them, would not be beneficial. 
+
 \subsection*{Alerts}
 \addcontentsline{toc}{subsection}{Alerts}
 Alert notifications can be used to alert the user that something is about to happen or has happened, this can be that their username or password is incorrect, their login was successful, something went wrong while trying to load content, et al.
@@ -181,6 +213,7 @@ There is a clear difference between the label element, and a button created with
  <$input type="reset">, <input type="button">. 
 \end{lstlisting}
 
+\newpage
 \subsection*{States}
 \addcontentsline{toc}{subsection}{States}
 A state is an object that augments, and alters all other styles. For example, A message can be in a success or error state. States are commonly applied to the same element as a layout rule or applied to the same element as a base module class. In the frameworks, the states are used to indicate success in both alerts, and in a form. 
@@ -208,6 +241,7 @@ A panel is a component that allows you to outline a section of a web page. This 
 }
 \end{lstlisting}
 
+\newpage
 \section*{Development Issues}
 \addcontentsline{toc}{section}{Development Issues}
 
@@ -222,6 +256,19 @@ Creating the partials. polymer was difficult to learn, not using it as it would 
 themes were difficult to think off. 
 
 Deciding what elements to include was difficult. 
+
+On of the biggest issues in the development of the framework was creating the grid layout, and media queries. The first major issue was the syntax. The breakpoints had been declared in a different partial, this lead to errors in the compiler. The compiler was looking for specific keywords after @media, which it wasn't able to interpret.
+
+To solve this issue, the query had to be writing using different syntax. The variables for the breakpoints had to be treated as an ID. The compiler also would not accept brackets to frame the argument, curly braces had to be used instead. To reach this conclusion, a lot of trial and error was done. This involved making small changes to the @media argument, viewing  the error, viewing SASS blogs to read what the error was in full, repeating this pattern until the code compiled with no errors. 
+\begin{lstlisting}[language=CSS3]
+//original 
+@media ($breakpoint-mobile)
+
+//new method
+@media #{$breakpoint-mobile} 
+\end{lstlisting}
+
+
 
 \newpage
 \section*{Project Plan}
