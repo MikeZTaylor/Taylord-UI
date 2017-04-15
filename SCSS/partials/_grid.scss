@@ -1,29 +1,40 @@
 /*------------------------------------*\
- * The grid */
-/*------------------------------------ */
 
-[class^="col"] {
+    $Grid System
+
+\*------------------------------------*/
+
+.ex-grid {
+  background-color: #f9f9f9;
+  padding: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid #eeeeee;
+  margin: .5rem 0;
+}
+
+.col {
   float: left;
   min-height: 1px;
 
-  @media #{$bp-desktop} {
+  @media #{$breakpoint-mobile} {
 	  float: none;
 	  width: 100%;
 	  margin-left: 0;
   }
 
-  @media ($bp-desktop) {
+  @media #{$breakpoint-desktop} {
 	  @include rem(margin-left, 30);
   }
 
 }
 
 .row {
-  @media ($bp-desktop) {
+  @media #{$breakpoint-desktop} {
 	    @include rem(margin-left, -30);
 	    *zoom: 1;
 	}
-	@media ($bp-mobile) {
+	@media #{$breakpoint-mobile} {
 		@include rem(margin-left, 0);
 	}
 	  @include rem(margin-left, -20);
@@ -41,105 +52,64 @@
 
 
 .container {
-	@include rem(width, 940);
+	@include rem(width, 960);
 	margin-left: auto;
 	margin-right: auto;
 
-  @media ($bp-mobile) {
+  @media #{$breakpoint-mobile} {
 		width: 95%;
 		width: auto;
 		float: none;
 	}
 
-	@media ($bp-tablet) {
-		@include rem(width, 724);
+	@media #{$breakpoint-tablet} {
+		@include rem(width, 767);
 	}
 
-	@media ($bp-desktop) {
-		@include rem(width, 1170);
+	@media #{$breakpoint-desktop} {
+		@include rem(width, 960);
 	}
 }
 
 .col12 {
-	@include rem(width, 940);
+	@include rem(width, 960);
 
-	@media ($bp-desktop) {
-		@include rem(width, 1170);
+	@media #{$breakpoint-desktop} {
+		@include rem(width, 960);
 	}
-	@media ($bp-tablet) {
-		@include rem(width, 724);
+	@media #{$breakpoint-tablet} {
+		@include rem(width, 767);
 	}
-	@media ($bp-mobile) {
+	@media #{$breakpoint-mobile} {
 		 width: 100%;
 	}
 }
 
-.col11 {
-	@include rem(width, 860);
-
-	@media ($bp-desktop) {
-		@include rem(width, 1070);
-	}
-	@media ($bp-tablet) {
-		@include rem(width, 662);
-	}
-	@media ($bp-mobile) {
-		 width: 100%;
-	}
-}
-
-.col10 {
-	@include rem(width, 780);
-
-	@media ($bp-desktop) {
-		@include rem(width, 970);
-	}
-	@media ($bp-tablet) {
-	  @include rem(width, 600);
-	}
-	@media ($bp-mobile) {
-		 width: 100%;
-	}
-}
 
 .col9 {
-  @include rem(width, 700);
+  @include rem(width, 620);
 
-	@media ($bp-desktop) {
-	  @include rem(width, 870);
+	@media #{$breakpoint-desktop} {
+	  @include rem(width, 620);
 	}
-	@media ($bp-tablet) {
-		@include rem(width, 538);
+	@media #{$breakpoint-tablet} {
+		@include rem(width, 438);
 	}
-	@media ($bp-mobile) {
+	@media #{$breakpoint-mobile} {
 		 width: 100%;
 	}
 }
 
 .col8 {
-	@include rem(width, 620);
+	@include rem(width, 700);
 
-	@media ($bp-desktop) {
-		@include rem(width, 770);
+	@media #{$breakpoint-desktop} {
+		@include rem(width, 700);
 	}
-	@media ($bp-tablet) {
+	@media #{$breakpoint-tablet} {
 		@include rem(width, 476);
 	}
-	@media ($bp-mobile) {
-		 width: 100%;
-	}
-}
-
-.col7 {
-  @include rem(width, 540);
-
-	@media ($bp-desktop) {
-		 @include rem(width, 670);
-	}
-	@media ($bp-tablet) {
-		@include rem(width, 414);
-	}
-	@media ($bp-mobile) {
+	@media #{$breakpoint-mobile} {
 		 width: 100%;
 	}
 }
@@ -147,69 +117,41 @@
 .col6 {
   @include rem(width, 460);
 
-	@media ($bp-desktop) {
-		@include rem(width, 570);
+	@media #{$breakpoint-desktop} {
+		@include rem(width, 460);
 	}
-	@media ($bp-tablet) {
+	@media #{$breakpoint-tablet} {
 		@include rem(width, 352);
 	}
-	@media ($bp-mobile) {
-		 width: 100%;
-	}
-}
-
-.col5 {
-	@include rem(width, 380);
-
-	@media ($bp-desktop) {
-		@include rem(width, 470);
-	}
-	@media ($bp-tablet) {
-		@include rem(width, 290);
-	}
-	@media ($bp-mobile) {
+	@media #{$breakpoint-mobile} {
 		 width: 100%;
 	}
 }
 
 .col4 {
-	@include rem(width, 300);
+	@include rem(width, 220);
 
-	@media ($bp-desktop) {
-		@include rem(width, 370);
+	@media #{$breakpoint-desktop} {
+		@include rem(width, 220);
 	}
-	@media ($bp-tablet) {
+	@media #{$breakpoint-tablet} {
 		@include rem(width, 228);
 	}
-	@media ($bp-mobile) {
+	@media #{$breakpoint-mobile} {
 		 width: 100%;
 	}
 }
 
 .col3 {
-	@include rem(width, 220);
+	@include rem(width, 300);
 
-	@media ($bp-desktop) {
-		@include rem(width, 270);
+	@media #{$breakpoint-desktop} {
+		@include rem(width, 300);
 	}
-	@media ($bp-tablet) {
+	@media #{$breakpoint-tablet} {
 		@include rem(width, 166);
 	}
-	@media ($bp-mobile ){
-		 width: 100%;
-	}
-}
-
-.col2 {
-	@include rem(width, 140);
-
-	@media ($bp-desktop) {
-		@include rem(width, 170);
-	}
-	@media ($bp-tablet) {
-		@include rem(width, 104);
-	}
-	@media ($bp-mobile) {
+	@media #{$breakpoint-mobile} {
 		 width: 100%;
 	}
 }
@@ -217,48 +159,16 @@
 .col1 {
 	@include rem(width, 60);
 
-	@media ($bp-desktop) {
-		@include rem(width, 70);
+	@media #{$breakpoint-desktop} {
+		@include rem(width, 60);
 	}
-	@media ($bp-tablet) {
+	@media #{$breakpoint-tablet} {
 		@include rem(width, 42);
 	}
-	@media ($bp-mobile) {
+	@media #{$breakpoint-mobile} {
 		 width: 100%;
 	}
 }
-
-
-
-// 940px offset //
-.offset12 { @include rem(width, 980); }
-.offset11 { @include rem(width, 900); }
-.offset10 { @include rem(width, 820); }
-.offset9  { @include rem(width, 740); }
-.offset8  { @include rem(width, 660); }
-.offset7  { @include rem(width, 580); }
-.offset6  { @include rem(width, 500); }
-.offset5  { @include rem(width, 420); }
-.offset4  { @include rem(width, 340); }
-.offset3  { @include rem(width, 260); }
-.offset2  { @include rem(width, 180); }
-.offset1  { @include rem(width, 100); }
-
-
-@media  (min-width: 768px) and (max-width: 979px) {
-
-.offset12 { @include rem(width, 764); }
-.offset11 { @include rem(width, 702); }
-.offset10 { @include rem(width, 640); }
-.offset9  { @include rem(width, 578); }
-.offset8  { @include rem(width, 516); }
-.offset7  { @include rem(width, 454); }
-.offset6  { @include rem(width, 392); }
-.offset5  { @include rem(width, 330); }
-.offset4  { @include rem(width, 268); }
-.offset3  { @include rem(width, 206); }
-.offset2  { @include rem(width, 144); }
-.offset1  { @include rem(width, 82); }
 
 .row-fluid {
   width: 100%;
@@ -269,7 +179,7 @@
 
 .row-fluid [class^="col"] {
 
-  @media ($bp-mobile) {
+  @media #{$breakpoint-mobile} {
     margin-left: 0;
   }
 
@@ -279,6 +189,7 @@
   min-height: 30px;
   margin-left: 2.76%;
   *margin-left: 2.70%;
+  @include box-sizing(border-box);
 }
 
 .row-fluid [class^="col"]:first-child {
@@ -302,32 +213,6 @@
   .row-fluid .col2 { width: 14.36%; }
   .row-fluid .col1 { width: 5.8%; }
 
-  .row-fluid .offset12 { margin-left: 105.52%; }
-  .row-fluid .offset12:first-child { margin-left: 102.76%; }
-  .row-fluid .offset11 { margin-left: 96.96%; }
-  .row-fluid .offset11:first-child { margin-left: 94.19%; }
-  .row-fluid .offset10 { margin-left: 88.39%; }
-  .row-fluid .offset10:first-child { margin-left: 85.63%; }
-  .row-fluid .offset9 { margin-left: 79.83%; }
-  .row-fluid .offset9:first-child { margin-left: 77.07%; }
-  .row-fluid .offset8 { margin-left: 71.27%; }
-  .row-fluid .offset8:first-child { margin-left: 68.50%; }
-  .row-fluid .offset7 { margin-left: 62.70; }
-  .row-fluid .offset7:first-child { margin-left: 59.94%; }
-  .row-fluid .offset6 { margin-left: 54.148%; }
-  .row-fluid .offset6:first-child { margin-left: 51.38%; }
-  .row-fluid .offset5 { margin-left: 45.58%; }
-  .row-fluid .offset5:first-child { margin-left: 42.81%; }
-  .row-fluid .offset4 { margin-left: 37.01%; }
-  .row-fluid .offset4:first-child { margin-left: 34.25%; }
-  .row-fluid .offset3 { margin-left: 28.45%; }
-  .row-fluid .offset3:first-child { margin-left: 25.69%; }
-  .row-fluid .offset2 { margin-left: 19.88%; }
-  .row-fluid .offset2:first-child { margin-left: 17.12%; }
-  .row-fluid .offset1 { margin-left: 11.32%; }
-  .row-fluid .offset1:first-child { margin-left: 8.56%; }
-}
-
 .row-fluid {
   width: 100%;
   *zoom: 1;
@@ -350,6 +235,7 @@
   width: 100%;
   min-height: 30px;
   margin-left: 2.12%;
+  @include box-sizing(border-box);
   }
 
 .row-fluid [class^="col"]:first-child { margin-left: 0; }
@@ -368,32 +254,7 @@
 .row-fluid .col2 { width: 14.895%; }
 .row-fluid .col1 { width: 6.38%; }
 
-.row-fluid .offset12 { margin-left: 104.25%; }
-.row-fluid .offset12:first-child { margin-left: 102.12%; }
-.row-fluid .offset11 { margin-left: 95.74%; }
-.row-fluid .offset11:first-child { margin-left: 93.61%; }
-.row-fluid .offset10 { margin-left: 87.23%; }
-.row-fluid .offset10:first-child { margin-left: 85.10%; }
-.row-fluid .offset9 { margin-left: 78.72%; }
-.row-fluid .offset9:first-child { margin-left: 76.59%; }
-.row-fluid .offset8 { margin-left: 70.21%; }
-.row-fluid .offset8:first-child { margin-left: 68.08%; }
-.row-fluid .offset7 { margin-left: 61.70%; }
-.row-fluid .offset7:first-child { margin-left: 59.57%; }
-.row-fluid .offset6 { margin-left: 53.195%; }
-.row-fluid .offset6:first-child { margin-left: 51.06%; }
-.row-fluid .offset5 { margin-left: 44.68%; }
-.row-fluid .offset5:first-child { margin-left: 42.55%; }
-.row-fluid .offset4 { margin-left: 36.17%; }
-.row-fluid .offset4:first-child { margin-left: 34.04%; }
-.row-fluid .offset3 { margin-left: 27.65%; }
-.row-fluid .offset3:first-child { margin-left: 25.53%; }
-.row-fluid .offset2 { margin-left: 19.14%; }
-.row-fluid .offset2:first-child { margin-left: 17.02%; }
-.row-fluid .offset1 { margin-left: 10.63%; }
-.row-fluid .offset1:first-child { margin-left: 8.51%; }
-
-@media ($bp-mobile) {
+@media #{$breakpoint-mobile} {
 .row-fluid {
   width: 100%;
 }

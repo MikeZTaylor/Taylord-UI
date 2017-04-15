@@ -56,7 +56,7 @@ $font-weight-400: 400;
 $font-weight-700: 700;
 $font-weight-800: 800;
 
-$rem-size: 14;
+$rem-size: 16;
 $baseline-size: 1rem;
 
 // baseline-size is the base variable to all
@@ -160,11 +160,11 @@ $button-success-background: $success-color;
  * Media Query Breakpoints */
 /*------------------------------------ */
 
-$bp-desktop: "screen and (min-width: 75rem)"; // 1200px
+$breakpoint-desktop: "screen and (min-width: 48rem) and (max-width: 60rem)";
 
-$bp-tablet: "screen and (min-width: 48rem) and (max-width: 61.1875rem)"; // 768px and 979px
+$breakpoint-tablet: "screen and (min-width: 30rem) and (max-width: 47.9375rem)";
 
-$bp-mobile: "screen and (max-width: 47.9375rem)"; // 767px
+$breakpoint-mobile: "screen and (max-width: 29.9375rem)";
 
 /*------------------------------------*\
  * Tables */

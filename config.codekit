@@ -67,6 +67,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/960-12-col-grid.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/images\/960-12-col-grid.png",
+		"outputAbbreviatedPath": "\/images\/960-12-col-grid.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/logo_placeholder.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -236,22 +247,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/SCSS\/partials\/_clearfix.scss",
 		"outputAbbreviatedPath": "\/SCSS\/css\/_clearfix.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/SCSS\/partials\/_forms.scss": {
-		"createSourceMap": 1,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/SCSS\/partials\/_forms.scss",
-		"outputAbbreviatedPath": "\/SCSS\/css\/_forms.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

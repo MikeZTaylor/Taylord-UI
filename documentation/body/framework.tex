@@ -115,6 +115,28 @@ header {
 \subsection*{Grid}
 \addcontentsline{toc}{subsection}{Grid}
 
+The grid is based on a 960 pixel grid or 60 rem in this case. The size is 60 rem as it is based on the default font size of 1 rem or 16 pixels. Using that as the base of the calculation, a font size of 960 pixels would be a rem value of 60. The reasons of why the grid is 960 pixels is that modern laptops, and or desktops no longer have a resolution below this. The 960 grid is evenly divisible in numerous ways: 
+
+\begin{itemize}
+	\item 2 x 480
+	\item 3 x 320
+	\item 4 x 240
+	\item 5 x 192
+	\item 6 x 160
+	\item 8 x 120
+	\item 10 x 96
+	\item 12 x 80
+	\item 15 x 64
+	\item 16 x 60
+	\item 20 x 48
+	\item 24 x 40
+	\item 30 x 32
+\end{itemize}
+
+This allows for a grid system that is adaptable to the a screen layout of any screen size. In using this type of grid system, a 12 column layout will also be used. The 12 column layout lends itself to the 960 grid as its also equally divisible, allowing for an odd number of columns all with even numbers as seen in figure \ref{fig:grid} whereas using a 16 grid column layout, the same result is not easily achieved. 
+
+The framework has three breakpoints; desktop, tablet, and mobile. Based on the viewpoint, the columns expand or collapse in size. 
+
 \subsection*{Alerts}
 \addcontentsline{toc}{subsection}{Alerts}
 Alert notifications can be used to alert the user that something is about to happen or has happened, this can be that their username or password is incorrect, their login was successful, something went wrong while trying to load content, et al.
@@ -133,6 +155,18 @@ Five different alert types were created, each with their own significance. All t
 
 \subsection*{Mixins}
 \addcontentsline{toc}{subsection}{Mixins}
+Mixins are one of the most powerful features of Sass. Mixins allow for efficient and clean code repetitions as well as an easy way to adjust your code with ease. Mixins are the Sass equivalent of macros in other programming languages.
+
+Mixins are used throughout the development of this framework in an effort to keep the code DRY. As seen in the example below, instead of having to write the border radius property for each browser, a mixin was written to do this for us. In the code, the mixin is called using the include statement @include border-radius. In the compiled CSS, the border radius property for each browser is added in automatically, 
+
+\begin{lstlisting}[language=CSS3]
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+}
+\end{lstlisting}
 
 \subsection*{Labels}
 \addcontentsline{toc}{subsection}{Labels}
@@ -173,6 +207,21 @@ A panel is a component that allows you to outline a section of a web page. This 
   }
 }
 \end{lstlisting}
+
+\section*{Development Issues}
+\addcontentsline{toc}{section}{Development Issues}
+
+No mixins were written in SASS, didn't know enough to write my own. Now i can. 
+
+Buttons, the normal button isn't clickable. 
+
+Keeping it Dry
+
+Creating the partials. polymer was difficult to learn, not using it as it would be to complicated for the user. 
+
+themes were difficult to think off. 
+
+Deciding what elements to include was difficult. 
 
 \newpage
 \section*{Project Plan}

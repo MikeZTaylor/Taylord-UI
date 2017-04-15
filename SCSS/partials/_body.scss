@@ -1,4 +1,5 @@
 body {
+  min-width: 60rem;
   background-color: $foundation-white;
   color: $text-color;
   font-family: $font-stack;
@@ -6,13 +7,18 @@ body {
   font-size: 14px;
   font-size: 1rem;
   line-height: 1.5;
-  margin: 0;
+  margin: auto; //was 0
   padding-top: 100px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
+}
+
+.row {
+width:960px;
+margin:auto;
 }
 
 *,
@@ -47,6 +53,15 @@ hr {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+}
 
-  /*-o-box-sizing: border-box */
+
+///tutorial stuff
+.showcasing_grid{
+  background-color: $foundation-color-e8e8;
+  padding: 5px;
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid $foundation-color-c7c7;
+  margin: .5rem 0;
 }

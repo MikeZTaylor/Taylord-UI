@@ -26,10 +26,10 @@ $url_image_placeholder: url(../images/logo_placeholder.png);
 $url_menu_icon: url(../images/menu-icon.png);
 
 // Modules and Variables
-@import "partials/base";
-@import "partials/body";
-//@import "partials/grid";
 @import "partials/mixins";
+@import "partials/base";
+@import "partials/grid";
+@import "partials/body";
 //@import "partials/helpers";
 
 // Partials
