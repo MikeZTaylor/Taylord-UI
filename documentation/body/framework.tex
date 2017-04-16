@@ -4,24 +4,6 @@
 \addcontentsline{toc}{section}{Framework}
 The following section will detail the components that make up the Taylor'd UI framework. Each of the following components are what makes up the framework, and aid in the development of a website. All the components of the framework have been built in separate partial files, denoted by an underscore. The underscore also tells codekit, the compiler been used to not compile the files into their own \gls{CSS} file. A separate file called taylord.scss was created, in this file the @include statement was used to pull all the separate partial files into one file and that file is then compiled to \gls{CSS}. 
 
-\subsection*{SASS}
-\addcontentsline{toc}{subsection}{SASS}
-
-Originally, the development of the framework started with the \gls{SASS} language. \gls{SASS} is a \gls{CSS} preprocessor that has syntax advancements, the syntax uses indentation to format the code, and does not use semi-colons to indicate a new line. Stylesheets created in \gls{SASS} have to be compiled into regular \gls{CSS} stylesheets to be used. However, they do not extend the \gls{CSS} standard itself. 
-
-However as development continued, mixins were found to be an issue when written in \gls{SASS}, \gls{SCSS} mixins could not be used with \gls{SASS} code. It was decided that the use of mixins were more important in the development of the \gls{CSS} than not. All the partials that were written in \gls{SASS} at this stage was converted into \gls{SCSS}. As this happened in the first few weeks of the development process, the process didn't take long. 
-
-\gls{SCSS} is an extension of the \gls{CSS} syntax. This means that a correctly written \gls{CSS} file is also valid \gls{SCSS}. \gls{SCSS} uses semi-colons and brackets to break up the code of an element. 
-
-%
-\newglossaryentry{SASS}
-{
-  name={SASS},
-  description={Syntactically Awesome Stylesheets},
-  sort=SASS
-}
-%
-
 \subsection*{Variables}
 \addcontentsline{toc}{subsection}{Variables}
 At the start of framework development, a file called \_foundation.scss was created, in this file all the variables for the framework are defined. In this file, the foundation colour variable is set and using the \gls{HSL} function called lighten, a range of colours are created to be used in the framework. Other colour variables were added and then used to set the background colour, alert colours, and link colours.
@@ -49,9 +31,12 @@ At the start of framework development, a file called \_foundation.scss was creat
   	color: $foundation-color-2121;
 \end{lstlisting}
 
+\newpage
 \subsection*{Font and Typography}
 \addcontentsline{toc}{subsection}{Font and Typography}
-In keeping with the framework being non opinionated, it was crucial to pick a font, and to have the typography nondescript so that the end user can change it to suit their needs. A range of fonts were looked at, the readability of the font in regards to large sections to single lines of text was looked at. Viewing the font on a range of devices ranging from mobile to desktop was looked at ensuring it was legible across these devices. The last aspect that was looked at was the range of the font, did it allow for non latin characters, accents and symbols\cite{WORD16}.
+In keeping with the framework being non opinionated, it was crucial to pick a font, and to have the typography nondescript so that the end user can change it to suit their needs. A range of fonts were looked at, the readability of the font in regards to large sections to single lines of text was looked at. 
+
+Viewing the font on a range of devices ranging from mobile to desktop was looked at ensuring it was legible across these devices. The last aspect that was looked at was the range of the font, did it allow for non latin characters, accents and symbols\cite{WORD16}.
 
 \newglossaryentry{px}
 {
@@ -75,27 +60,25 @@ In keeping with the framework being non opinionated, it was crucial to pick a fo
   sort=rem
 }
 
-\newpage
 The font that passed these tests, and was visually appealing was Open Sans. The next step was to determine the font sizing and how to calculate it. When decided on the best way to execute the font sizing, two methods were looked at, \gls{em} and \gls{rem}.\gls{px} was not looked at as early versions of Internet Explorer are not able to change the font size using browser functionality, a major usability issue. The \gls{em} technique alters the base font size on the body element by using a percentage \cite{GUN16}.
 
 This adapts the font so that 1em is equal to 10px, instead of the default 16px. To change the font size to the equivalent of 14px, the \gls{em} needs to be 1.4em. The downside of using em to calculate the font sizing is that the font size compounds. This means that a list within a list isn't 14px but rather 20px. There is a work around where any child elements are declared to use 1em, but an entry level user would not know this. 
 
 With the advent of \gls{CSS} 3, \gls{rem} was added, as previously mentioned, \gls{em} sizing was relative to the font size of the parent whereas \gls{rem} is relative to the root or html element. This means that a single font size can be defined for the html element, and all \gls{rem} units will be a percentage of that base unit. Safari 5, Chrome, Firefox 3.6+, and even Internet Explorer 9 have support for \gls{rem} units. Opera up to version 11.10, and early versions of Internet Explorer have yet to implement \gls{rem} units. In order to display font on these browsers, a fallback \gls{px} size is calculated using a mixin. 
 
-\newpage
 \subsection*{Colour Scheme}
 \addcontentsline{toc}{subsection}{Colour Scheme}
 When creating the colour scheme, it was important to keep design opinions to a minimum, to use colours that would get the frameworks point across. It was also key to use colours that the end user would recognise that they were for instructional purposes, and for them to change in their web development projects. The colour needed to look good when modified as well, this means if the hue, tone and vibrancy of the colour is modified, the resulting colour needed to look well. 
 
 Instead of researching colour theory and choosing the best colours, it was decided to use Google's Material Design \citet{Google17} colour palette, and choose from their wide range of colours. The palette  gave a variety of colours along with modifications of the colour such as different hues and saturations. The colours selected to use in the framework were kept to primary colours to keep it as non opinionated as possible.
 
+\newpage
 \subsection*{Tables}
 \addcontentsline{toc}{subsection}{Tables}
 Tables in HTML should only be used for rendering data that naturally belongs in a grid based system. This is data where the data characterised is similar across a number of objects. Tables should not be used for the layout of content in a website, divs should be used for this. The key to designing the tables was to demonstrate to the end user that the tables were for data, and not for layout.
 
 Five table variations were created for the framework, ranging from default table to striped tables, and included is table modifiers. Table modifiers take the colours that are used to dictate success or warning, and add them to a row in the table. The tables were also designed to be responsive, to achieve this the padding of table is calculated by dividing the \$baseline height by a set value. 
 
-\newpage
 \begin{lstlisting}[language=CSS3]
     .table.table-condensed > thead > tr > th,
     .table.table-condensed > tbody > tr > td {
@@ -115,7 +98,6 @@ Five button types were designed at the start of the project. The default button,
 
 Based off the default button type, six styles were created. Each of these button styles has a visual waiting to it such as the warning button. This button can tell the user to proceed with caution, it can also be used as a delete button. To create these buttons a mixin was used that takes the colour stored in the variable for each of these classes. The mixin also adds in the active and hover states, and calculates the colours to be used. 
 
-\newpage
 \begin{lstlisting}[language=CSS3]
 .button-default {
   @include button-version($button-default-color,
@@ -129,6 +111,22 @@ Based off the default button type, six styles were created. Each of these button
 }
 \end{lstlisting}
 
+\subsection*{Panels}
+\addcontentsline{toc}{subsection}{Panels}
+A panel is a component that allows you to outline a section of a web page. This enables you to view sections on your page as you add content to them, allowing you to place emphasis where you need it or removing all content from a section. 
+
+\begin{lstlisting}[language=CSS3]
+.panel-default {
+  border-color: $default-border-bottom-color;
+
+  .panel-title {
+    @include panel-title($default-color-background, 
+    $default-panel-text, $default-border-bottom-color);
+  }
+}
+\end{lstlisting}
+
+\newpage
 \subsection*{Button Groups and Pagination}
 \addcontentsline{toc}{subsection}{Button Groups and Pagination}
 A button group is a series of buttons grouped together on a single line, this can be achieved by removing the margin attribute in CSS. Pagination is a series of numbers grouped together on a single line, this can be useful for when you have multiple pages in your website. As these two components can be used interchangeably, it was decided to include them together in the same partial.
@@ -140,6 +138,20 @@ To get these components working correctly, the $>$ symbol was used, this allowed
   border: 1px solid $foundation-color-e8e8;
 }
 \end{lstlisting}
+
+\subsection*{Labels}
+\addcontentsline{toc}{subsection}{Labels}
+Button labels should be kept as simple as possible. Long labels take longer to read, and can also take up large sections of valuable real estate on mobile web pages. 
+
+The button element illustrates a clickable button. The button element can be quite adaptable, elements such as images, text, headers, and even paragraphs can be in the button. The button element can also contain pseudo-elements such as ::before, and ::after. 
+
+There is a clear difference between the label element, and a button created with an input element. An input element serves a data field, this is user data that you intend to dispatch to a server. There are several types of input related to a button.
+
+\begin{lstlisting}[language=CSS3]
+ <input type="submit">, <input type="image">, <input type="file">, 
+ <$input type="reset">, <input type="button">. 
+\end{lstlisting}
+
 
 \newpage
 \subsection*{Navigation}
@@ -162,6 +174,17 @@ header {
 			display: none;
 			position: absolute;
 			padding: 10px;
+\end{lstlisting}
+
+\subsection*{States}
+\addcontentsline{toc}{subsection}{States}
+A state is an object that augments, and alters all other styles. For example, A message can be in a success or error state. States are commonly applied to the same element as a layout rule or applied to the same element as a base module class. In the frameworks, the states are used to indicate success in both alerts, and in a form. 
+
+\begin{lstlisting}[language=CSS3]
+.alert-success {
+  color: darken($success-color, 15%);
+  border-color: $success-color;
+  background-color: lighten($success-color, 40%);
 \end{lstlisting}
 
 \newpage
@@ -238,48 +261,6 @@ Five different alert types were created, each with their own significance. All t
 \end{lstlisting}
 
 \newpage
-\subsection*{Labels}
-\addcontentsline{toc}{subsection}{Labels}
-Button labels should be kept as simple as possible. Long labels take longer to read, and can also take up large sections of valuable real estate on mobile web pages. 
-
-The button element illustrates a clickable button. The button element can be quite adaptable, elements such as images, text, headers, and even paragraphs can be in the button. The button element can also contain pseudo-elements such as ::before, and ::after. 
-
-There is a clear difference between the label element, and a button created with an input element. An input element serves a data field, this is user data that you intend to dispatch to a server. There are several types of input related to a button.
-
-\begin{lstlisting}[language=CSS3]
- <input type="submit">, <input type="image">, <input type="file">, 
- <$input type="reset">, <input type="button">. 
-\end{lstlisting}
-
-\newpage
-\subsection*{States}
-\addcontentsline{toc}{subsection}{States}
-A state is an object that augments, and alters all other styles. For example, A message can be in a success or error state. States are commonly applied to the same element as a layout rule or applied to the same element as a base module class. In the frameworks, the states are used to indicate success in both alerts, and in a form. 
-
-\begin{lstlisting}[language=CSS3]
-.alert-success {
-  color: darken($success-color, 15%);
-  border-color: $success-color;
-  background-color: lighten($success-color, 40%);
-}
-\end{lstlisting}
-
-\subsection*{Panels}
-\addcontentsline{toc}{subsection}{Panels}
-A panel is a component that allows you to outline a section of a web page. This enables you to view sections on your page as you add content to them, allowing you to place emphasis where you need it or removing all content from a section. 
-
-\begin{lstlisting}[language=CSS3]
-.panel-default {
-  border-color: $default-border-bottom-color;
-
-  .panel-title {
-    @include panel-title($default-color-background, 
-    $default-panel-text, $default-border-bottom-color);
-  }
-}
-\end{lstlisting}
-
-\newpage
 \section*{Development Issues}
 \addcontentsline{toc}{section}{Development Issues}
 
@@ -307,7 +288,7 @@ To figure out the cause of the issue, tools such as the Chrome Development tools
 
 It seemed that the button issue was caused by the style to be overwritten by a different partial. To get the buttons to have their different states, the active, hover, and focus elements had to be hard coded into the button. In doing this, it didn't matter what other styles might override the values as the elements were hard coded.
 
-A minor issue was trying to keep the code DRY both the SASS. and the compiled CSS was viewed to see if there was repeating code. When there was repeating code, mixins were used where possible. Although there was sections of repeating code that converting to mixins was not possible. 
+A minor issue was trying to keep the code DRY both the SASS. and the compiled CSS was viewed to see if there was repeating code. When there was repeating code, \gls{mixins} were used where possible. Although there was sections of repeating code that converting to \gls{mixins} was not possible. 
 
 Originally, the partials were going to be developed using web components \citet{Web17}, and Polymer \citet{Google17b}. The research had been done on these technologies, and how to use them. The development had started on the partials using these technologies but as the first partials were created, another student had viewing the work and asked "Is this not too complicated for your user?", and they were correct. The framework has been designed for the entry level user to understand, and use. Using the latest in web standards is likely to confuse them more. 
 
@@ -342,9 +323,11 @@ dom-module id="example-app">
 </dom-module>
 
 //index.html
-<link rel="import" href="../iron-component-page/iron-component-page.html">
+<link rel="import" href="../iron-component-page/
+iron-component-page.html">
 <body>
-   <iron-component-page src="example-app.html"></iron-component-page>
+   <iron-component-page src="example-app.html">
+   </iron-component-page>
 </body>
 \end{lstlisting}
 
@@ -421,7 +404,29 @@ To solve this issue, the query had to be writing using different syntax. The var
 \section*{Technologies}
 \addcontentsline{toc}{section}{Technologies}
 
-Codekit
-SASS
-Ruby On Rails
-HTML
+To compile the \gls{SCSS}, Codekit \citep{CODEKIT17} was used. Although \gls{SCSS} can be compiled from the command line or using a tool such as Grunt, using an application such as Codekit had extra features that would all have to be separate commands or even applications that made development easier. 
+
+Codekit is an application that helps a developer build websites faster by automating tasks that a developer needs. CodeKit compiles languages such as SASS, Less, Stylus, and CoffeeScript. Codekit auto refreshes the browsers you are testing the website in, they offer built in hosting, that can be accessed by phones, tablets and other PC's. Codekit automatically minifies, and automatically checks the syntax ensuring it is correct, as well as optimising images. By automating these features, it can speed up the developers workflow. 
+
+Originally, the development of the framework started with the \gls{SASS} language. \gls{SASS} is a \gls{CSS} preprocessor that has syntax advancements, the syntax uses indentation to format the code, and does not use semi-colons to indicate a new line. Stylesheets created in \gls{SASS} have to be compiled into regular \gls{CSS} stylesheets to be used. However, they do not extend the \gls{CSS} standard itself. 
+
+However as development continued, mixins were found to be an issue when written in \gls{SASS}, \gls{SCSS} mixins could not be used with \gls{SASS} code. It was decided that the use of mixins were more important in the development of the \gls{CSS} than not. All the partials that were written in \gls{SASS} at this stage was converted into \gls{SCSS}. As this happened in the first few weeks of the development process, the process didn't take long. 
+
+\gls{SCSS} is an extension of the \gls{CSS} syntax. This means that a correctly written \gls{CSS} file is also valid \gls{SCSS}. \gls{SCSS} uses semi-colons and braces to break up the code of an element. Variables in \gls{SCSS} are declared with \$, and the assignment sign is :. 
+
+%
+\newglossaryentry{SASS}
+{
+  name={SASS},
+  description={Syntactically Awesome Stylesheets},
+  sort=SASS
+}
+%
+
+Rails is a development tool that gives developers a structure for all the code they write, a framework. The Rails framework helps developers to build websites and applications, because it abstracts, and simplifies common repetitive tasks. Rails was chosen as the language to develop the partials as the rails conventions allows for developers to move to different projects seamlessly as each project will follow the same structure, and coding practices. This will be of benefit to the entry level users. 
+
+Ruby code is very readable, this will benefit the entry level user when they are reading the boilerplate files, gaining an understanding of how the boilerplate, and framework work. 
+
+HTML is a markup language used in structuring, and presenting content on the Word Wide Web. HTML along with Ruby on Rails is been used to develop the boilerplates to that the end user can edit to suit their needs. 
+
+LaTeX is a document preparation system for high-quality typesetting. The user uses markup tagging conventions to define the general structure of a document. LaTeX is been used in this project to develop the documentation that defines, and describes the project.
