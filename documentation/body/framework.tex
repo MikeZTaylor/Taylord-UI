@@ -2,21 +2,43 @@
 \addcontentsline{toc}{chapter}{Development}
 \section*{Framework}
 \addcontentsline{toc}{section}{Framework}
-The following section will detail the components that make up the Taylor'd UI framework. Each of the following components are what makes up the framework, and aid in the development of a website. All the components of the framework have been built in separate partial files, denoted by an underscore. The underscore also tells codekit, the compiler been used to not compile the files into their own css file. A separate file called taylord.scss was created, in this file the @include statement was used to pull all the separate partial files into one file and that file is then compiled to CSS. 
+The following section will detail the components that make up the Taylor'd UI framework. Each of the following components are what makes up the framework, and aid in the development of a website. All the components of the framework have been built in separate partial files, denoted by an underscore. The underscore also tells codekit, the compiler been used to not compile the files into their own \gls{CSS} file. A separate file called taylord.scss was created, in this file the @include statement was used to pull all the separate partial files into one file and that file is then compiled to \gls{CSS}. 
 
 \subsection*{SASS}
 \addcontentsline{toc}{subsection}{SASS}
 
-Originally, the development of the framework started with the SASS language. SASS is a CSS preprocessor that has syntax advancements, the syntax uses indentation to format the code, and does not use semi-colons to indicate a new line. Stylesheets created in SASS have to be compiled into regular CSS stylesheets to be used. However, they do not extend the CSS standard itself. 
+Originally, the development of the framework started with the \gls{SASS} language. \gls{SASS} is a \gls{CSS} preprocessor that has syntax advancements, the syntax uses indentation to format the code, and does not use semi-colons to indicate a new line. Stylesheets created in \gls{SASS} have to be compiled into regular \gls{CSS} stylesheets to be used. However, they do not extend the \gls{CSS} standard itself. 
 
-However as development continued, mixins were found to be an issue when written in SASS, SCSS mixins could not be used with SASS code. It was decided that the use of mixins were more important in the development of the CSS than not. All the partials that were written in SASS at this stage was converted into SCSS. As this happened in the first few weeks of the development process, the process didn't take long. 
+However as development continued, mixins were found to be an issue when written in \gls{SASS}, \gls{SCSS} mixins could not be used with \gls{SASS} code. It was decided that the use of mixins were more important in the development of the \gls{CSS} than not. All the partials that were written in \gls{SASS} at this stage was converted into \gls{SCSS}. As this happened in the first few weeks of the development process, the process didn't take long. 
 
-SCSS (Sassy CSS) is an extension of the CSS syntax. This means that a correctly written CSS file is also valid SCSS. SCSS uses semi-colons and brackets to break up the code of an element. 
+\gls{SCSS} is an extension of the \gls{CSS} syntax. This means that a correctly written \gls{CSS} file is also valid \gls{SCSS}. \gls{SCSS} uses semi-colons and brackets to break up the code of an element. 
 
-\newpage
+%
+\newglossaryentry{SASS}
+{
+  name={SASS},
+  description={Syntactically Awesome Stylesheets},
+  sort=SASS
+}
+%
+
 \subsection*{Variables}
 \addcontentsline{toc}{subsection}{Variables}
-At the start of framework development, a file called \_foundation.scss was created, in this file all the variables for the framework are defined. In this file, the foundation colour variable is set and using the HSL function called lighten, a range of colours are created to be used in the framework. Other colour variables were added and then used to set the background colour, alert colours, and link colours.
+At the start of framework development, a file called \_foundation.scss was created, in this file all the variables for the framework are defined. In this file, the foundation colour variable is set and using the \gls{HSL} function called lighten, a range of colours are created to be used in the framework. Other colour variables were added and then used to set the background colour, alert colours, and link colours.
+
+\newglossaryentry{SCSS}
+{
+  name={SCSS},
+  description={Sassy Cascading Stylesheets},
+  sort=SCSS
+}
+
+\newglossaryentry{HSL}
+{
+  name={HSL},
+  description={Hue, Saturate, Lighten},
+  sort=HSL
+}
 
 \begin{lstlisting}[language=CSS3]
 	$foundation-color: #000;
@@ -29,14 +51,38 @@ At the start of framework development, a file called \_foundation.scss was creat
 
 \subsection*{Font and Typography}
 \addcontentsline{toc}{subsection}{Font and Typography}
-In keeping with the framework being non opinionated, it was crucial to pick a font, and to have the typography nondescript so that the end user can change it to suit their needs. A range of fonts were looked at, the readability of the font in regards to large sections to single lines of text was looked at. Next, viewing the font on a range of devices ranging from mobile to desktop was looked at ensuing it was legible across these devices. The last aspect that was looked at was the range of the font, did it allow for non latin characters, accents and symbols\cite{WORD16}.
+In keeping with the framework being non opinionated, it was crucial to pick a font, and to have the typography nondescript so that the end user can change it to suit their needs. A range of fonts were looked at, the readability of the font in regards to large sections to single lines of text was looked at. Viewing the font on a range of devices ranging from mobile to desktop was looked at ensuring it was legible across these devices. The last aspect that was looked at was the range of the font, did it allow for non latin characters, accents and symbols\cite{WORD16}.
 
-The font that passed these tests, and was a joy to look at was Open Sans. The next step was to determine the font sizing and how to calculate it. When decided on the best way to execute the font sizing, two methods were looked at, em and rem. Pixels was not looked at as early versions of Internet Explorer are not able to change the font size using browser functionality, a major usability issue. The em technique alters the base font size on the body element by using a percentage \cite{GUN16}.
+\newglossaryentry{px}
+{
+  name={px},
+  description={pixel},
+  sort=px
+}
+%
 
-This adapts the font so that 1em is equal to 10 pixels, instead of the default 16 pixels. To change the font size to the equivalent of 14 pixels, the em needs to be 1.4em. The downside of using em to calculate the font sizing is that the font size compounds. This means that a list within a list isn't 14 pixels but rather 20 pixels. There is a work around where any child elements are declared to use 1em, but an entry level user would not know this. 
+\newglossaryentry{em}
+{
+  name={em},
+  description={element},
+  sort=em
+}
 
-With the advent of CSS3, rem which means root element was added, as previously mentioned, em sizing was relative to the font size of the parent whereas rem is relative to the root or html element. This means that a single font size can be defined for the html element, and all rem units will be a percentage of that base unit. Safari 5, Chrome, Firefox 3.6+, and even Internet Explorer 9 have support for rem units. Opera up to version 11.10, and early versions of Internet Explorer have yet to implement rem units. In order to display font on these browsers, a fallback pixel size is calculated using a mixin. 
+\newglossaryentry{rem}
+{
+  name={rem},
+  description={Root element},
+  sort=rem
+}
 
+\newpage
+The font that passed these tests, and was visually appealing was Open Sans. The next step was to determine the font sizing and how to calculate it. When decided on the best way to execute the font sizing, two methods were looked at, \gls{em} and \gls{rem}.\gls{px} was not looked at as early versions of Internet Explorer are not able to change the font size using browser functionality, a major usability issue. The \gls{em} technique alters the base font size on the body element by using a percentage \cite{GUN16}.
+
+This adapts the font so that 1em is equal to 10px, instead of the default 16px. To change the font size to the equivalent of 14px, the \gls{em} needs to be 1.4em. The downside of using em to calculate the font sizing is that the font size compounds. This means that a list within a list isn't 14px but rather 20px. There is a work around where any child elements are declared to use 1em, but an entry level user would not know this. 
+
+With the advent of \gls{CSS} 3, \gls{rem} was added, as previously mentioned, \gls{em} sizing was relative to the font size of the parent whereas \gls{rem} is relative to the root or html element. This means that a single font size can be defined for the html element, and all \gls{rem} units will be a percentage of that base unit. Safari 5, Chrome, Firefox 3.6+, and even Internet Explorer 9 have support for \gls{rem} units. Opera up to version 11.10, and early versions of Internet Explorer have yet to implement \gls{rem} units. In order to display font on these browsers, a fallback \gls{px} size is calculated using a mixin. 
+
+\newpage
 \subsection*{Colour Scheme}
 \addcontentsline{toc}{subsection}{Colour Scheme}
 When creating the colour scheme, it was important to keep design opinions to a minimum, to use colours that would get the frameworks point across. It was also key to use colours that the end user would recognise that they were for instructional purposes, and for them to change in their web development projects. The colour needed to look good when modified as well, this means if the hue, tone and vibrancy of the colour is modified, the resulting colour needed to look well. 
@@ -49,6 +95,7 @@ Tables in HTML should only be used for rendering data that naturally belongs in 
 
 Five table variations were created for the framework, ranging from default table to striped tables, and included is table modifiers. Table modifiers take the colours that are used to dictate success or warning, and add them to a row in the table. The tables were also designed to be responsive, to achieve this the padding of table is calculated by dividing the \$baseline height by a set value. 
 
+\newpage
 \begin{lstlisting}[language=CSS3]
     .table.table-condensed > thead > tr > th,
     .table.table-condensed > tbody > tr > td {
@@ -68,9 +115,11 @@ Five button types were designed at the start of the project. The default button,
 
 Based off the default button type, six styles were created. Each of these button styles has a visual waiting to it such as the warning button. This button can tell the user to proceed with caution, it can also be used as a delete button. To create these buttons a mixin was used that takes the colour stored in the variable for each of these classes. The mixin also adds in the active and hover states, and calculates the colours to be used. 
 
+\newpage
 \begin{lstlisting}[language=CSS3]
 .button-default {
-  @include button-version($button-default-color, $button-default-background);
+  @include button-version($button-default-color,
+   $button-default-background);
   color: $foundation-color-a6a6;
   text-decoration: none;
   border: $foundation-color-e8e8;
@@ -80,7 +129,6 @@ Based off the default button type, six styles were created. Each of these button
 }
 \end{lstlisting}
 
-\newpage
 \subsection*{Button Groups and Pagination}
 \addcontentsline{toc}{subsection}{Button Groups and Pagination}
 A button group is a series of buttons grouped together on a single line, this can be achieved by removing the margin attribute in CSS. Pagination is a series of numbers grouped together on a single line, this can be useful for when you have multiple pages in your website. As these two components can be used interchangeably, it was decided to include them together in the same partial.
@@ -93,6 +141,7 @@ To get these components working correctly, the $>$ symbol was used, this allowed
 }
 \end{lstlisting}
 
+\newpage
 \subsection*{Navigation}
 \addcontentsline{toc}{subsection}{Navigation}
 The navigation component of the framework is a simple responsive navigation menu  comprised of a non list style that becomes a drop down menu when the screen size is less than 640px.
@@ -114,41 +163,28 @@ header {
 			position: absolute;
 			padding: 10px;
 \end{lstlisting}
+
+\newpage
 \subsection*{Grid}
 \addcontentsline{toc}{subsection}{Grid}
 
-The grid is based on a 960 pixel grid or 60 rem in this case. The size is 60 rem as it is based on the default font size of 1 rem or 16 pixels. Using that as the base of the calculation, a font size of 960 pixels would be a rem value of 60. The reasons of why the grid is 960 pixels is that modern laptops, and or desktops no longer have a resolution below this. The 960 grid is evenly divisible in numerous ways: 
-
-\begin{itemize}
-	\item 2 x 480
-	\item 3 x 320
-	\item 4 x 240
-	\item 5 x 192
-	\item 6 x 160
-	\item 8 x 120
-	\item 10 x 96
-	\item 12 x 80
-	\item 15 x 64
-	\item 16 x 60
-	\item 20 x 48
-	\item 24 x 40
-	\item 30 x 32
-\end{itemize}
+The grid is based on a 960 pixel grid or 60 rem in this case. The size is 60 rem as it is based on the default font size of 1 rem or 16 pixels. Using that as the base of the calculation, a font size of 960 pixels would be a rem value of 60. The reasons of why the grid is 960 pixels is that modern laptops, and or desktops no longer have a resolution below this. The 960 grid is evenly divisible in numerous ways as in in \ref{column}. 
 
 This allows for a grid system that is adaptable to the a screen layout of any screen size. In using this type of grid system, a 12 column layout will also be used. The 12 column layout lends itself to the 960 grid as its also equally divisible, allowing for an odd number of columns all with even numbers as seen in figure \ref{fig:grid} whereas using a 16 grid column layout, the same result is not easily achieved. 
 
 The framework has three breakpoints; desktop, tablet, and mobile. Based on the viewpoint, the columns expand or collapse in size. 
 
 \begin{lstlisting}[language=CSS3]
-$breakpoint-desktop: "screen and (min-width: 48rem) and (max-width: 60rem)";
-$breakpoint-tablet: "screen and (min-width: 30rem) and (max-width: 47.9375rem)";
+$breakpoint-desktop: "screen and (min-width: 48rem) 
+and (max-width: 60rem)";
+$breakpoint-tablet: "screen and (min-width: 30rem) 
+and (max-width: 47.9375rem)";
 $breakpoint-mobile: "screen and (max-width: 29.9375rem)";
 \end{lstlisting}
 
-
-\newpage
 The media queries were developed using the rem mixin that was also used for font sizing, this allowed for the rem value and pixel value to be stored. For the columns, a media query for each target was included. Desktop, and tablet views have a rem, and pixel value. For mobile, percentages are used to better scale the content.
 
+\newpage
 \begin{lstlisting}[language=CSS3]
 .col12 {
 	@include rem(width, 960);
@@ -169,6 +205,7 @@ Even though the framework is designed for 12 grids, when the media queries were 
 
 The framework has been designed to be a starting point, for better control the user needs to add media queries for each column. The framework is intended as a teaching tool for the user, adding in the queries for them, would not be beneficial. 
 
+\newpage
 \subsection*{Alerts}
 \addcontentsline{toc}{subsection}{Alerts}
 Alert notifications can be used to alert the user that something is about to happen or has happened, this can be that their username or password is incorrect, their login was successful, something went wrong while trying to load content, et al.
@@ -187,9 +224,9 @@ Five different alert types were created, each with their own significance. All t
 
 \subsection*{Mixins}
 \addcontentsline{toc}{subsection}{Mixins}
-Mixins are one of the most powerful features of Sass. Mixins allow for efficient and clean code repetitions as well as an easy way to adjust your code with ease. Mixins are the Sass equivalent of macros in other programming languages.
+\gls{mixins} are one of the most powerful features of \gls{SASS}. \gls{mixins} allow for efficient and clean code repetitions as well as an easy way to adjust your code with ease. \gls{mixins} are the \gls{SASS} equivalent of macros in other programming languages.
 
-Mixins are used throughout the development of this framework in an effort to keep the code DRY. As seen in the example below, instead of having to write the border radius property for each browser, a mixin was written to do this for us. In the code, the mixin is called using the include statement @include border-radius. In the compiled CSS, the border radius property for each browser is added in automatically, 
+\gls{mixins} are used throughout the development of this framework in an effort to keep the code DRY. As seen in the example below, instead of having to write the border radius property for each browser, a mixin was written to do this for us. In the code, the mixin is called using the include statement @include border-radius. In the compiled CSS, the border radius property for each browser is added in automatically, 
 
 \begin{lstlisting}[language=CSS3]
 @mixin border-radius($radius) {
@@ -200,6 +237,7 @@ Mixins are used throughout the development of this framework in an effort to kee
 }
 \end{lstlisting}
 
+\newpage
 \subsection*{Labels}
 \addcontentsline{toc}{subsection}{Labels}
 Button labels should be kept as simple as possible. Long labels take longer to read, and can also take up large sections of valuable real estate on mobile web pages. 
@@ -235,8 +273,8 @@ A panel is a component that allows you to outline a section of a web page. This 
   border-color: $default-border-bottom-color;
 
   .panel-title {
-    @include panel-title($default-color-background, $default-panel-text, 
-    $default-border-bottom-color);
+    @include panel-title($default-color-background, 
+    $default-panel-text, $default-border-bottom-color);
   }
 }
 \end{lstlisting}
@@ -245,21 +283,85 @@ A panel is a component that allows you to outline a section of a web page. This 
 \section*{Development Issues}
 \addcontentsline{toc}{section}{Development Issues}
 
-No mixins were written in SASS, didn't know enough to write my own. Now i can. 
+\newglossaryentry{DRY}
+{
+  name={DRY},
+  description={Don't Repeat Yourself},
+  sort=DRY
+}
 
-Buttons, the normal button isn't clickable. 
+Originally the framework was to be developed using \gls{SASS}, but as the development went on, and wanting to keep the code as \gls{DRY} as possible, \gls{mixins} were needed. Here within lies the issue, not enough \gls{SASS} was known at the start of the project to write \gls{SASS} \gls{mixins} or knowing how to convert \gls{SCSS} to \gls{SASS}. The development then continued until several partials were created but the use of \gls{mixins} were needed to continue the development using the correct methods. 
 
-Keeping it Dry
+It was at this stage when development was stopped, enough \gls{SASS} was known to be able to convert the \gls{SASS} into \gls{SCSS}. After a day of conversion, ensuring that the \gls{SCSS} worked exactly like the \gls{SASS}, was development able to continue. 
 
-Creating the partials. polymer was difficult to learn, not using it as it would be to complicated for the user. 
+\newglossaryentry{mixins}
+{
+  name={mixins},
+  description={a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes.},
+  sort=mixins
+}
+
+Another development issue was the buttons, the normal button was not clickable but the large, small, and pill button were. This was an issue that plagued the developer throughout the development. The code for buttons were rewritten a few times to see where the issue was, and no matter what was written, the button was not clickable, this issue then effected the default button, along with the classes that used the default button as a base such as the primary button. 
+
+To figure out the cause of the issue, tools such as the Chrome Development tools were used. Using the inspect element feature, the button toggle state was used to force the element state as seen in \ref{fig:tools}. This allowed for each of the buttons states to be forced to run, while viewing the corresponding code to see where the error was. 
+
+It seemed that the button issue was caused by the style to be overwritten by a different partial. To get the buttons to have their different states, the active, hover, and focus elements had to be hard coded into the button. In doing this, it didn't matter what other styles might override the values as the elements were hard coded.
+
+A minor issue was trying to keep the code DRY both the SASS. and the compiled CSS was viewed to see if there was repeating code. When there was repeating code, mixins were used where possible. Although there was sections of repeating code that converting to mixins was not possible. 
+
+Originally, the partials were going to be developed using web components \citet{Web17}, and Polymer \citet{Google17b}. The research had been done on these technologies, and how to use them. The development had started on the partials using these technologies but as the first partials were created, another student had viewing the work and asked "Is this not too complicated for your user?", and they were correct. The framework has been designed for the entry level user to understand, and use. Using the latest in web standards is likely to confuse them more. 
+
+The below code snippet shows how a partial would work in using polymer. A template is made in a separate file and then called into the index file. The template is broken into different sections, the template section, and then the polymer section. Polymer is used to ensure that the template file is displayed in all browsers as the template tag is bot support by all browsers currently. 
+
+\begin{lstlisting}[language=HTML]
+\\example-app.html
+dom-module id="example-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello there[[prop1]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'example-app',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'example-app',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
+
+//index.html
+<link rel="import" href="../iron-component-page/iron-component-page.html">
+<body>
+   <iron-component-page src="example-app.html"></iron-component-page>
+</body>
+\end{lstlisting}
+
+Instead the Ruby language is been used to develop the partials. Although the end user is likely to not know Ruby, the syntax is more user friendly. With using Ruby, the code is not overtaking the HTML as was the case with Polymer. The code snippets will always in the same places, this allows the end user to copy and paste the snippets in their websites without them having to know Ruby. Below is a code snippet of how a partial is rendering in a different file. 
+
+\begin{lstlisting}[language=Ruby]
+render template: "example/partial.html.erb"
+\end{lstlisting}
+
 
 themes were difficult to think off. 
 
-Deciding what elements to include was difficult. 
+One the the biggest obstacles in the development of this framework was deciding on what components were critical to the framework. Then what elements would the end user want. And finally, what elements does the developer think will be useful for the end user, elements that they need to understand without overcomplicating the framework, and or doing the work of the end user for them.
 
 On of the biggest issues in the development of the framework was creating the grid layout, and media queries. The first major issue was the syntax. The breakpoints had been declared in a different partial, this lead to errors in the compiler. The compiler was looking for specific keywords after @media, which it wasn't able to interpret.
 
-To solve this issue, the query had to be writing using different syntax. The variables for the breakpoints had to be treated as an ID. The compiler also would not accept brackets to frame the argument, curly braces had to be used instead. To reach this conclusion, a lot of trial and error was done. This involved making small changes to the @media argument, viewing  the error, viewing SASS blogs to read what the error was in full, repeating this pattern until the code compiled with no errors. 
+To solve this issue, the query had to be writing using different syntax. The variables for the breakpoints had to be treated as an ID. The compiler also would not accept brackets to frame the argument, curly braces had to be used instead. To reach this conclusion, a lot of trial and error was done. This involved making small changes to the @media argument, viewing  the error, viewing \gls{SASS} blogs to read what the error was in full, repeating this pattern until the code compiled with no errors. 
 \begin{lstlisting}[language=CSS3]
 //original 
 @media ($breakpoint-mobile)
@@ -267,8 +369,6 @@ To solve this issue, the query had to be writing using different syntax. The var
 //new method
 @media #{$breakpoint-mobile} 
 \end{lstlisting}
-
-
 
 \newpage
 \section*{Project Plan}
@@ -293,7 +393,7 @@ To solve this issue, the query had to be writing using different syntax. The var
 	\subsection*{Engineering Release Two (March):}
 	\addcontentsline{toc}{subsection}{Engineering Release Two (March)}
 	\item Iteration Four: (20th of February - 6th of March)\begin{itemize} 
-	\item Rewrote all the SASS files to SCSS
+	\item Rewrote all the \gls{SASS} files to \gls{SCSS}
 	\item Developed button mixins that would calculate all the button sizes
 	\item Created Alerts partial
 	\item Created States partial
@@ -316,3 +416,12 @@ To solve this issue, the query had to be writing using different syntax. The var
 	\item Finalised all the sections of the report, reworded sections, ready for submission.
 	\end{itemize}	
 \end{itemize}
+
+\newpage
+\section*{Technologies}
+\addcontentsline{toc}{section}{Technologies}
+
+Codekit
+SASS
+Ruby On Rails
+HTML
