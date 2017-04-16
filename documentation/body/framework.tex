@@ -260,6 +260,43 @@ Five different alert types were created, each with their own significance. All t
 }
 \end{lstlisting}
 
+
+\newpage
+\section*{Technologies}
+\addcontentsline{toc}{section}{Technologies}
+
+To compile the \gls{SCSS}, Codekit \citep{CODEKIT17} was used. Although \gls{SCSS} can be compiled from the command line or using a tool such as Grunt, using an application such as Codekit had extra features that would all have to be separate commands or even applications that made development easier. 
+
+Codekit is an application that helps a developer build websites faster by automating tasks that a developer needs. CodeKit compiles languages such as SASS, Less, Stylus, and CoffeeScript. Codekit auto refreshes the browsers you are testing the website in, they offer built in hosting, that can be accessed by phones, tablets and other PC's. Codekit automatically minifies, and automatically checks the syntax ensuring it is correct, as well as optimising images. By automating these features, it can speed up the developers workflow. 
+
+Originally, the development of the framework started with the \gls{SASS} language. \gls{SASS} is a \gls{CSS} preprocessor that has syntax advancements, the syntax uses indentation to format the code, and does not use semi-colons to indicate a new line. Stylesheets created in \gls{SASS} have to be compiled into regular \gls{CSS} stylesheets to be used. However, they do not extend the \gls{CSS} standard itself. 
+
+However as development continued, mixins were found to be an issue when written in \gls{SASS}, \gls{SCSS} mixins could not be used with \gls{SASS} code. It was decided that the use of mixins were more important in the development of the \gls{CSS} than not. All the partials that were written in \gls{SASS} at this stage was converted into \gls{SCSS}. As this happened in the first few weeks of the development process, the process didn't take long. 
+
+\gls{SCSS} is an extension of the \gls{CSS} syntax. This means that a correctly written \gls{CSS} file is also valid \gls{SCSS}. \gls{SCSS} uses semi-colons and braces to break up the code of an element. Variables in \gls{SCSS} are declared with \$, and the assignment sign is :. 
+
+%
+\newglossaryentry{SASS}
+{
+  name={SASS},
+  description={Syntactically Awesome Stylesheets},
+  sort=SASS
+}
+%
+
+Rails is a development tool that gives developers a structure for all the code they write, a framework. The Rails framework helps developers to build websites and applications, because it abstracts, and simplifies common repetitive tasks. Rails was chosen as the language to develop the partials as the rails conventions allows for developers to move to different projects seamlessly as each project will follow the same structure, and coding practices. This will be of benefit to the entry level users. 
+
+Ruby code is very readable, this will benefit the entry level user when they are reading the boilerplate files, gaining an understanding of how the boilerplate, and framework work. 
+
+HTML is a markup language used in structuring, and presenting content on the Word Wide Web. HTML along with Ruby on Rails is been used to develop the boilerplates to that the end user can edit to suit their needs. 
+
+LaTeX is a document preparation system for high-quality typesetting. The user uses markup tagging conventions to define the general structure of a document. LaTeX is been used in this project to develop the documentation that defines, and describes the project.
+
+As the project will be large, with complicated parts, and to help in the development of the project, Git will be used for version control. Git works by creating snapshots of files. If there hasn't been any changes to specific file, Git will link it to a previous version, keeping the project fast, and lean. 
+
+Having versions of the project will show what changes have been made over time, and if needed allow the project to be rollbacked to a previous version if say one of the features in the framework is causing interfering with the other classes.
+
+
 \newpage
 \section*{Development Issues}
 \addcontentsline{toc}{section}{Development Issues}
@@ -399,34 +436,3 @@ To solve this issue, the query had to be writing using different syntax. The var
 	\item Finalised all the sections of the report, reworded sections, ready for submission.
 	\end{itemize}	
 \end{itemize}
-
-\newpage
-\section*{Technologies}
-\addcontentsline{toc}{section}{Technologies}
-
-To compile the \gls{SCSS}, Codekit \citep{CODEKIT17} was used. Although \gls{SCSS} can be compiled from the command line or using a tool such as Grunt, using an application such as Codekit had extra features that would all have to be separate commands or even applications that made development easier. 
-
-Codekit is an application that helps a developer build websites faster by automating tasks that a developer needs. CodeKit compiles languages such as SASS, Less, Stylus, and CoffeeScript. Codekit auto refreshes the browsers you are testing the website in, they offer built in hosting, that can be accessed by phones, tablets and other PC's. Codekit automatically minifies, and automatically checks the syntax ensuring it is correct, as well as optimising images. By automating these features, it can speed up the developers workflow. 
-
-Originally, the development of the framework started with the \gls{SASS} language. \gls{SASS} is a \gls{CSS} preprocessor that has syntax advancements, the syntax uses indentation to format the code, and does not use semi-colons to indicate a new line. Stylesheets created in \gls{SASS} have to be compiled into regular \gls{CSS} stylesheets to be used. However, they do not extend the \gls{CSS} standard itself. 
-
-However as development continued, mixins were found to be an issue when written in \gls{SASS}, \gls{SCSS} mixins could not be used with \gls{SASS} code. It was decided that the use of mixins were more important in the development of the \gls{CSS} than not. All the partials that were written in \gls{SASS} at this stage was converted into \gls{SCSS}. As this happened in the first few weeks of the development process, the process didn't take long. 
-
-\gls{SCSS} is an extension of the \gls{CSS} syntax. This means that a correctly written \gls{CSS} file is also valid \gls{SCSS}. \gls{SCSS} uses semi-colons and braces to break up the code of an element. Variables in \gls{SCSS} are declared with \$, and the assignment sign is :. 
-
-%
-\newglossaryentry{SASS}
-{
-  name={SASS},
-  description={Syntactically Awesome Stylesheets},
-  sort=SASS
-}
-%
-
-Rails is a development tool that gives developers a structure for all the code they write, a framework. The Rails framework helps developers to build websites and applications, because it abstracts, and simplifies common repetitive tasks. Rails was chosen as the language to develop the partials as the rails conventions allows for developers to move to different projects seamlessly as each project will follow the same structure, and coding practices. This will be of benefit to the entry level users. 
-
-Ruby code is very readable, this will benefit the entry level user when they are reading the boilerplate files, gaining an understanding of how the boilerplate, and framework work. 
-
-HTML is a markup language used in structuring, and presenting content on the Word Wide Web. HTML along with Ruby on Rails is been used to develop the boilerplates to that the end user can edit to suit their needs. 
-
-LaTeX is a document preparation system for high-quality typesetting. The user uses markup tagging conventions to define the general structure of a document. LaTeX is been used in this project to develop the documentation that defines, and describes the project.
