@@ -16,39 +16,42 @@ a.button-primary {
 }
 
 .button {
+  @include buttons($button-primary-color, $button-primary-background);
   @include button-size($foundation-padding-vertical, $foundation-padding-horizontal, $button-font-size, $foundation-line-height);
-  border: none;
-  color: $foundation-color-c7c7;
-  background-color: #fff;
-  border: none;
   display: inline-block;
   font-family: $font-stack;
   font-weight: $font-weight-400;
   text-decoration: none;
   overflow: visible;
+  white-space: nowrap;
+  cursor: pointer;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 
 .button-small {
+  @include buttons($button-primary-color, $button-primary-background);
   @include button-size($foundation-padding-small-vertical, $foundation-padding-small-horizontal, $button-font-size-small, $line-height-small);
 }
 
 .button-large {
+  @include buttons($button-primary-color, $button-primary-background);
   @include button-size($foundation-padding-large-vertical, $foundation-padding-large-horizontal, $button-font-size-small, $line-height-large);
-
 }
 
 .button-pill {
+  @include buttons($button-primary-color, $button-primary-background);
   @include border-radius($border-radius * 4);
 }
 
 .button-link {
+  @include disable-selection;
   background: transparent;
   background-color: transparent;
   border-color: transparent;
   color: inherit;
+  pointer-events:none;
 }
 
 .button-full {

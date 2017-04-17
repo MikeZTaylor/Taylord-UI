@@ -28,6 +28,21 @@
   }
 }
 
+@mixin buttons($color, $background) {
+  color: $foundation-white;
+  background-color: $foundation-color-c7c7;
+
+  &:hover {
+    background-color: darken($foundation-color-c7c7, 10%);
+  }
+  &:active {
+    color: darken($foundation-white, 5%);
+    background-color: darken($foundation-color-c7c7, 20%);
+    /*     .transition(all .25s ease); */
+    outline: 0;
+  }
+}
+
 @mixin button-size($foundation-padding-vertical, $foundation-padding-horizontal, $button-font-size, $foundation-line-height) {
   padding: $foundation-padding-vertical $foundation-padding-horizontal;
   font-size: $button-font-size;
@@ -73,4 +88,11 @@
             color: $link-color-active;
         }
     }
+}
+
+@mixin disable-selection {
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
 }

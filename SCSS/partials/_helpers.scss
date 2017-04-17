@@ -1,28 +1,28 @@
 /*------------------------------------*\
  * Helpers */
 /*------------------------------------ */
-@media ($bp-desktop) {
+@media #{$breakpoint-desktop} {
 	.desktop-hidden {
 		visibility: hidden;
 		display: none;
 	}
 }
 
-@media ($bp-tablet) {
+@media #{$breakpoint-tablet} {
 	.tablet-hidden {
 		visibility: hidden;
 		display: none;
 	}
 }
 
-@media ($bp-mobile) {
+@media #{$breakpoint-mobile} {
 	.mobile-hidden {
 		visibility: hidden;
 		display: none;
 	}
 }
 
-@media ($bp-mobile) {
+@media #{$breakpoint-mobile} {
   .show-mobile {
   	visibility: visible;
   	display: block;
@@ -33,7 +33,7 @@
 	display: none;
 	visibility: hidden;
 
-	@media ($bp-mobile) {
+	@media #{$breakpoint-mobile} {
 		display: block;
 		visibility: visible;
 	}
@@ -43,7 +43,7 @@
   display: none;
   visibility: hidden;
 
-  @media ($bp-tablet) {
+  @media #{$breakpoint-tablet} {
     display: block;
     visibility: visible;
   }
@@ -53,7 +53,7 @@
   display: none;
   visibility: hidden;
 
-  @media ($bp-desktop) {
+  @media #{$breakpoint-desktop} {
     display: block;
     visibility: visible;
   }
@@ -63,10 +63,8 @@
   visibility: hidden;
   display: none;
   opacity: 0;
-  @include transition(opacity .45s linear);
 }
 
 .fade {
   opacity: 0;
-  @include transition(opacity .45s linear);
 }

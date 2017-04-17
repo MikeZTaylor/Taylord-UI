@@ -100,6 +100,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/tools.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17817,
+		"inputAbbreviatedPath": "\/images\/tools.png",
+		"outputAbbreviatedPath": "\/images\/tools.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -311,6 +322,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/SCSS\/partials\/_labels.scss",
 		"outputAbbreviatedPath": "\/SCSS\/css\/_labels.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/SCSS\/partials\/_lists.scss": {
+		"createSourceMap": 1,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/SCSS\/partials\/_lists.scss",
+		"outputAbbreviatedPath": "\/SCSS\/css\/_lists.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

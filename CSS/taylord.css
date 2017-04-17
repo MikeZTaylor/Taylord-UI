@@ -58,14 +58,6 @@
 
 \*------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-.ex-grid {
-  background-color: #f9f9f9;
-  padding: 8px;
-  padding: 0.5rem;
-  text-align: center;
-  border: 1px solid #eeeeee;
-  margin: .5rem 0; }
-
 .col {
   float: left;
   min-height: 1px; }
@@ -464,6 +456,57 @@ hr {
   border: 1px solid #c7c7c7;
   margin: .5rem 0; }
 
+/*------------------------------------*\
+ * Helpers */
+/*------------------------------------ */
+@media screen and (min-width: 48rem) and (max-width: 60rem) {
+  .desktop-hidden {
+    visibility: hidden;
+    display: none; } }
+@media screen and (min-width: 30rem) and (max-width: 47.9375rem) {
+  .tablet-hidden {
+    visibility: hidden;
+    display: none; } }
+@media screen and (max-width: 29.9375rem) {
+  .mobile-hidden {
+    visibility: hidden;
+    display: none; } }
+@media screen and (max-width: 29.9375rem) {
+  .show-mobile {
+    visibility: visible;
+    display: block; } }
+.show-mobile {
+  display: none;
+  visibility: hidden; }
+  @media screen and (max-width: 29.9375rem) {
+    .show-mobile {
+      display: block;
+      visibility: visible; } }
+
+.show-tablet {
+  display: none;
+  visibility: hidden; }
+  @media screen and (min-width: 30rem) and (max-width: 47.9375rem) {
+    .show-tablet {
+      display: block;
+      visibility: visible; } }
+
+.show-desktop {
+  display: none;
+  visibility: hidden; }
+  @media screen and (min-width: 48rem) and (max-width: 60rem) {
+    .show-desktop {
+      display: block;
+      visibility: visible; } }
+
+.hide {
+  visibility: hidden;
+  display: none;
+  opacity: 0; }
+
+.fade {
+  opacity: 0; }
+
 a {
   color: #f9791b; }
   a:visited {
@@ -672,49 +715,88 @@ a.button-primary {
   color: #e8e8e8; }
 
 .button {
+  color: #fff;
+  background-color: #c7c7c7;
   padding: 0.5rem 0.875rem;
   font-size: 1rem;
   text-transform: uppercase;
   line-height: 1.3;
-  border: none;
-  border: none;
-  color: #c7c7c7;
-  background-color: #fff;
   border: none;
   display: inline-block;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   text-decoration: none;
   overflow: visible;
+  white-space: nowrap;
+  cursor: pointer;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   transition: all 0.25s ease; }
+  .button:hover {
+    background-color: #adadad; }
+  .button:active {
+    color: #f2f2f2;
+    background-color: #949494;
+    /*     .transition(all .25s ease); */
+    outline: 0; }
 
 .button-small {
+  color: #fff;
+  background-color: #c7c7c7;
   padding: 0.5rem 0.1rem;
   font-size: 0.8rem;
   text-transform: uppercase;
   line-height: 1rem;
   border: none; }
+  .button-small:hover {
+    background-color: #adadad; }
+  .button-small:active {
+    color: #f2f2f2;
+    background-color: #949494;
+    /*     .transition(all .25s ease); */
+    outline: 0; }
 
 .button-large {
+  color: #fff;
+  background-color: #c7c7c7;
   padding: 0.875rem 1.5rem;
   font-size: 0.8rem;
   text-transform: uppercase;
   line-height: 1.69;
   border: none; }
+  .button-large:hover {
+    background-color: #adadad; }
+  .button-large:active {
+    color: #f2f2f2;
+    background-color: #949494;
+    /*     .transition(all .25s ease); */
+    outline: 0; }
 
 .button-pill {
+  color: #fff;
+  background-color: #c7c7c7;
   border-radius: 24px;
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
   -ms-border-radius: 24px; }
+  .button-pill:hover {
+    background-color: #adadad; }
+  .button-pill:active {
+    color: #f2f2f2;
+    background-color: #949494;
+    /*     .transition(all .25s ease); */
+    outline: 0; }
 
 .button-link {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   background: transparent;
   background-color: transparent;
   border-color: transparent;
-  color: inherit; }
+  color: inherit;
+  pointer-events: none; }
 
 .button-full {
   display: block;
@@ -791,6 +873,31 @@ a.button-primary {
     /*     .transition(all .25s ease); */
     outline: 0; }
 
+ul {
+  list-style: disc inside;
+  padding-left: 0;
+  margin-top: 0; }
+  ul ul {
+    margin: 0.5rem 0 0.5rem 2rem;
+    font-size: 90%; }
+  ul ol {
+    margin: 0.5rem 0 0.5rem 2rem;
+    font-size: 90%; }
+
+ol {
+  list-style: square outside none;
+  padding-left: 0;
+  margin-top: 0; }
+  ol ol {
+    margin: 0.5rem 0 0.5rem 2rem;
+    font-size: 90%; }
+  ol ul {
+    margin: 0.5rem 0 0.5rem 2rem;
+    font-size: 90%; }
+
+li {
+  margin-bottom: 1rem; }
+
 /*------------------------------------*\
 * Buttons Groups || Pagination */
 /*------------------------------------ */
@@ -825,6 +932,7 @@ a.button-primary {
 .pagination > ul > li > a {
   float: left;
   width: 25%;
+  width: 33%;
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
