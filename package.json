@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/MikeZTaylor/Taylor-d-UI-Framework#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-nunjucks-render": "^2.2.1"
   }
 }

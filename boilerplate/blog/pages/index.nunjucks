@@ -1,0 +1,17 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+{% include "partials/navigation.nunjucks" %}
+
+<!-- Adds the navigation partial -->
+<!-- index.html -->
+<!-- Importing Nunjucks Macro -->
+{% include "partials/panel.nunjucks" %}
+
+{% for i in range(0, 3) -%}
+  {% include "partials/blogpost.nunjucks" %}
+{%- endfor %}
+
+{% endblock %}

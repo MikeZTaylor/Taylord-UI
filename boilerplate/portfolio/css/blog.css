@@ -1,0 +1,77 @@
+body{
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 54px;
+    text-align: center;
+}
+
+h2 {
+  font-size: 44px;
+    text-align: center;
+    color: #fff;
+}
+
+h3 {
+  font-size: 34px;
+    color: #000;
+}
+
+.blogDetails{
+    text-align: left;
+}
+
+ul {
+  list-style: none;
+}
+
+small{
+  color: #D3D3D3;
+  display: inline;
+}
+
+.jumbotron{
+  height: 300px;
+}
+
+#left{
+     float:left;
+}
+#right{
+     float:right;
+}
+
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Read more';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Read less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #B85A15;
+  font-size: .9em;
+  line-height: 2;
+}

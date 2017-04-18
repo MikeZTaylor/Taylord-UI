@@ -1,0 +1,1 @@
+var gulp=require("gulp"),nunjucksRender=require("gulp-nunjucks-render");gulp.task("nunjucks",function(){return gulp.src("boilerplate/blog/pages/**/*.+(html|nunjucks)").pipe(nunjucksRender({path:["boilerplate/blog/templates"]})).pipe(gulp.dest("boilerplate/blog"))});
