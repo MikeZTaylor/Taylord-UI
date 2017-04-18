@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simple Blog</title>
+  <title>Portfolio</title>
   <link rel="stylesheet" href="css/taylord.css" />
-  <link rel="stylesheet" href="css/blog.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
       </head>
 <body>
 

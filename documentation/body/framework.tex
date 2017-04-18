@@ -263,8 +263,33 @@ Five different alert types were created, each with their own significance. All t
 \addcontentsline{toc}{section}{Boilerplates, and Partials}
 \section*{Boilerplates, and Partials}
 
-3 boilerplate templates to use
-partials were developed using gulp and Nunjucks
+A total of three boilerplate templates were made; a blog, portfolio, and -----. The templates were broken into partials so that there was no repetition of code, and for reusability. The boilerplates themselves are bare, and have the look of a wireframe, as they are intended to be. The boilerplates have been added to the framework as a learning tool, for the end user to manipulate with their own stylings, learning by doing. 
+
+To build the partials, Gulp, and Nunjucks was used in tandem along with a plugin called gulp-nunjucks-render \citep{PLUG17} . A gulp file was created that contained a script that is given the partial, and layout locations, and then compiles it into a html file using the command gulp nunjuks.
+
+\begin{lstlisting}[language=CSS3]
+gulp.task('nunjucks', function() {
+  // Gets .html and .nunjucks files in pages
+  return gulp.src('boilerplate/blog/pages/**/*.+(html|nunjucks)')
+  // Renders template with nunjucks
+  .pipe(nunjucksRender({
+      path: ['boilerplate/blog/templates']
+    }))
+  // output files in app folder
+  .pipe(gulp.dest('boilerplate/blog'));
+});
+
+\end{lstlisting}
+
+
+In an effort to remove any repetition, a loop was created in the layout file that repeated a certain partial for a set number of times, instead of having to recreate those elements multiple times. 
+
+\begin{lstlisting}[language=CSS3]
+{% for i in range(0, 3) -%}
+  {% include "partials/portfolio.nunjucks" %}
+{%- endfor %}
+\end{lstlisting}
+
 \newpage
 \section*{Technologies}
 \addcontentsline{toc}{section}{Technologies}
@@ -288,13 +313,13 @@ However as development continued, mixins were found to be an issue when written 
 }
 %
 
-A Template Engines is a tool that allows a user to break HTML code into smaller pieces that can be reused across multiple HTML files. They also give you the power to feed data into variables that help you simplify your code. Instead of using a tool to develop the partials Gulp, and Nunjucks will be used.
+A Template Engines is a tool that allows a user to break HTML code into smaller pieces that can be reused across multiple HTML files. They also give you the power to feed data into variables that help you simplify your code. Instead of using a tool to develop the partials Gulp \citep{GULP17}, and Nunjucks \citep{NUN17}  will be used.
 
 Nunjucks is a rich, and powerful language used for templating. Nunjucks have features such as inheritance that other templating engines such as Handlebars do not. Gulp.js which is a task runner, is used alongside Nunjucks to remove the problem of repetition. 
 
 HTML is a markup language used in structuring, and presenting content on the Word Wide Web. HTML along with Ruby on Rails is been used to develop the boilerplates to that the end user can edit to suit their needs. 
 
-LaTeX is a document preparation system for high-quality typesetting. The user uses markup tagging conventions to define the general structure of a document. LaTeX is been used in this project to develop the documentation that defines, and describes the project.
+LaTeX \cite{LAT17} is a document preparation system for high-quality typesetting. The user uses markup tagging conventions to define the general structure of a document. LaTeX is been used in this project to develop the documentation that defines, and describes the project.
 
 As the project will be large, with complicated parts, and to help in the development of the project, Git will be used for version control. Git works by creating snapshots of files. If there hasn't been any changes to specific file, Git will link it to a previous version, keeping the project fast, and lean. 
 

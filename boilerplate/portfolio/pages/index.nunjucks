@@ -11,7 +11,13 @@
 {% include "partials/panel.nunjucks" %}
 
 {% for i in range(0, 3) -%}
-  {% include "partials/blogpost.nunjucks" %}
+  {% include "partials/portfolio.nunjucks" %}
 {%- endfor %}
+<hr />
+{% include "partials/skills.nunjucks" %}
+<hr />
+{% include "partials/contact.nunjucks" %}
+
+{% include "partials/footer.nunjucks" %}
 
 {% endblock %}

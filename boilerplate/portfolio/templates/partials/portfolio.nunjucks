@@ -1,0 +1,22 @@
+<div class="container">
+<div class="row-fluid">
+  <div class="col4">
+    <div id="wrapper">
+    <img src="http://placehold.it/550x550" class="hover" />
+    <p class="text">This photo is about: </p>
+  </div>
+</div>
+  <div class="col4">
+    <div id="wrapper">
+    <img src="http://placehold.it/550x550" class="hover" />
+    <p class="text">This photo is about: </p>
+  </div>
+  </div>
+  <div class="col4">
+    <div id="wrapper">
+    <img src="http://placehold.it/550x550" class="hover" />
+    <p class="text">This photo is about: </p>
+  </div>
+  </div>
+</div>
+</div>

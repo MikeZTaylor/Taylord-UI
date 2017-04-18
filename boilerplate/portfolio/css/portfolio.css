@@ -1,0 +1,70 @@
+body{
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+  padding-top: 3%;
+}
+
+h2 {
+  font-size: 44px;
+  text-align: center;
+  color: #fff;
+}
+
+h3 {
+  font-size: 34px;
+  color: #000;
+}
+
+
+#wrapper .text {
+  position:relative;
+  font-size: 20px;
+  text-align: center;
+  bottom:50px;
+  visibility:hidden;
+  margin: 0 auto;
+}
+
+#wrapper:hover .text {
+  visibility:visible;
+}
+
+
+.blogDetails{
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+}
+
+small{
+  color: #D3D3D3;
+  display: inline;
+}
+
+.jumbotron{
+  height: 300px;
+}
+
+#left{
+  float:left;
+}
+#right{
+  float:right;
+}
+
+.footer {
+  background-color: #E8E8E8;
+  text-align: center;
+  position:relative;
+  bottom:0;
+}
+
+.footer > p {
+  display:inline;
+}
