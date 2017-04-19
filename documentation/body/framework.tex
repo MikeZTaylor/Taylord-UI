@@ -5,7 +5,7 @@
 
 To compile the \gls{SCSS}, Codekit \citep{CODEKIT17} was used. Although \gls{SCSS} can be compiled from the command line or using a tool such as Grunt, using an application such as Codekit had extra features that would all have to be separate commands or even applications that made development easier. 
 
-Codekit is an application that helps a developer build websites faster by automating tasks that a developer needs. CodeKit compiles languages such as SASS, Less, Stylus, and CoffeeScript. Codekit auto refreshes the browsers you are testing the website in, they offer built in hosting, that can be accessed by phones, tablets and other PC's. Codekit automatically minifies, and automatically checks the syntax ensuring it is correct, as well as optimising images. By automating these features, it can speed up the developers workflow. 
+Codekit is an application that helps a developer build websites faster by automating tasks that a developer needs. CodeKit compiles languages such as SASS, Less, Stylus, and CoffeeScript. Codekit auto refreshes the browsers you are testing the website in, they offer built in hosting, that can be accessed by phones, tablets and other PC's. Codekit automatically minifies, and automatically checks the syntax ensuring it is correct, as well as optimising images. By automating these features, it can speed up the developer's workflow. 
 
 The development of the project started with using \gls{SASS} to build the framework code, However as development continued, \gls{mixins} were found to be an issue when written in \gls{SASS}, \gls{SCSS} \gls{mixins} could not be used with \gls{SASS} code. It was decided that the use of \gls{mixins} were more important in the development of the \gls{CSS} than not. The \gls{SASS} was converted into \gls{SCSS} to continue development. 
 
@@ -29,11 +29,11 @@ Nunjucks is a rich, and powerful language used for templating. Nunjucks have fea
 
 HTML is a markup language used in structuring, and presenting content on the Word Wide Web. HTML along with Ruby on Rails is been used to develop the boilerplates to that the end user can edit to suit their needs. 
 
-The LaTeX \cite{LAT17} is a document preparation system for high-quality typesetting. The user uses markup tagging conventions to define the general structure of a document. LaTeX is been used in this project to develop the documentation that defines, and describes the project.
+The LaTeX Project is a document preparation system for high-quality typesetting. The user uses markup tagging conventions to define the general structure of a document \citep{LAT17}. LaTeX is being used in this project to develop the documentation that defines, and describes the project.
 
-As the project will be large, with complicated parts, and to help in the development of the project, Git will be used for version control, \cite{GIT05}. Git works by creating snapshots of files. If there hasn't been any changes to specific file, Git will link it to a previous version, keeping the project fast, and lean. 
+As the project will be large, with complicated parts, and to help in the development of the project, Git will be used for version control \citep{GIT05}. Git works by creating snapshots of files. If there hasn't been any changes to specific file, Git will link it to a previous version, keeping the project fast, and lean. 
 
-Having versions of the project will show what changes have been made over time, and if needed allow the project to be rollbacked to a previous version if say one of the features in the framework is causing interfering with the other classes.
+Having versions of the project will show what changes have been made over time, and if needed allow the project to be roll backed to a previous version if say one of the features in the framework is causing interfering with the other classes.
 
 \newpage
 \section*{Framework}
@@ -71,7 +71,7 @@ At the start of framework development, a file called \_foundation.scss was creat
 \newpage
 \subsection*{Font and Typography}
 \addcontentsline{toc}{subsection}{Font and Typography}
-In keeping with the framework being non opinionated, it was crucial to pick a font, and to have the typography nondescript so that the end user can change it to suit their needs. When researching fonts, the readability of the the font was looked at in regards to how it looked in large sections to single lines of text. 
+In keeping with the framework being non opinionated, it was crucial to pick a font, and to have the typography nondescript so that the end user can change it to suit their needs. When researching fonts, the readability of the the font was looked at in regard to how it looked in large sections to single lines of text. 
 
 The font was then viewed on a range of devices ranging from mobile to desktop, ensuring it was legible across these devices. Lastly the range of the font was looked at, did the font allow for non latin characters, accents, and symbols \citep{WORD16}.
 
@@ -116,7 +116,7 @@ Instead of researching colour theory and choosing the best colours, it was decid
 \newpage
 \subsection*{Tables}
 \addcontentsline{toc}{subsection}{Tables}
-Tables in HTML should only be used for rendering data that naturally belongs in a grid based system. This is data where the data characterised is similar across a number of objects. Tables should not be used for the layout of content in a website, divs should be used for this. The key to designing the tables was to demonstrate to the end user that the tables were for data, and not for layout.
+Tables in HTML should only be used for rendering data that naturally belongs in a grid based system. This is data where the data characterised is similar across a serveral objects. Tables should not be used for the layout of content in a website, divs should be used for this. The key to designing the tables was to demonstrate to the end user that the tables were for data, and not for layout.
 
 Five table variations including table modifiers were created for the framework, ranging from default table to striped tables. Table modifiers take the colours that are used to dictate success or warning, and add them to a row in the table. The tables were designed to be responsive, this was achieved by taking the padding of table, and then dividing the \$baseline height by a set value as seen below. 
 
@@ -133,7 +133,7 @@ Five table variations including table modifiers were created for the framework, 
 
 \subsection*{Buttons}
 \addcontentsline{toc}{subsection}{Buttons}
-Buttons are an integral part of a framework. The styling, and the functionality of the buttons are key in the end users goal of using a website. If a button does not look like a button or if the styling of a button is overdone, the user can get confused, and not know how to proceed. With this in mind, the development of the buttons continued throughout the development of the framework. Originally, the buttons had round corners but this was removed in trying to keep the design non opinionated. 
+Buttons are an integral part of a framework. The styling, and the functionality of the buttons are key in the end users goal of using a website. If a button does not look like a button or if the styling of a button is overdone, the user can get confused, and not know how to proceed. The development of the buttons continued throughout the development of the framework. Originally, the buttons had round corners but this was removed in trying to keep the design non opinionated. 
 
 Five button types were designed at the start of the project. The default button, then large, and small buttons based off the default button, and lastly a pill shaped button. 
 
@@ -172,7 +172,7 @@ A panel is a component that allows you to outline a section of a web page. This 
 \addcontentsline{toc}{subsection}{Button Groups and Pagination}
 A button group is a series of buttons grouped together on a single line, this can be achieved by removing the margin attribute in CSS. Pagination is a series of numbers grouped together on a single line, this can be useful for when you have multiple pages in your website. As these two components can be used interchangeably, it was decided to include them together in the same partial.
 
-To get these components working correctly, the $>$ symbol was used, this allowed for only the direct children of an element to be selected, and modified. It won't effect any other element that is not a direct child of that element. In the code snippet below only the a element of unordered list item belonging to the class pagination gets a solid 1px border.   
+To get these components working correctly, the $>$ symbol was used, this allowed for only the direct children of an element to be selected, and modified. It will not affect any other element that is not a direct child of that element. In the code snippet below only the a element of unordered list item belonging to the class pagination gets a solid 1px border.   
 
 \begin{lstlisting}[language=CSS3]
 .pagination > ul > li > a {
@@ -197,7 +197,7 @@ There is a clear difference between the label element, and a button created with
 \newpage
 \subsection*{Navigation}
 \addcontentsline{toc}{subsection}{Navigation}
-The navigation component of the framework is a simple responsive navigation menu  comprised of a non list style that becomes a drop down menu when the screen size is less than 640px.
+The navigation component of the framework is a simple responsive navigation menu  comprised of a non-list style that becomes a drop down menu when the screen size is less than 640px.
 
 On a larger browser window size, the navigation is designed to stay at the top of the browser window when the user is scrolling down on a web page, this is achieved by making the navigation fixed to the web page. As screen real estate is a commodity on smaller browser window sizes such as mobile, the navigation bar changes to absolute. The navigation bar now stays at the top of web page, giving more screen real estate to the user. 
 
@@ -232,7 +232,7 @@ A state is an object that augments, and alters all other styles. For example, A 
 \subsection*{Grid}
 \addcontentsline{toc}{subsection}{Grid}
 
-The grid is based on a 960px grid or 60rem in this case. The size is 60rem as it is based on the default font size of 1 rem or 16 pixels. Using that as the base of the calculation, a font size of 960px would be a \gls{rem} value of 60. The reasons of why the grid is 960px is that modern laptops, and or desktops no longer have a resolution below this. The 960 grid is evenly divisible in numerous ways as in in \ref{column}. 
+The grid is based on a 960px grid or 60rem in this case. The size is 60rem as it is based on the default font size of 1rem or 16px. Using that as the base of the calculation, a font size of 960px would be a \gls{rem} value of 60. The reasons of why the grid is 960px is that modern laptops, and or desktops no longer have a resolution below this. The 960 grid is evenly divisible in numerous ways as in in \ref{column}. 
 
 The 960 grid is adaptable to any layout or screen size. With using the 960 grid, a 12 column layout will utilised. The 12 column layout lends itself to the 960 grid as its also equally divisible, allowing for an odd number of columns all with even numbers as seen in figure \ref{fig:grid} whereas using a 16 grid column layout, the same result is not easily achieved. 
 
@@ -357,9 +357,9 @@ To figure out the cause of the issue, tools such as the Chrome Development tools
 
 It seemed that the button issue was caused by the style to be overwritten by a different partial. To get the buttons to have their different states, the active, hover, and focus elements had to be hard coded into the button. In doing this, it didn't matter what other styles might override the values as the elements were hard coded.
 
-A minor issue was trying to keep the code DRY both the SASS. and the compiled CSS was viewed to see if there was repeating code. When there was repeating code, \gls{mixins} were used where possible. Although there was sections of repeating code that converting to \gls{mixins} was not possible. 
+A minor issue was trying to keep the code DRY both the SASS. and the compiled CSS was viewed to see if there was repeating code. When there was repeating code, \gls{mixins} were used where possible. Although there were sections of repeating code that converting to \gls{mixins} was not possible. 
 
-Originally, the partials were going to be developed using web components \citet{Web17}, and Polymer \citet{Google17b}. The research had been done on these technologies, and how to use them. The development had started on the partials using these technologies but as the first partials were created, another student had viewing the work and asked "Is this not too complicated for your user?", and they were correct. The framework has been designed for the entry level user to understand, and use. Using the latest in web standards is likely to confuse them more. 
+Originally, the partials were going to be developed using Web Components \citep{Web17}, and Polymer \citep{Google17b}. The research had been done on these technologies, and how to use them. The development had started on the partials using these technologies but as the first partials were created, another student had viewing the work and asked \textit{"Is this not too complicated for your user?"}, and they were correct. The framework has been designed for the entry level user to understand, and use. Using the latest in web standards is likely to confuse them more.
 
 The below code snippet shows how a partial would work in using polymer. A template is made in a separate file and then called into the index file. The template is broken into different sections, the template section, and then the polymer section. Polymer is used to ensure that the template file is displayed in all browsers as the template tag is bot support by all browsers currently. 
 
@@ -400,18 +400,11 @@ iron-component-page.html">
 </body>
 \end{lstlisting}
 
-Instead the Ruby language is been used to develop the partials. Although the end user is likely to not know Ruby, the syntax is more user friendly. With using Ruby, the code is not overtaking the HTML as was the case with Polymer. The code snippets will always in the same places, this allows the end user to copy and paste the snippets in their websites without them having to know Ruby. Below is a code snippet of how a partial is rendering in a different file. 
-
-\begin{lstlisting}[language=Ruby]
-render template: "example/partial.html.erb"
-\end{lstlisting}
-
-
 themes were difficult to think off. 
 
-One the the biggest obstacles in the development of this framework was deciding on what components were critical to the framework. Then what elements would the end user want. And finally, what elements does the developer think will be useful for the end user, elements that they need to understand without overcomplicating the framework, and or doing the work of the end user for them.
+One of the biggest obstacles in the development of this framework was deciding on what components were critical to the framework. Then what elements would the end user want. And finally, what elements does the developer think will be useful for the end user, elements that they need to understand without overcomplicating the framework, and or doing the work of the end user for them.
 
-On of the biggest issues in the development of the framework was creating the grid layout, and media queries. The first major issue was the syntax. The breakpoints had been declared in a different partial, this lead to errors in the compiler. The compiler was looking for specific keywords after @media, which it wasn't able to interpret.
+On of the biggest issues in the development of the framework was creating the grid layout, and media queries. The first major issue was the syntax. The breakpoints had been declared in a different partial, this lead to errors in the compiler. The compiler was looking for specific keywords after @media, which it could not interpret.
 
 To solve this issue, the query had to be writing using different syntax. The variables for the breakpoints had to be treated as an ID. The compiler also would not accept brackets to frame the argument, curly braces had to be used instead. To reach this conclusion, a lot of trial and error was done. This involved making small changes to the @media argument, viewing  the error, viewing \gls{SASS} blogs to read what the error was in full, repeating this pattern until the code compiled with no errors. 
 \begin{lstlisting}[language=CSS3]
