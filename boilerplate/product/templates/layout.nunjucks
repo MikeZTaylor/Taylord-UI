@@ -1,0 +1,15 @@
+<!-- layout.nunjucks -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/taylord.css" />
+  <link rel="stylesheet" href="css/product.css" />
+      </head>
+<body>
+
+  <!-- You write code for this content block in another file -->
+  {% block content %} {% endblock %}
+</body>
+</html>

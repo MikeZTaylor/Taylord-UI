@@ -1,0 +1,35 @@
+body{
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+  padding-top: 3%;
+}
+
+h2 {
+  font-size: 44px;
+  text-align: center;
+  color: #fff;
+}
+
+h3 {
+  font-size: 34px;
+  color: #000;
+}
+
+h4 {
+  font-size: 24px;
+  color: #555555;
+}
+
+.img-container {
+  margin-top: 30px;
+  min-height: 400px;
+  background-image: url(http://placehold.it/1800x400);
+  background-repeat: no-repeat;
+  background-size: 1800px 400px;
+  background-position: center top;
+  /*padding: 40px; (If don't want to set min-height or some image content is there) */
+}

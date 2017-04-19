@@ -1,0 +1,15 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+{% include "partials/navigation.nunjucks" %}
+
+<!-- Adds the navigation partial -->
+<!-- index.html -->
+<!-- Importing Nunjucks Macro -->
+{% include "partials/bannerImage.nunjucks" %}
+{% include "partials/product.nunjucks" %}
+{% include "partials/skills.nunjucks" %}
+
+{% endblock %}

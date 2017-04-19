@@ -22,3 +22,14 @@ gulp.task('nunjucks', function() {
   // output files in app folder
   .pipe(gulp.dest('boilerplate/portfolio'));
 });
+
+gulp.task('nunjucks', function() {
+  // Gets .html and .nunjucks files in pages
+  return gulp.src('boilerplate/product/pages/**/*.+(html|nunjucks)')
+  // Renders template with nunjucks
+  .pipe(nunjucksRender({
+      path: ['boilerplate/product/templates']
+    }))
+  // output files in app folder
+  .pipe(gulp.dest('boilerplate/product'));
+});

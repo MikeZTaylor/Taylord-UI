@@ -1,8 +1,45 @@
 \chapter*{Development}
 \addcontentsline{toc}{chapter}{Development}
+\section*{Technologies}
+\addcontentsline{toc}{section}{Technologies}
+
+To compile the \gls{SCSS}, Codekit \citep{CODEKIT17} was used. Although \gls{SCSS} can be compiled from the command line or using a tool such as Grunt, using an application such as Codekit had extra features that would all have to be separate commands or even applications that made development easier. 
+
+Codekit is an application that helps a developer build websites faster by automating tasks that a developer needs. CodeKit compiles languages such as SASS, Less, Stylus, and CoffeeScript. Codekit auto refreshes the browsers you are testing the website in, they offer built in hosting, that can be accessed by phones, tablets and other PC's. Codekit automatically minifies, and automatically checks the syntax ensuring it is correct, as well as optimising images. By automating these features, it can speed up the developers workflow. 
+
+The development of the project started with using \gls{SASS} to build the framework code, However as development continued, \gls{mixins} were found to be an issue when written in \gls{SASS}, \gls{SCSS} \gls{mixins} could not be used with \gls{SASS} code. It was decided that the use of \gls{mixins} were more important in the development of the \gls{CSS} than not. The \gls{SASS} was converted into \gls{SCSS} to continue development. 
+
+\gls{SCSS} is an extension of the \gls{CSS} syntax. This means that a correctly written \gls{CSS} file is also valid \gls{SCSS}. \gls{SCSS} uses semi-colons and braces to break up the code of an element. Variables in \gls{SCSS} are declared with \$, and the assignment sign is :. 
+
+
+%
+\newglossaryentry{SASS}
+{
+  name={SASS},
+  description={Syntactically Awesome Stylesheets},
+  sort=SASS
+}
+%
+
+\gls{mixins} are one of the most powerful features of \gls{SASS}/ \gls{SCSS}. They allow for efficient, and clean code repetitions as well as an easy way to adjust your code with ease. \gls{mixins} are the \gls{SCSS} equivalent of macros in other programming languages.
+
+A Template Engines is a tool that allows a user to break HTML code into smaller pieces that can be reused across multiple HTML files. They also give you the power to feed data into variables that help you simplify your code. Instead of using a tool to develop the partials Gulp \citep{GULP17}, and Nunjucks \citep{NUN17}  will be used.
+
+Nunjucks is a rich, and powerful language used for templating. Nunjucks have features such as inheritance that other templating engines such as Handlebars do not. Gulp.js which is a task runner, is used alongside Nunjucks to remove the problem of repetition. 
+
+HTML is a markup language used in structuring, and presenting content on the Word Wide Web. HTML along with Ruby on Rails is been used to develop the boilerplates to that the end user can edit to suit their needs. 
+
+The LaTeX \cite{LAT17} is a document preparation system for high-quality typesetting. The user uses markup tagging conventions to define the general structure of a document. LaTeX is been used in this project to develop the documentation that defines, and describes the project.
+
+As the project will be large, with complicated parts, and to help in the development of the project, Git will be used for version control, \cite{GIT05}. Git works by creating snapshots of files. If there hasn't been any changes to specific file, Git will link it to a previous version, keeping the project fast, and lean. 
+
+Having versions of the project will show what changes have been made over time, and if needed allow the project to be rollbacked to a previous version if say one of the features in the framework is causing interfering with the other classes.
+
+\newpage
 \section*{Framework}
 \addcontentsline{toc}{section}{Framework}
-The following section will detail the components that make up the Taylor'd UI framework. Each of the following components are what makes up the framework, and aid in the development of a website. All the components of the framework have been built in separate partial files, denoted by an underscore. The underscore also tells codekit, the compiler been used to not compile the files into their own \gls{CSS} file. A separate file called taylord.scss was created, in this file the @include statement was used to pull all the separate partial files into one file and that file is then compiled to \gls{CSS}. 
+The following section will detail the components that make up the Taylor'd UI framework. Each of the following components are what makes up the framework, and aid in the development of a website. All the components of the framework have been built in separate partial files, denoted by an underscore. The underscore informs codekit, to not compile the partials. A separate file called taylord.scss was created, in this file the @include statement was used to pull all the separate partial files into one file and that file is then compiled to \gls{CSS}. 
+
 
 \subsection*{Variables}
 \addcontentsline{toc}{subsection}{Variables}
@@ -34,9 +71,9 @@ At the start of framework development, a file called \_foundation.scss was creat
 \newpage
 \subsection*{Font and Typography}
 \addcontentsline{toc}{subsection}{Font and Typography}
-In keeping with the framework being non opinionated, it was crucial to pick a font, and to have the typography nondescript so that the end user can change it to suit their needs. A range of fonts were looked at, the readability of the font in regards to large sections to single lines of text was looked at. 
+In keeping with the framework being non opinionated, it was crucial to pick a font, and to have the typography nondescript so that the end user can change it to suit their needs. When researching fonts, the readability of the the font was looked at in regards to how it looked in large sections to single lines of text. 
 
-Viewing the font on a range of devices ranging from mobile to desktop was looked at ensuring it was legible across these devices. The last aspect that was looked at was the range of the font, did it allow for non latin characters, accents and symbols\cite{WORD16}.
+The font was then viewed on a range of devices ranging from mobile to desktop, ensuring it was legible across these devices. Lastly the range of the font was looked at, did the font allow for non latin characters, accents, and symbols \citep{WORD16}.
 
 \newglossaryentry{px}
 {
@@ -52,6 +89,7 @@ Viewing the font on a range of devices ranging from mobile to desktop was looked
   description={element},
   sort=em
 }
+%
 
 \newglossaryentry{rem}
 {
@@ -59,25 +97,28 @@ Viewing the font on a range of devices ranging from mobile to desktop was looked
   description={Root element},
   sort=rem
 }
+%
 
-The font that passed these tests, and was visually appealing was Open Sans. The next step was to determine the font sizing and how to calculate it. When decided on the best way to execute the font sizing, two methods were looked at, \gls{em} and \gls{rem}.\gls{px} was not looked at as early versions of Internet Explorer are not able to change the font size using browser functionality, a major usability issue. The \gls{em} technique alters the base font size on the body element by using a percentage \cite{GUN16}.
+The font that passed these tests, and was visually appealing was Open Sans \citep{MATT17}. Open Sans was commissioned by Google and designed by Steve Matteson. Open Sans was designed to have a friendly, but neutral appearance and is optimised for legibility across different mediums such as print, web and mobile. 
 
-This adapts the font so that 1em is equal to 10px, instead of the default 16px. To change the font size to the equivalent of 14px, the \gls{em} needs to be 1.4em. The downside of using em to calculate the font sizing is that the font size compounds. This means that a list within a list isn't 14px but rather 20px. There is a work around where any child elements are declared to use 1em, but an entry level user would not know this. 
+The next step was to determine the font sizing and how to calculate it. Font sizing can be achieved using the three following methods; \gls{px}, \gls{em}, and \gls{rem}. \gls{px} was not looked at as early versions of Internet Explorer are not able to change the font size using browser functionality, a major usability issue. 
 
-With the advent of \gls{CSS} 3, \gls{rem} was added, as previously mentioned, \gls{em} sizing was relative to the font size of the parent whereas \gls{rem} is relative to the root or html element. This means that a single font size can be defined for the html element, and all \gls{rem} units will be a percentage of that base unit. Safari 5, Chrome, Firefox 3.6+, and even Internet Explorer 9 have support for \gls{rem} units. Opera up to version 11.10, and early versions of Internet Explorer have yet to implement \gls{rem} units. In order to display font on these browsers, a fallback \gls{px} size is calculated using a mixin. 
+The \gls{em} technique alters the base font size on the body element by using a percentage \citep{GUN16}. This adapts the font so that 1em is equal to 10px, instead of the default 16px. To change the font size to the equivalent of 14px, the \gls{em} needs to be 1.4em. The downside of using \gls{em} to calculate the font sizing is that the font size compounds. This means that a list within a list isn't 14px but rather 20px. There is a work around where any child elements are declared to use 1em, but an entry level user would not know this. 
+
+With the advent of \gls{CSS}3, \gls{rem} was added, as previously mentioned, \gls{em} sizing was relative to the font size of the parent whereas \gls{rem} is relative to the root or html element. This means that a single font size can be defined for the html element, and all \gls{rem} units will be a percentage of that base unit. Safari 5, Chrome, Firefox 3.6+, and even Internet Explorer 9 have support for \gls{rem} units. Opera up to version 11.10, and early versions of Internet Explorer have yet to implement \gls{rem} units. In order to display font on these browsers, a fallback \gls{px} size is calculated using \gls{mixins}. 
 
 \subsection*{Colour Scheme}
 \addcontentsline{toc}{subsection}{Colour Scheme}
-When creating the colour scheme, it was important to keep design opinions to a minimum, to use colours that would get the frameworks point across. It was also key to use colours that the end user would recognise that they were for instructional purposes, and for them to change in their web development projects. The colour needed to look good when modified as well, this means if the hue, tone and vibrancy of the colour is modified, the resulting colour needed to look well. 
+When creating the colour scheme, it was important to keep design opinions to a minimum, to use colours that had more neutral tones, and that are not garish in appearance. It was also important to use colours that the end user would recognise that they were for instructional purposes, and for them to change in their web development projects. The colour needed to look visually appealing when modified as well. This means if the hue, tone and vibrancy of the colour is modified, the resulting colour needed to be appealing as well. 
 
-Instead of researching colour theory and choosing the best colours, it was decided to use Google's Material Design \citet{Google17} colour palette, and choose from their wide range of colours. The palette  gave a variety of colours along with modifications of the colour such as different hues and saturations. The colours selected to use in the framework were kept to primary colours to keep it as non opinionated as possible.
+Instead of researching colour theory and choosing the best colours, it was decided to use Google's Material Design colour palette, and choose from their wide range of colours \citep{Google17}. The palette  gave a variety of colours along with modifications of the colour such as different hues and saturations.
 
 \newpage
 \subsection*{Tables}
 \addcontentsline{toc}{subsection}{Tables}
 Tables in HTML should only be used for rendering data that naturally belongs in a grid based system. This is data where the data characterised is similar across a number of objects. Tables should not be used for the layout of content in a website, divs should be used for this. The key to designing the tables was to demonstrate to the end user that the tables were for data, and not for layout.
 
-Five table variations were created for the framework, ranging from default table to striped tables, and included is table modifiers. Table modifiers take the colours that are used to dictate success or warning, and add them to a row in the table. The tables were also designed to be responsive, to achieve this the padding of table is calculated by dividing the \$baseline height by a set value. 
+Five table variations including table modifiers were created for the framework, ranging from default table to striped tables. Table modifiers take the colours that are used to dictate success or warning, and add them to a row in the table. The tables were designed to be responsive, this was achieved by taking the padding of table, and then dividing the \$baseline height by a set value as seen below. 
 
 \begin{lstlisting}[language=CSS3]
     .table.table-condensed > thead > tr > th,
@@ -96,7 +137,7 @@ Buttons are an integral part of a framework. The styling, and the functionality 
 
 Five button types were designed at the start of the project. The default button, then large, and small buttons based off the default button, and lastly a pill shaped button. 
 
-Based off the default button type, six styles were created. Each of these button styles has a visual waiting to it such as the warning button. This button can tell the user to proceed with caution, it can also be used as a delete button. To create these buttons a mixin was used that takes the colour stored in the variable for each of these classes. The mixin also adds in the active and hover states, and calculates the colours to be used. 
+Based off the default button type, six styles were created. Each of these button styles has a visual weighting to it such as the warning button. This button can tell the user to proceed with caution, it can also be used as a delete button. To create these buttons, \gls{mixins} was used that takes the colour stored in the variable for each of these classes. The \gls{mixins} also adds in the active and hover states, and calculates the colours to be used. 
 
 \begin{lstlisting}[language=CSS3]
 .button-default {
@@ -191,9 +232,9 @@ A state is an object that augments, and alters all other styles. For example, A 
 \subsection*{Grid}
 \addcontentsline{toc}{subsection}{Grid}
 
-The grid is based on a 960 pixel grid or 60 rem in this case. The size is 60 rem as it is based on the default font size of 1 rem or 16 pixels. Using that as the base of the calculation, a font size of 960 pixels would be a rem value of 60. The reasons of why the grid is 960 pixels is that modern laptops, and or desktops no longer have a resolution below this. The 960 grid is evenly divisible in numerous ways as in in \ref{column}. 
+The grid is based on a 960px grid or 60rem in this case. The size is 60rem as it is based on the default font size of 1 rem or 16 pixels. Using that as the base of the calculation, a font size of 960px would be a \gls{rem} value of 60. The reasons of why the grid is 960px is that modern laptops, and or desktops no longer have a resolution below this. The 960 grid is evenly divisible in numerous ways as in in \ref{column}. 
 
-This allows for a grid system that is adaptable to the a screen layout of any screen size. In using this type of grid system, a 12 column layout will also be used. The 12 column layout lends itself to the 960 grid as its also equally divisible, allowing for an odd number of columns all with even numbers as seen in figure \ref{fig:grid} whereas using a 16 grid column layout, the same result is not easily achieved. 
+The 960 grid is adaptable to any layout or screen size. With using the 960 grid, a 12 column layout will utilised. The 12 column layout lends itself to the 960 grid as its also equally divisible, allowing for an odd number of columns all with even numbers as seen in figure \ref{fig:grid} whereas using a 16 grid column layout, the same result is not easily achieved. 
 
 The framework has three breakpoints; desktop, tablet, and mobile. Based on the viewpoint, the columns expand or collapse in size. 
 
@@ -224,7 +265,7 @@ The media queries were developed using the rem mixin that was also used for font
 }
 \end{lstlisting}
 
-Even though the framework is designed for 12 grids, when the media queries were designed, a query was not made for each column of the grid. Not every column has a media query attached for it, instead the column around the missing column do the guess work for that column. 
+Even though the framework is designed for 12 grids, when the media queries were designed, a query was not made for each column of the grid. Not every column has a media query attached to it. Instead the column around the missing column does the guess work for that column. 
 
 The framework has been designed to be a starting point, for better control the user needs to add media queries for each column. The framework is intended as a teaching tool for the user, adding in the queries for them, would not be beneficial. 
 
@@ -247,8 +288,6 @@ Five different alert types were created, each with their own significance. All t
 
 \subsection*{Mixins}
 \addcontentsline{toc}{subsection}{Mixins}
-\gls{mixins} are one of the most powerful features of \gls{SASS}. \gls{mixins} allow for efficient and clean code repetitions as well as an easy way to adjust your code with ease. \gls{mixins} are the \gls{SASS} equivalent of macros in other programming languages.
-
 \gls{mixins} are used throughout the development of this framework in an effort to keep the code DRY. As seen in the example below, instead of having to write the border radius property for each browser, a mixin was written to do this for us. In the code, the mixin is called using the include statement @include border-radius. In the compiled CSS, the border radius property for each browser is added in automatically, 
 
 \begin{lstlisting}[language=CSS3]
@@ -260,6 +299,7 @@ Five different alert types were created, each with their own significance. All t
 }
 \end{lstlisting}
 
+\newpage
 \addcontentsline{toc}{section}{Boilerplates, and Partials}
 \section*{Boilerplates, and Partials}
 
@@ -290,41 +330,6 @@ In an effort to remove any repetition, a loop was created in the layout file tha
 {%- endfor %}
 \end{lstlisting}
 
-\newpage
-\section*{Technologies}
-\addcontentsline{toc}{section}{Technologies}
-
-To compile the \gls{SCSS}, Codekit \citep{CODEKIT17} was used. Although \gls{SCSS} can be compiled from the command line or using a tool such as Grunt, using an application such as Codekit had extra features that would all have to be separate commands or even applications that made development easier. 
-
-Codekit is an application that helps a developer build websites faster by automating tasks that a developer needs. CodeKit compiles languages such as SASS, Less, Stylus, and CoffeeScript. Codekit auto refreshes the browsers you are testing the website in, they offer built in hosting, that can be accessed by phones, tablets and other PC's. Codekit automatically minifies, and automatically checks the syntax ensuring it is correct, as well as optimising images. By automating these features, it can speed up the developers workflow. 
-
-Originally, the development of the framework started with the \gls{SASS} language. \gls{SASS} is a \gls{CSS} preprocessor that has syntax advancements, the syntax uses indentation to format the code, and does not use semi-colons to indicate a new line. Stylesheets created in \gls{SASS} have to be compiled into regular \gls{CSS} stylesheets to be used. However, they do not extend the \gls{CSS} standard itself. 
-
-However as development continued, mixins were found to be an issue when written in \gls{SASS}, \gls{SCSS} mixins could not be used with \gls{SASS} code. It was decided that the use of mixins were more important in the development of the \gls{CSS} than not. All the partials that were written in \gls{SASS} at this stage was converted into \gls{SCSS}. As this happened in the first few weeks of the development process, the process didn't take long. 
-
-\gls{SCSS} is an extension of the \gls{CSS} syntax. This means that a correctly written \gls{CSS} file is also valid \gls{SCSS}. \gls{SCSS} uses semi-colons and braces to break up the code of an element. Variables in \gls{SCSS} are declared with \$, and the assignment sign is :. 
-
-%
-\newglossaryentry{SASS}
-{
-  name={SASS},
-  description={Syntactically Awesome Stylesheets},
-  sort=SASS
-}
-%
-
-A Template Engines is a tool that allows a user to break HTML code into smaller pieces that can be reused across multiple HTML files. They also give you the power to feed data into variables that help you simplify your code. Instead of using a tool to develop the partials Gulp \citep{GULP17}, and Nunjucks \citep{NUN17}  will be used.
-
-Nunjucks is a rich, and powerful language used for templating. Nunjucks have features such as inheritance that other templating engines such as Handlebars do not. Gulp.js which is a task runner, is used alongside Nunjucks to remove the problem of repetition. 
-
-HTML is a markup language used in structuring, and presenting content on the Word Wide Web. HTML along with Ruby on Rails is been used to develop the boilerplates to that the end user can edit to suit their needs. 
-
-LaTeX \cite{LAT17} is a document preparation system for high-quality typesetting. The user uses markup tagging conventions to define the general structure of a document. LaTeX is been used in this project to develop the documentation that defines, and describes the project.
-
-As the project will be large, with complicated parts, and to help in the development of the project, Git will be used for version control. Git works by creating snapshots of files. If there hasn't been any changes to specific file, Git will link it to a previous version, keeping the project fast, and lean. 
-
-Having versions of the project will show what changes have been made over time, and if needed allow the project to be rollbacked to a previous version if say one of the features in the framework is causing interfering with the other classes.
-
 
 \newpage
 \section*{Development Issues}
@@ -337,9 +342,7 @@ Having versions of the project will show what changes have been made over time, 
   sort=DRY
 }
 
-Originally the framework was to be developed using \gls{SASS}, but as the development went on, and wanting to keep the code as \gls{DRY} as possible, \gls{mixins} were needed. Here within lies the issue, not enough \gls{SASS} was known at the start of the project to write \gls{SASS} \gls{mixins} or knowing how to convert \gls{SCSS} to \gls{SASS}. The development then continued until several partials were created but the use of \gls{mixins} were needed to continue the development using the correct methods. 
-
-It was at this stage when development was stopped, enough \gls{SASS} was known to be able to convert the \gls{SASS} into \gls{SCSS}. After a day of conversion, ensuring that the \gls{SCSS} worked exactly like the \gls{SASS}, was development able to continue. 
+Originally the framework was to be developed using \gls{SASS}, but as the development went on, and wanting to keep the code as \gls{DRY} as possible, \gls{mixins} were needed. The development then continued until several partials were created but the use of \gls{mixins} were needed to continue the development using the correct methods, it was at this stage that development stopped so that already written \gls{SASS} could be converted into \gls{SCSS}. 
 
 \newglossaryentry{mixins}
 {

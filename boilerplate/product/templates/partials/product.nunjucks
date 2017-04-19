@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row-fluid">
+    <div class="col12">
+      <h1>Lorem Ipsum</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+      <div align="right">
+        <a href="#" class="button button-primary">Find Out More</a>
+        <a href="#" class="button button-primary">Find Out Less</a>
+      </div>
+    </div>
+
+    <div class="col12">
+      <div class="col3">
+        <h3>Lorum</h3>
+        <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
+      </div>
+      <div class="col3">
+        <h3>Ipsum</h3>
+        <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
+      </div>
+      <div class="col3">
+        <h3>Dolor</h3>
+        <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
+      </div>
+      <div class="col3">
+        <h3>Sit Amet</h3>
+        <p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
+      </div>
+    </div>
+
+    <div class="col12">
+      <div class="col6">
+        <img class="thumbnail" src="http://placehold.it/700x250">
+          <h4>Nulla At Nulla Justo, Eget</h4>
+        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in.</p>
+      </div>
+      <div class="col6">
+        <img class="thumbnail" src="http://placehold.it/700x250">
+        <h4>Nulla At Nulla Justo, Eget</h4>
+        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in.</p>
+      </div>
+    </div>
+  </div>
+</div>
