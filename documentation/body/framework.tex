@@ -3,13 +3,19 @@
 \section*{Technologies}
 \addcontentsline{toc}{section}{Technologies}
 
-To compile the \gls{SCSS}, Codekit \citep{CODEKIT17} was used. Although \gls{SCSS} can be compiled from the command line or using a tool such as Grunt, using an application such as Codekit had extra features that would all have to be separate commands or even applications that made development easier. 
+\subsection*{CodeKit}
+\addcontentsline{toc}{subsection}{CodeKit}
 
-Codekit is an application that helps a developer build websites faster by automating tasks that a developer needs. CodeKit compiles languages such as SASS, Less, Stylus, and CoffeeScript. Codekit auto refreshes the browsers you are testing the website in, they offer built in hosting, that can be accessed by phones, tablets and other PC's. Codekit automatically minifies, and automatically checks the syntax ensuring it is correct, as well as optimising images. By automating these features, it can speed up the developer's workflow. 
+To compile the \gls{SCSS}subsection Codekit \citep{CODEKIT17} was used. Although \gls{SCSS} can be compiled from the command line or using a tool such as Grunt, using an application such as Codekit had extra features that would all have to be separate commands or even applications that made development easier. 
 
-The development of the project started with using \gls{SASS} to build the framework code, However as development continued, \gls{mixins} were found to be an issue when written in \gls{SASS}, \gls{SCSS} \gls{mixins} could not be used with \gls{SASS} code. It was decided that the use of \gls{mixins} were more important in the development of the \gls{CSS} than not. The \gls{SASS} was converted into \gls{SCSS} to continue development. 
+\subsection*{SCSS}
+\addcontentsline{toc}{subsection}{SCSS}
 
-\gls{SCSS} is an extension of the \gls{CSS} syntax. This means that a correctly written \gls{CSS} file is also valid \gls{SCSS}. \gls{SCSS} uses semi-colons and braces to break up the code of an element. Variables in \gls{SCSS} are declared with \$, and the assignment sign is :. 
+\gls{SCSS} can be compiled by many different utilities such as Grunt. However, the decision was made to use Codekit \citep{CODEKIT17}]. There are several reasons for this, it is a single application which compiles languages such as SASS, Less, Stylus, and CoffeeScript as well as offering tools such as built in local hosting that can be accessed from multiple devices, and automatic minifier all in a single package, and reduced the need to use many different applications to perform the same tasks performed by Codekit.
+ 
+ The initial idea was to build the framework code using \gls{SASS}, however as development continued, \gls{mixins} were found to be an issue when written in \gls{SASS}, \gls{SCSS} \gls{mixins} could not be used with \gls{SASS} code. It was decided that the use of \gls{mixins} were more important in the development of the \gls{CSS} than not. The \gls{SASS} was converted into \gls{SCSS} to continue development. 
+ 
+\gls{SCSS} is an extension of the \gls{CSS} syntax, which means that rules written in \gls{CSS} can also be considered to be valid \gls{SCSS}. \gls{SCSS} uses semi-colons and braces to break up the code of an element. Variables in \gls{SCSS} are declared with \$, and the assignment sign is :. 
 
 
 %
@@ -23,27 +29,38 @@ The development of the project started with using \gls{SASS} to build the framew
 
 \gls{mixins} are one of the most powerful features of \gls{SASS}/ \gls{SCSS}. They allow for efficient, and clean code repetitions as well as an easy way to adjust your code with ease. \gls{mixins} are the \gls{SCSS} equivalent of macros in other programming languages.
 
-A Template Engines is a tool that allows a user to break HTML code into smaller pieces that can be reused across multiple HTML files. They also give you the power to feed data into variables that help you simplify your code. Instead of using a tool to develop the partials Gulp \citep{GULP17}, and Nunjucks \citep{NUN17}  will be used.
+\subsection*{Nunjucks}
+\addcontentsline{toc}{subsection}{Nunjucks}
+Nunjucks is a rich, and powerful language used for templating. Nunjucks has features such as inheritance that other templating engines such as Handlebars do not. Gulp.js which is a task runner, is used alongside Nunjucks to remove the problem of repetition. 
 
-Nunjucks is a rich, and powerful language used for templating. Nunjucks have features such as inheritance that other templating engines such as Handlebars do not. Gulp.js which is a task runner, is used alongside Nunjucks to remove the problem of repetition. 
+A template engine is a tool that allows a user to break HTML code into smaller pieces that can be reused across multiple HTML files. Templating engines allow developers to write dynamic code, which can change based on what is inserted into a particular variable. This is extremely useful in situations such as localisation where different phrasing might be required. This can be achieved by using translation module such as i18n \citep{NPM16}. Another major benefit to this is the ability to separate content from stylisation \citep{CONT05}. Instead of using a application to develop the partials Gulp \citep{GULP17}, and Nunjucks \citep{NUN17} will be used.
 
-HTML is a markup language used in structuring, and presenting content on the Word Wide Web. HTML along with Ruby on Rails is been used to develop the boilerplates to that the end user can edit to suit their needs. 
+\subsection*{HTML}
+\addcontentsline{toc}{subsection}{HTML}
+HTML is a markup language used in structuring, and presenting content on the Word Wide Web. HTML is the tool that the user will be using as the starting point of their development.
 
-The LaTeX Project is a document preparation system for high-quality typesetting. The user uses markup tagging conventions to define the general structure of a document \citep{LAT17}. LaTeX is being used in this project to develop the documentation that defines, and describes the project.
+\subsection*{LaTeX}
+\addcontentsline{toc}{subsection}{LaTeX}
+The LaTeX Project is a document preparation system for high-quality typesetting. The user uses markup tagging conventions to define the general structure of a document \citep{LAT17}. With LaTeX a documents content can be quickly and easily developed then styled through the use of markup tagging conventions which define the general structure of a project.
 
-As the project will be large, with complicated parts, and to help in the development of the project, Git will be used for version control \citep{GIT05}. Git works by creating snapshots of files. If there hasn't been any changes to specific file, Git will link it to a previous version, keeping the project fast, and lean. 
+\subsection*{Git}
+\addcontentsline{toc}{subsection}{Git}
+As the project will be large, with complicated parts, and to help in the development of the project, Git will be used for version control. Git works by creating snapshots of files. If there hasn't been any changes to specific file, Git will link it to a previous version, keeping the project fast, and lean \citep{GIT05}.
 
-Having versions of the project will show what changes have been made over time, and if needed allow the project to be roll backed to a previous version if say one of the features in the framework is causing interfering with the other classes.
+Having versions of the project will show what changes have been made over time, and if needed allow the project to be roll backed to a previous version. If a regression bug is introduced into the framework, it can be rolled back to a previous version easily using git \citep{ATL16}.
 
 \newpage
 \section*{Framework}
 \addcontentsline{toc}{section}{Framework}
-The following section will detail the components that make up the Taylor'd UI framework. Each of the following components are what makes up the framework, and aid in the development of a website. All the components of the framework have been built in separate partial files, denoted by an underscore. The underscore informs codekit, to not compile the partials. A separate file called taylord.scss was created, in this file the @include statement was used to pull all the separate partial files into one file and that file is then compiled to \gls{CSS}. 
-
+The Taylor'd UI framework is made up from the following components. Each of these components have been developed in separate partial files denoted by an underscore. The underscore is a keyword which is used to pass instructions to Codekit. A separate file called taylord.scss was created, in this file the @include statement was used to pull all the separate partial files into one file and that file is then compiled to \gls{CSS}. 
 
 \subsection*{Variables}
 \addcontentsline{toc}{subsection}{Variables}
-At the start of framework development, a file called \_foundation.scss was created, in this file all the variables for the framework are defined. In this file, the foundation colour variable is set and using the \gls{HSL} function called lighten, a range of colours are created to be used in the framework. Other colour variables were added and then used to set the background colour, alert colours, and link colours.
+At the start of framework development, a file called \_foundation.scss was created, in this file all the variables for the framework are defined. In this file, the foundation colour variable is set and using the \gls{HSL} function called lighten. 
+
+\gls{HSL} stands for Hue, Saturation, Lighten. Hue is a degree on the RGB colour wheel, this ranges from 0 to 360. 0 is red, 120 is green, and 240 is blue, Saturation is a percentage value; 0\% means a shade of grey and 100\% is the full colour. Lightness is also a percentage; 0\% is black, 100\% is white \citep{HSL16}.
+
+A range of colours are created to be used in the framework. Other colour variables were added and then used to set the background colour, alert colours, and link colours.
 
 \newglossaryentry{SCSS}
 {
@@ -71,9 +88,9 @@ At the start of framework development, a file called \_foundation.scss was creat
 \newpage
 \subsection*{Font and Typography}
 \addcontentsline{toc}{subsection}{Font and Typography}
-In keeping with the framework being non opinionated, it was crucial to pick a font, and to have the typography nondescript so that the end user can change it to suit their needs. When researching fonts, the readability of the the font was looked at in regard to how it looked in large sections to single lines of text. 
+In keeping with the framework being non opinionated, it was crucial to pick a font, and to have the typography nondescript so that the end user can change it to suit their needs. A clear indicator of a suitable font, is that it that it is readable when used in individual lines and also in large blocks of text. 
 
-The font was then viewed on a range of devices ranging from mobile to desktop, ensuring it was legible across these devices. Lastly the range of the font was looked at, did the font allow for non latin characters, accents, and symbols \citep{WORD16}.
+Each candidate font was viewed on a range of devices including mobile, and desktop, thereby ensuring it was legible across multiple devices, and screen resolutions. Lastly the range of the font was looked at, did the font allow for non latin characters, accents, and symbols \citep{WORD16}.
 
 \newglossaryentry{px}
 {
@@ -109,7 +126,7 @@ With the advent of \gls{CSS}3, \gls{rem} was added, as previously mentioned, \gl
 
 \subsection*{Colour Scheme}
 \addcontentsline{toc}{subsection}{Colour Scheme}
-When creating the colour scheme, it was important to keep design opinions to a minimum, to use colours that had more neutral tones, and that are not garish in appearance. It was also important to use colours that the end user would recognise that they were for instructional purposes, and for them to change in their web development projects. The colour needed to look visually appealing when modified as well. This means if the hue, tone and vibrancy of the colour is modified, the resulting colour needed to be appealing as well. 
+When creating the colour scheme, it was important to keep design opinions to a minimum, to use colours that had more neutral tones, and that are not garish in appearance. It was also important to use colours that the end user would recognise that they were for instructional purposes, and for them to change in their own web development projects. The colour needed to look visually appealing when modified as well. This means if the hue, tone and vibrancy of the colour is modified, the resulting colour needed to be appealing as well. 
 
 Instead of researching colour theory and choosing the best colours, it was decided to use Google's Material Design colour palette, and choose from their wide range of colours \citep{Google17}. The palette  gave a variety of colours along with modifications of the colour such as different hues and saturations.
 
@@ -232,7 +249,7 @@ A state is an object that augments, and alters all other styles. For example, A 
 \subsection*{Grid}
 \addcontentsline{toc}{subsection}{Grid}
 
-The grid is based on a 960px grid or 60rem in this case. The size is 60rem as it is based on the default font size of 1rem or 16px. Using that as the base of the calculation, a font size of 960px would be a \gls{rem} value of 60. The reasons of why the grid is 960px is that modern laptops, and or desktops no longer have a resolution below this. The 960 grid is evenly divisible in numerous ways as in in \ref{column}. 
+The grid is based on a 960px grid or 60rem in this case. The size is 60rem as it is based on the default font size of 1rem or 16px. Using that as the base of the calculation, a font size of 960px would be a \gls{rem} value of 60. Modern desktops and laptops and mobile screens no longer tend to have resolutions below 960px, and for this reason the grid is set at this size as well as been evenly divisible in numerous ways as in in \ref{column}. 
 
 The 960 grid is adaptable to any layout or screen size. With using the 960 grid, a 12 column layout will utilised. The 12 column layout lends itself to the 960 grid as its also equally divisible, allowing for an odd number of columns all with even numbers as seen in figure \ref{fig:grid} whereas using a 16 grid column layout, the same result is not easily achieved. 
 
@@ -272,7 +289,7 @@ The framework has been designed to be a starting point, for better control the u
 \newpage
 \subsection*{Alerts}
 \addcontentsline{toc}{subsection}{Alerts}
-Alert notifications can be used to alert the user that something is about to happen or has happened, this can be that their username or password is incorrect, their login was successful, something went wrong while trying to load content, et al.
+Alert notifications can be used to alert the user that something is about to happen or has happened, this can be that their username or password is incorrect, their login was successful, something went wrong while trying to load content, etc.
 
 Five different alert types were created, each with their own significance. All the alerts are built using the same alert class, and through the use of the modifiers are changed into each alert type. 
 
@@ -288,7 +305,7 @@ Five different alert types were created, each with their own significance. All t
 
 \subsection*{Mixins}
 \addcontentsline{toc}{subsection}{Mixins}
-\gls{mixins} are used throughout the development of this framework in an effort to keep the code DRY. As seen in the example below, instead of having to write the border radius property for each browser, a mixin was written to do this for us. In the code, the mixin is called using the include statement @include border-radius. In the compiled CSS, the border radius property for each browser is added in automatically, 
+\gls{mixins} are used throughout the development of this framework in an effort to keep the code \gls{DRY}, (Don't Repeat Yourself). As seen in the example below, instead of having to write the border radius property for each browser, \gls{mixins} were written to do this automatically. In the code, the \gls{mixins} are called using the include statement @include border-radius. In the compiled \gls{CSS}, the border radius property for each browser is added in automatically, 
 
 \begin{lstlisting}[language=CSS3]
 @mixin border-radius($radius) {
@@ -303,7 +320,7 @@ Five different alert types were created, each with their own significance. All t
 \addcontentsline{toc}{section}{Boilerplates, and Partials}
 \section*{Boilerplates, and Partials}
 
-A total of three boilerplate templates were made; a blog, portfolio, and -----. The templates were broken into partials so that there was no repetition of code, and for reusability. The boilerplates themselves are bare, and have the look of a wireframe, as they are intended to be. The boilerplates have been added to the framework as a learning tool, for the end user to manipulate with their own stylings, learning by doing. 
+A total of three boilerplate templates were made; a blog, portfolio, a product page. The templates were broken into partials so that there was no repetition of code, and for reusability. The boilerplates themselves are bare, and have the look of a wireframe, as they are intended to be. The boilerplates have been added to the framework as a learning tool, for the end user to manipulate with their own stylings, learning by doing. 
 
 To build the partials, Gulp, and Nunjucks was used in tandem along with a plugin called gulp-nunjucks-render \citep{PLUG17} . A gulp file was created that contained a script that is given the partial, and layout locations, and then compiles it into a html file using the command gulp nunjuks.
 
@@ -342,8 +359,8 @@ In an effort to remove any repetition, a loop was created in the layout file tha
   sort=DRY
 }
 
-Originally the framework was to be developed using \gls{SASS}, but as the development went on, and wanting to keep the code as \gls{DRY} as possible, \gls{mixins} were needed. The development then continued until several partials were created but the use of \gls{mixins} were needed to continue the development using the correct methods, it was at this stage that development stopped so that already written \gls{SASS} could be converted into \gls{SCSS}. 
-
+Originally the framework was to be developed using \gls{SASS}, Several partials were developed, however to proceed further the use of \gls{mixins} would be required. This was not possible with the existing \gls{SASS}, and an effort to convert everything to \gls{SCSS} was undertaken.
+ 
 \newglossaryentry{mixins}
 {
   name={mixins},
@@ -351,13 +368,13 @@ Originally the framework was to be developed using \gls{SASS}, but as the develo
   sort=mixins
 }
 
-Another development issue was the buttons, the normal button was not clickable but the large, small, and pill button were. This was an issue that plagued the developer throughout the development. The code for buttons were rewritten a few times to see where the issue was, and no matter what was written, the button was not clickable, this issue then effected the default button, along with the classes that used the default button as a base such as the primary button. 
+A bug within the button code surfaced which affected only certain buttons. This was an issue that plagued the developer throughout the development. The code for buttons were rewritten a few times to see where the issue was, and no matter what was written, the button was not clickable, this issue then effected the default button, along with the classes that used the default button as a base such as the primary button. 
 
-To figure out the cause of the issue, tools such as the Chrome Development tools were used. Using the inspect element feature, the button toggle state was used to force the element state as seen in \ref{fig:tools}. This allowed for each of the buttons states to be forced to run, while viewing the corresponding code to see where the error was. 
+To figure out the cause of the issue, tools such as the Chrome Development tools were used. Using the inspect element feature, the button toggle state was used to force the element state as seen in figure \ref{fig:tools}. This allowed for each of the buttons states to be forced to run, while viewing the corresponding code to see where the error was. 
 
 It seemed that the button issue was caused by the style to be overwritten by a different partial. To get the buttons to have their different states, the active, hover, and focus elements had to be hard coded into the button. In doing this, it didn't matter what other styles might override the values as the elements were hard coded.
 
-A minor issue was trying to keep the code DRY both the SASS. and the compiled CSS was viewed to see if there was repeating code. When there was repeating code, \gls{mixins} were used where possible. Although there were sections of repeating code that converting to \gls{mixins} was not possible. 
+A minor issue was trying to keep the code \gls{DRY} both the \gls{SASS}. and the compiled \gls{CSS} was viewed to see if there was repeating code. When there was repeating code, \gls{mixins} were used where possible. Although there were sections of repeating code that converting to \gls{mixins} was not possible. 
 
 Originally, the partials were going to be developed using Web Components \citep{Web17}, and Polymer \citep{Google17b}. The research had been done on these technologies, and how to use them. The development had started on the partials using these technologies but as the first partials were created, another student had viewing the work and asked \textit{"Is this not too complicated for your user?"}, and they were correct. The framework has been designed for the entry level user to understand, and use. Using the latest in web standards is likely to confuse them more.
 
@@ -439,7 +456,7 @@ To solve this issue, the query had to be writing using different syntax. The var
 	\addcontentsline{toc}{subsection}{Engineering Release Two (March)}
 	\item Iteration Four: (20th of February - 6th of March)\begin{itemize} 
 	\item Rewrote all the \gls{SASS} files to \gls{SCSS}
-	\item Developed button mixins that would calculate all the button sizes
+	\item Developed button \gls{mixins} that would calculate all the button sizes
 	\item Created Alerts partial
 	\item Created States partial
 	\item Created Panel partial

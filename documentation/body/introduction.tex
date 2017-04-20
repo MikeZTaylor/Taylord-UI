@@ -1,16 +1,8 @@
 \newpage
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
-%This is typically an outline description detailing the background to the problem.
-
-%
-%\newglossaryentry{DAM}
-%{
-%  name={DAM},
-%  description={decameter radio emissions in the 10-100 m wavelengths},
-%  sort=DAM
-%}
-%
+\section*{Background}
+\addcontentsline{toc}{section}{Background}
 
 \gls{UI}, and \gls{CSS} frameworks are abundant and readily available and generally covered by permissible licence agreements \citep{CODY16}. This not only allows commercial use of the frameworks but ultimately encourages tie in to a particular framework. End users expect all websites to work across their devices, laptops, tablets and phones. This requirement of responsive web applications ensures that hand coding a solution is a daunting task for entry level developers.
 
@@ -40,9 +32,10 @@ Using a framework allows the user to speed up the initial mock-up process, they 
 
 Frameworks such as Twitter Bootstrap \citep{SASS16}, and Zurb Foundation \citep{LESS16} offer complete solutions, with ready built code for forms, buttons, fluid layouts, and popovers. Skeleton \citep{SKEL16} is an example of the other end of the spectrum. Skeleton is a boilerplate for responsive, and mobile first development. It is designed to be light, and is built with less than 400 lines of code. Unlike Bootstrap or Foundation, skeleton is designed to be the users starting point, not their full solution. 
 
-This project has been built to offer the end user a complete solution designed with an entry level user in mind. The framework is non-opinionated unlike frameworks such as Bootstrap which is very opinionated about their design \citet{KEMH16}. This framework is designed to be the starting point for a user, for the user to manipulate, and build upon.
+This project has been built to offer the end user a complete solution designed with an entry level user in mind. The framework is non-opinionated unlike frameworks such as Bootstrap which is very opinionated about their design \citet{KEMH16}. This framework is 
+designed to be the starting point which a user may then manipulate, and build upon.
 
-Instead of the user building large complex websites with repeating code, one of the project goals is to get the user familiar with concepts such boilerplate templates, partials and a \gls{CLI}. Partials break up the html code into smaller more manageable fragments that can be used across multiple html files. The framework has been built with this in mind, creating classes, and id's that can be reused instead of having a bloated package with a lot of unused code \citep{KAR15}.
+Rather than building large complex websites with repeating code, one of the project goals is to allow a safe environment where a user can experiment with boilerplate templates, partials, and a \gls{CLI}. Partials break up the html code into smaller more manageable fragments that can be used across multiple html files. The framework has been built with this in mind, creating classes, and id's that can be reused instead of having a bloated package with a lot of unused code \citep{KAR15}.
 
 \newglossaryentry{CLI}
 {
@@ -51,14 +44,13 @@ Instead of the user building large complex websites with repeating code, one of 
   sort=CLI
 }
 
-A major benefit of this project, is the ability to customise or use prebuilt themes also known as boilerplate templates. By generating the templates for the user, it can allow them to concentrate on the aesthetics more so than the structure of the project. Using templates does have its negatives, the templates themselves can be expensive costing hundreds if not thousands as seen on Themeforest \citep{THEME17}. Many shortcuts could be used in the development of boilerplate, not adhering to W3S standards. These boilerplate's can also offer little customisation \citep{NATH16}.
+Prebuilt code such as standard default themes are often referred to as boilerplate templates, a major benefit of this project is to enable the easy modification of such templates. By generating the templates for the user, it can allow them to concentrate on the aesthetics more so than the structure of the project. Using prebuilt themes will not suit every situation. The templates themselves can be expensive as can be seen on Themeforest \citep{THEME17}, and might not adhere to the W3C standards, or worse might offer little customisation \citep{NATH16}. 
 
 Further attempts to incorporate Bootstrap into projects demonstrated the syntax as very unfriendly, and noticeably more difficult than hand coded \gls{CSS}. Bootstrap syntax such as: \begin{lstlisting}
 	 <div class="col-sm-4">\end{lstlisting} 
 	 does not describe in any form that it would be displayed as a three column layout in the browser. Based on the snippet above, an entry level user is unlikely to know how to change this from a three column layout to a single column layout. 
 	 
-Additionally while working as a web developer mentor at Coderdojo, students were observed to have similar experiences. Many were reluctant to learn frameworks such as Bootstrap as they were too confusing.
-
+Additionally while working as a web developer mentor at Coderdojo, students were observed to have similar experiences. Many were reluctant to learn frameworks such as Bootstrap as they were too confusing. Taylor'd UI could potentially be used in an educational environment to provide students a structured introduction to web development.
 %
 \section*{License}
 \addcontentsline{toc}{section}{License}

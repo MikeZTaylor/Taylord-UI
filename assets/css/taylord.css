@@ -538,7 +538,7 @@ header {
 
 nav {
   float: right;
-  padding: 5px; }
+  padding: 2%; }
 
 #menu-icon {
   display: hidden;
@@ -1112,7 +1112,7 @@ li {
 /*------------------------------------*\
  * Lbaels */
 /*------------------------------------ */
-.btn-label {
+.button-label {
   vertical-align: middle;
   display: inline-block;
   padding: 0.025rem .25rem;
@@ -1167,7 +1167,7 @@ li {
     text-decoration: underline; }
     .alert a:hover {
       text-decoration: none; }
-  .alert .btn {
+  .alert .button {
     margin-top: 1.4rem; }
 
 /*------------------------------------*\
