@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var nunjucksRender = require('gulp-nunjucks-render');
 
-gulp.task('nunjucks', function() {
+gulp.task('nunjucks_one', function() {
   // Gets .html and .nunjucks files in pages
   return gulp.src('boilerplate/blog/pages/**/*.+(html|nunjucks)')
   // Renders template with nunjucks
@@ -12,7 +12,7 @@ gulp.task('nunjucks', function() {
   .pipe(gulp.dest('boilerplate/blog'));
 });
 
-gulp.task('nunjucks', function() {
+gulp.task('nunjucks_two', function() {
   // Gets .html and .nunjucks files in pages
   return gulp.src('boilerplate/portfolio/pages/**/*.+(html|nunjucks)')
   // Renders template with nunjucks
@@ -23,7 +23,7 @@ gulp.task('nunjucks', function() {
   .pipe(gulp.dest('boilerplate/portfolio'));
 });
 
-gulp.task('nunjucks', function() {
+gulp.task('nunjucks_three', function() {
   // Gets .html and .nunjucks files in pages
   return gulp.src('boilerplate/product/pages/**/*.+(html|nunjucks)')
   // Renders template with nunjucks
@@ -33,3 +33,6 @@ gulp.task('nunjucks', function() {
   // output files in app folder
   .pipe(gulp.dest('boilerplate/product'));
 });
+
+
+gulp.task('nunjucks', ['nunjucks_one', 'nunjucks_two', 'nunjucks_three']);

@@ -3,9 +3,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Portfolio</title>
+  <title>Product</title>
   <link rel="stylesheet" href="css/taylord.css" />
   <link rel="stylesheet" href="css/product.css" />
+  <link rel="stylesheet" href="../../themes/material.css" />
       </head>
 <body>
 

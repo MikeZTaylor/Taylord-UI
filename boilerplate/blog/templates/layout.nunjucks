@@ -6,10 +6,12 @@
   <title>Simple Blog</title>
   <link rel="stylesheet" href="css/taylord.css" />
   <link rel="stylesheet" href="css/blog.css" />
-      </head>
+  <link rel="stylesheet" href="../../themes/material.css" />
+</head>
 <body>
 
   <!-- You write code for this content block in another file -->
   {% block content %} {% endblock %}
+  <hr />
 </body>
 </html>
