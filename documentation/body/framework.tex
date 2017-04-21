@@ -52,7 +52,7 @@ Having versions of the project will show what changes have been made over time, 
 \newpage
 \section*{Framework}
 \addcontentsline{toc}{section}{Framework}
-The Taylor'd UI framework is made up from the following components. Each of these components have been developed in separate partial files denoted by an underscore. The underscore is a keyword which is used to pass instructions to Codekit. A separate file called taylord.scss was created, in this file the @include statement was used to pull all the separate partial files into one file and that file is then compiled to \gls{CSS}. 
+The Taylor'd UI framework is made up from the following components. Each of these components have been developed in separate partial files denoted by an underscore. The underscore is a keyword which is used to pass instructions to Codekit. A separate file called taylord.scss was created, in this file the \latinword{@includes} statement was used to pull all the separate partial files into one file and that file is then compiled to \gls{CSS}. 
 
 \subsection*{Variables}
 \addcontentsline{toc}{subsection}{Variables}
@@ -130,7 +130,8 @@ When creating the colour scheme, it was important to keep design opinions to a m
 
 Instead of researching colour theory and choosing the best colours, it was decided to use Google's Material Design colour palette, and choose from their wide range of colours \citep{Google17}. The palette  gave a variety of colours along with modifications of the colour such as different hues and saturations.
 
-\newpage
+For the neutral colours of the framework such as text and heading colours, a SASS colour generator was used \citep{ARCH17}. The generator allowed for a base colour to be added, the output was lightened versions of the base colours. This was useful when creating the variable name, as the colour code could be entered at the end, enabling the end user to have a good idea of what the colour would look like. 
+
 \subsection*{Tables}
 \addcontentsline{toc}{subsection}{Tables}
 Tables in HTML should only be used for rendering data that naturally belongs in a grid based system. This is data where the data characterised is similar across a serveral objects. Tables should not be used for the layout of content in a website, divs should be used for this. The key to designing the tables was to demonstrate to the end user that the tables were for data, and not for layout.
@@ -201,7 +202,7 @@ To get these components working correctly, the $>$ symbol was used, this allowed
 \addcontentsline{toc}{subsection}{Labels}
 Button labels should be kept as simple as possible. Long labels take longer to read, and can also take up large sections of valuable real estate on mobile web pages. 
 
-The button element illustrates a clickable button. The button element can be quite adaptable, elements such as images, text, headers, and even paragraphs can be in the button. The button element can also contain pseudo-elements such as ::before, and ::after. 
+The button element illustrates a clickable button. The button element can be quite adaptable, elements such as images, text, headers, and even paragraphs can be in the button. The button element can also contain pseudo-elements such as \latinword{::before}, and \latinword{::after}. 
 
 There is a clear difference between the label element, and a button created with an input element. An input element serves a data field, this is user data that you intend to dispatch to a server. There are several types of input related to a button.
 

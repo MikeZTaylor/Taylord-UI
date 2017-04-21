@@ -16,7 +16,7 @@ Partials are reusable HTML snippets that you can be embed into a template file a
 
 Not all modern browsers have full support for partials, and templates as seen on caniuse \citep{CANI17}. In order to achieve partials, and templates, Taylor'd UI is using nunjucks a rich and powerful templating engine. 
 
-If you are not comfortable in learning how to break the HTML into partials, and just want the HTML file to play around with, the file index.html can be found in the parent directory.
+If you are not comfortable in learning how to break the HTML into partials, and just want the HTML file to play around with, the file \latinword{index.html} can be found in the parent directory.
 
 Before starting, from the terminal enter in the commands seen below, the first will install gulp, the second will install nunjucks:
 
@@ -25,18 +25,18 @@ npm install gulp-cli -g
 npm install gulp-nunjucks-render --save-dev
 \end{lstlisting}
 
-A package.json file will then need to be created, this will configure the Node / NPM packages. Following this, create a gulp.js file, and place it in your main folder. Open the file and add the two following lines to the top.:
+A package.json file will then need to be created, this will configure the Node / NPM packages. Following this, create a \latinword{gulp.js} file, and place it in your main folder. Open the file and add the two following lines to the top.:
 
 \begin{lstlisting}[language=HTML]
 var gulp = require('gulp');
 var nunjucksRender = require('gulp-nunjucks-render');
 \end{lstlisting}
 
-The gulp.js file tells gulp what to do. In this file, we will be adding in the tasks we want gulp to run.
+The \latinword{gulp.js} file tells gulp what to do. In this file, we will be adding in the tasks we want gulp to run.
 
 Next, create a folder structure similar to layout structure as seen in figure \ref{fig:structure}. The templates folder is used for storing the Nunjucks partials, and any other Nunjucks files that will be added to files in the pages folder. The pages folder is used for storing files that will be compiled into HTML. Once they are compiled, they will be created in the blog folder.
 
-Create a file and call it layout.nunjucks. The layout file will contain the boilerplate HTML code such as title, and links to external files such as the CSS, see below for an example.
+Create a file and call it \latinword{layout.nunjucks}. The layout file will contain the boilerplate HTML code such as title, and links to external files such as the CSS, see below for an example.
 
 \begin{lstlisting}[language=HTML]
 <!-- layout.nunjucks -->
@@ -55,9 +55,9 @@ Create a file and call it layout.nunjucks. The layout file will contain the boil
 </html>
 \end{lstlisting}
 
-In the pages folder, create a file called index.nunjucks. This file will ultimately be converted into index.html and placed in the blog folder. The index.nunjucks extends the layout.nunjucks file, this means it contains all the boilerplate code written in the layout file. 
+In the pages folder, create a file called \latinword{index.nunjucks}. This file will ultimately be converted into index.html and placed in the blog folder. The \latinword{index.nunjucks} extends the \latinword{layout.nunjucks} file, this means it contains all the boilerplate code written in the layout file. 
 
-HTML code that is specific to index.nunjucks between the two block as seen below: 
+HTML code that is specific to \latinword{index.nunjucks} between the two block as seen below: 
 
 \begin{lstlisting}[language=HTML]
 {% block content %}
@@ -65,7 +65,7 @@ HTML code that is specific to index.nunjucks between the two block as seen below
 {% endblock %}
 \end{lstlisting}
 
-To generate the index.html file, a nunjucks task needs to be created that will do the conversion for us. Add the following code to the gulp.js file.  
+To generate the \latinword{index.html} file, a nunjucks task needs to be created that will do the conversion for us. Add the following code to the \latinword{gulp.js} file.  
 
 \begin{lstlisting}[language=HTML]
 <!DOCTYPE html>
@@ -81,7 +81,7 @@ To generate the index.html file, a nunjucks task needs to be created that will d
 </html>
 \end{lstlisting}
 
-Run gulp nunjucks from the terminal, you should see a new file called index.html created in the root folder. Open the file in a text editor. What you will find is something similar to below, a html file containing all the code from the layout file, and a heading that we added. 
+Run \latinword{gulp nunjucks} from the terminal, you should see a new file called \latinword{index.html} created in the root folder. Open the file in a text editor. What you will find is something similar to below, a html file containing all the code from the layout file, and a heading that we added. 
 
 \begin{lstlisting}[language=HTML]
 gulp.task('nunjucks', function() {
@@ -96,7 +96,7 @@ gulp.task('nunjucks', function() {
 });
 \end{lstlisting}
 
-Moving on to the next stage, partials. Create a new file called nav.nunjucks in the partial folder. Create a navigation class like below: 
+Moving on to the next stage, partials. Create a new file called \latinword{nav.nunjucks} in the partial folder. Create a navigation class like below: 
 
 
 \begin{lstlisting}[language=HTML]
@@ -111,7 +111,7 @@ Moving on to the next stage, partials. Create a new file called nav.nunjucks in 
   </nav>
 \end{lstlisting}
 
-Then add the following snippet to the layout file. This tells the layout.nunjucks file to include the navigation partial when it compiles. Run gulp nunjucks again.
+Then add the following snippet to the layout file. This tells the \latinword{layout.nunjucks} file to include the navigation partial when it compiles. Run \latinword{gulp nunjucks} again.
 \begin{lstlisting}[language=CSS3]
 {% include "partials/navigation.nunjucks" %}
 \end{lstlisting}
