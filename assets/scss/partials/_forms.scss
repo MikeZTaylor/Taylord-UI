@@ -1,0 +1,108 @@
+.form-styling {
+  padding: 30px;
+  margin: 50px auto;
+
+  input {
+    &[type="date"],
+    &[type="datetime"],
+    &[type="email"],
+    &[type="number"],
+    &[type="password"],
+    &[type="search"],
+    &[type="text"],
+    &[type="time"],
+    &[type="url"] {
+      @include box-sizing(0);
+      @include rem(font-size, 16);
+      outline: none;
+      display: block;
+      width: 100%;
+      padding: 7px;
+      border: none;
+      border-bottom: 1px solid $foundation-color-4d4d;
+      background: transparent;
+      margin-bottom: 10px;
+      height: 45px;
+    }
+  }
+
+  input[type="radio"] {
+    display:none;
+  }
+  input[type="radio"] + label {
+    color: $foundation-color-4d4d;
+    @include rem(font-size, 14);
+  }
+  input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    @include border-radius(50%);
+  }
+
+  input[type="radio"] + label span {
+    background-color: $foundation-color-4d4d;
+  }
+
+  input[type="radio"]:checked + label span{
+    background-color: darken($foundation-orange, 20%);
+  }
+
+  input[type="radio"] + label span,
+  input[type="radio"]:checked + label span {
+    -webkit-transition:background-color 0.4s linear;
+    -o-transition:background-color 0.4s linear;
+    -moz-transition:background-color 0.4s linear;
+    transition:background-color 0.4s linear;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    @include box-sizing(border-box);
+  }
+
+  .form-group {
+    vertical-align: middle;
+    position: relative;
+    @include rem(margin-bottom, 16);
+  }
+
+  .form-group::after,
+  .form-group::before {
+    clear: both;
+    display: table;
+    content: "";
+  }
+
+  select,
+  textarea {
+  @include box-sizing(border-box);
+  @include rem(font-size, 16);
+    height: auto;
+    resize: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-bottom: 1px solid $foundation-color-4d4d;
+    background: transparent;
+    margin-bottom: 10px;
+    height: 45px;
+  }
+
+  textarea {
+    resize: none;
+    overflow: hidden;
+  }
+
+  input {
+    &[type="button"],
+    &[type="submit"] {
+      padding: 8px 18px;
+    }
+  }
+}

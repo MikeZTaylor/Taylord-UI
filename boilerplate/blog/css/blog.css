@@ -35,6 +35,12 @@ small{
   height: 300px;
 }
 
+.blog-image{
+  max-width: 100%;
+  height: 400px;
+  background-image: url(http://placehold.it/850x350);
+}
+
 #left{
      float:left;
 }

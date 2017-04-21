@@ -19,6 +19,15 @@ h3 {
   color: #000;
 }
 
+.portfolio-image{
+  background-image: url("http://placehold.it/550x550");
+  max-width: 550px;
+  height: 300px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 #wrapper .text {
   position:relative;
@@ -31,11 +40,6 @@ h3 {
 
 #wrapper:hover .text {
   visibility:visible;
-}
-
-
-.blogDetails{
-  text-align: left;
 }
 
 ul {

@@ -12,7 +12,7 @@ a.button-info,
 a.button-danger,
 a.button-primary {
   text-decoration: none;
-  color: $foundation-color-e8e8;
+  color: $foundation-color-e6e6;
 }
 
 .button {
@@ -61,9 +61,9 @@ a.button-primary {
 
 .button-default {
   @include button-version($button-default-color, $button-default-background);
-  color: $foundation-color-a6a6;
+  color: #000;
   text-decoration: none;
-  border: $foundation-color-e8e8;
+  border: $foundation-color-cccc;
   border-style: solid;
   border-width: thin;
 }

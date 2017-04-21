@@ -10,8 +10,12 @@ h1, h2, h3, h4, h5, h6, p {
 h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
   text-rendering: auto;
-  color: $foundation-color-2121;
+  color: $foundation-color-1a1a;
   margin-bottom: 0;
+}
+
+h4, h5, h6{
+  color: $foundation-color-4d4d;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -96,7 +100,7 @@ blockquote {
   margin-left: 3.125rem;
   padding-left: 14px;
   padding-left: 1rem;
-  border-left: 5px solid $foundation-color;
+  border-left: 5px solid $blockquote-border-color;
 
   cite {
     font-weight: bold;

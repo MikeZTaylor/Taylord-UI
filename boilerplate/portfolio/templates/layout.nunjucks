@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="../../themes/material.css" />
       </head>
 <body>
-<h1>sdfsdgsgsg</h1>
   <!-- You write code for this content block in another file -->
   {% block content %} {% endblock %}
 </body>

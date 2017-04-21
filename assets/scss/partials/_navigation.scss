@@ -13,7 +13,7 @@ header {
 	position: fixed;
 	top: 0;
 	left: 0;
-	border-bottom: 0.5px solid $foundation-color-8585;
+	border-bottom: 0.5px solid $foundation-color-b3b3;
 	z-index: 100;
 }
 
@@ -36,7 +36,7 @@ nav {
   margin-top: 15px;
 	width: 40px;
 	height: 40px;
-	background: lighten($foundation-color-8585, 20%) $url_menu-icon center;
+	background: lighten($foundation-color-e6e6, 20%) $url_menu-icon center;
 }
 
 ul {
@@ -50,11 +50,11 @@ li {
 }
 
 .current {
-	color: darken($foundation-color-8585, 20%);
+	color: darken($foundation-color-4d4d, 20%);
 }
 
 a:hover#menu-icon {
-	background-color: $foundation-color-8585;
+	background-color: $foundation-color-8080;
 	@include border-radius($border-radius * 0.2);
 	border-radius: 4px 4px 0 0;
 }
@@ -73,7 +73,7 @@ a:hover#menu-icon {
 			position: absolute;
 			padding: 10px;
 			background: $foundation-white;
-			border: 1px solid $foundation-color-8585;
+			border: 1px solid $foundation-color-cccc;
 			right: 20px;
 			top: 60px;
 			width: 50%;
@@ -92,7 +92,7 @@ a:hover#menu-icon {
 			position: absolute;
 			padding: 20px;
 			background: $foundation-white;
-			border: 1px solid $foundation-color-8585;
+			border: 1px solid $foundation-color-cccc;
 			right: 20px;
 			top: 60px;
 			width: 50%;
