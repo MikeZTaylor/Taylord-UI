@@ -11,20 +11,16 @@
     </ul>
   </div>
   <div class="col6">
-    <label>Name
-      <input type="text" placeholder="Name">
-    </label>
-    <br />
-    <label>Email
-      <input type="text" placeholder="Email">
-    </label>
-        <br />
-    <label>
-      Message
-      <textarea placeholder="Tell me how much you want to hire me!"></textarea>
-    </label>
-        <br />
-    <input type="submit" class="button button-default" value="Submit">
+    <div class="form-styling">
+      <form class="form-group">
+        <input type="text" name="field1" placeholder="Full Name" />
+        <input type="email" name="field2" placeholder="Email" />
+        <input type="url" name="field3" placeholder="Website" />
+        <textarea placeholder=" Your Message" onkeyup="adjust_textarea(this)"></textarea>
+        <div align="right"><input class="button button-primary" value="Send Message" /></div
+        <br /> <br />
+      </form>
+    </div>
   </div>
 </div>
 </div>

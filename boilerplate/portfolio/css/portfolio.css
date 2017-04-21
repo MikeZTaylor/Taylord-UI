@@ -42,6 +42,10 @@ h3 {
   visibility:visible;
 }
 
+.form-styling {
+    padding: 0;
+}
+
 ul {
   list-style: none;
 }
