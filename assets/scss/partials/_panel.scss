@@ -5,8 +5,6 @@
 .panel {
   border: 1px solid transparent;
   background-color: $foundation-white;
-  @include border-radius($border-radius);
-
 }
 
 .panel-title {

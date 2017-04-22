@@ -11,7 +11,7 @@ To compile the \gls{SCSS}subsection Codekit \citep{CODEKIT17} was used. Although
 \subsection*{SCSS}
 \addcontentsline{toc}{subsection}{SCSS}
 
-\gls{SCSS} can be compiled by many different utilities such as Grunt. However, the decision was made to use Codekit \citep{CODEKIT17}]. There are several reasons for this, it is a single application which compiles languages such as SASS, Less, Stylus, and CoffeeScript as well as offering tools such as built in local hosting that can be accessed from multiple devices, and automatic minifier all in a single package, and reduced the need to use many different applications to perform the same tasks performed by Codekit.
+\gls{SCSS} can be compiled by many different utilities such as Grunt. However, the decision was made to use Codekit \citep{CODEKIT17}. There are several reasons for this, it is a single application which compiles languages such as SASS, Less, Stylus, and CoffeeScript as well as offering tools such as built in local hosting that can be accessed from multiple devices, and automatic minifier all in a single package, and reduced the need to use many different applications to perform the same tasks performed by Codekit.
  
  The initial idea was to build the framework code using \gls{SASS}, however as development continued, \gls{mixins} were found to be an issue when written in \gls{SASS}, \gls{SCSS} \gls{mixins} could not be used with \gls{SASS} code. It was decided that the use of \gls{mixins} were more important in the development of the \gls{CSS} than not. The \gls{SASS} was converted into \gls{SCSS} to continue development. 
  
@@ -33,15 +33,15 @@ To compile the \gls{SCSS}subsection Codekit \citep{CODEKIT17} was used. Although
 \addcontentsline{toc}{subsection}{Nunjucks}
 Nunjucks is a rich, and powerful language used for templating. Nunjucks has features such as inheritance that other templating engines such as Handlebars do not. Gulp.js which is a task runner, is used alongside Nunjucks to remove the problem of repetition. 
 
-A template engine is a tool that allows a user to break HTML code into smaller pieces that can be reused across multiple HTML files. Templating engines allow developers to write dynamic code, which can change based on what is inserted into a particular variable. This is extremely useful in situations such as localisation where different phrasing might be required. This can be achieved by using translation module such as i18n \citep{NPM16}. Another major benefit to this is the ability to separate content from stylisation \citep{CONT05}. Instead of using a application to develop the partials Gulp \citep{GULP17}, and Nunjucks \citep{NUN17} will be used.
+A template engine is a tool that allows a user to break \gls{HTML} code into smaller pieces that can be reused across multiple \gls{HTML} files. Templating engines allow developers to write dynamic code, which can change based on what is inserted into a particular variable. This is extremely useful in situations such as localisation where different phrasing might be required. This can be achieved by using translation module such as i18n \citep{NPM16}. Another major benefit to this is the ability to separate content from stylisation \citep{CONT05}. Instead of using a application to develop the partials Gulp \citep{GULP17}, and Nunjucks \citep{NUN17} will be used.
 
 \subsection*{HTML}
 \addcontentsline{toc}{subsection}{HTML}
-HTML is a markup language used in structuring, and presenting content on the Word Wide Web. HTML is the tool that the user will be using as the starting point of their development.
+\gls{HTML} is a markup language used in structuring, and presenting content on the Word Wide Web. \gls{HTML} is the tool that the user will be using as the starting point of their development.
 
 \subsection*{LaTeX}
 \addcontentsline{toc}{subsection}{LaTeX}
-The LaTeX Project is a document preparation system for high-quality typesetting. The user uses markup tagging conventions to define the general structure of a document \citep{LAT17}. With LaTeX a documents content can be quickly and easily developed then styled through the use of markup tagging conventions which define the general structure of a project.
+The LaTeX Project is a document preparation system for high-quality typesetting. With LaTeX a documents content can be quickly and easily developed then styled through the use of markup tagging conventions which define the general structure of a project \citep{LAT17}.
 
 \subsection*{Git}
 \addcontentsline{toc}{subsection}{Git}
@@ -122,7 +122,7 @@ The next step was to determine the font sizing and how to calculate it. Font siz
 
 The \gls{em} technique alters the base font size on the body element by using a percentage \citep{GUN16}. This adapts the font so that 1em is equal to 10px, instead of the default 16px. To change the font size to the equivalent of 14px, the \gls{em} needs to be 1.4em. The downside of using \gls{em} to calculate the font sizing is that the font size compounds. This means that a list within a list isn't 14px but rather 20px. There is a work around where any child elements are declared to use 1em, but an entry level user would not know this. 
 
-With the advent of \gls{CSS}3, \gls{rem} was added, as previously mentioned, \gls{em} sizing was relative to the font size of the parent whereas \gls{rem} is relative to the root or html element. This means that a single font size can be defined for the html element, and all \gls{rem} units will be a percentage of that base unit. Safari 5, Chrome, Firefox 3.6+, and even Internet Explorer 9 have support for \gls{rem} units. Opera up to version 11.10, and early versions of Internet Explorer have yet to implement \gls{rem} units. In order to display font on these browsers, a fallback \gls{px} size is calculated using \gls{mixins}. 
+With the advent of \gls{CSS}3, \gls{rem} was added, as previously mentioned, \gls{em} sizing was relative to the font size of the parent whereas \gls{rem} is relative to the root or \gls{HTML} element. This means that a single font size can be defined for the \gls{HTML} element, and all \gls{rem} units will be a percentage of that base unit. Safari 5, Chrome, Firefox 3.6+, and even Internet Explorer 9 have support for \gls{rem} units. Opera up to version 11.10, and early versions of Internet Explorer have yet to implement \gls{rem} units. In order to display font on these browsers, a fallback \gls{px} size is calculated using \gls{mixins}. 
 
 \subsection*{Colour Scheme}
 \addcontentsline{toc}{subsection}{Colour Scheme}
@@ -130,11 +130,11 @@ When creating the colour scheme, it was important to keep design opinions to a m
 
 Instead of researching colour theory and choosing the best colours, it was decided to use Google's Material Design colour palette, and choose from their wide range of colours \citep{Google17}. The palette  gave a variety of colours along with modifications of the colour such as different hues and saturations.
 
-For the neutral colours of the framework such as text and heading colours, a SASS colour generator was used \citep{ARCH17}. The generator allowed for a base colour to be added, the output was lightened versions of the base colours. This was useful when creating the variable name, as the colour code could be entered at the end, enabling the end user to have a good idea of what the colour would look like. 
+For the neutral colours of the framework such as text and heading colours, a \gls{SASS} colour generator was used \citep{ARCH17}. The generator allowed for a base colour to be added, the output was lightened versions of the base colours. This was useful when creating the variable name, as the colour code could be entered at the end, enabling the end user to have a good idea of what the colour would look like. 
 
 \subsection*{Tables}
 \addcontentsline{toc}{subsection}{Tables}
-Tables in HTML should only be used for rendering data that naturally belongs in a grid based system. This is data where the data characterised is similar across a serveral objects. Tables should not be used for the layout of content in a website, divs should be used for this. The key to designing the tables was to demonstrate to the end user that the tables were for data, and not for layout.
+Tables in \gls{HTML} should only be used for rendering data that naturally belongs in a grid based system. This is data where the data characterised is similar across a several objects. Tables should not be used for the layout of content in a website, divs should be used for this. The key to designing the tables was to demonstrate to the end user that the tables were for data, and not for layout.
 
 Five table variations including table modifiers were created for the framework, ranging from default table to striped tables. Table modifiers take the colours that are used to dictate success or warning, and add them to a row in the table. The tables were designed to be responsive, this was achieved by taking the padding of table, and then dividing the \$baseline height by a set value as seen below. 
 
@@ -188,7 +188,7 @@ A panel is a component that allows you to outline a section of a web page. This 
 \newpage
 \subsection*{Button Groups and Pagination}
 \addcontentsline{toc}{subsection}{Button Groups and Pagination}
-A button group is a series of buttons grouped together on a single line, this can be achieved by removing the margin attribute in CSS. Pagination is a series of numbers grouped together on a single line, this can be useful for when you have multiple pages in your website. As these two components can be used interchangeably, it was decided to include them together in the same partial.
+A button group is a series of buttons grouped together on a single line, this can be achieved by removing the margin attribute in \gls{CSS}. Pagination is a series of numbers grouped together on a single line, this can be useful for when you have multiple pages in your website. As these two components can be used interchangeably, it was decided to include them together in the same partial.
 
 To get these components working correctly, the $>$ symbol was used, this allowed for only the direct children of an element to be selected, and modified. It will not affect any other element that is not a direct child of that element. In the code snippet below only the a element of unordered list item belonging to the class pagination gets a solid 1px border.   
 
@@ -266,7 +266,6 @@ $breakpoint-mobile: "screen and (max-width: 29.9375rem)";
 
 The media queries were developed using the rem mixin that was also used for font sizing, this allowed for the rem value and pixel value to be stored. For the columns, a media query for each target was included. Desktop, and tablet views have a rem, and pixel value. For mobile, percentages are used to better scale the content.
 
-\newpage
 \begin{lstlisting}[language=CSS3]
 .col12 {
 	@include rem(width, 960);
@@ -283,6 +282,24 @@ The media queries were developed using the rem mixin that was also used for font
 }
 \end{lstlisting}
 
+Using the class row fluid, the width has changed from a set number of 960px to width of 100\%. The percentage value allows for the columns to collapse in a predetermined pattern. The media query for mobile encompasses the fluid grid for it to scale down the columns. 
+
+\begin{lstlisting}[language=CSS3]
+.row-fluid [class^="col"] {
+
+  @media #{$breakpoint-mobile} {
+    margin-left: 0;
+  }
+
+  display: block;
+  float: left;
+  width: 100%;
+  min-height: 30px;
+  margin-left: 2.76%;
+  *margin-left: 2.70%;
+  @include box-sizing(border-box);
+}
+\end{lstlisting}
 Even though the framework is designed for 12 grids, when the media queries were designed, a query was not made for each column of the grid. Not every column has a media query attached to it. Instead the column around the missing column does the guess work for that column. 
 
 The framework has been designed to be a starting point, for better control the user needs to add media queries for each column. The framework is intended as a teaching tool for the user, adding in the queries for them, would not be beneficial. 
@@ -306,7 +323,7 @@ Five different alert types were created, each with their own significance. All t
 
 \subsection*{Mixins}
 \addcontentsline{toc}{subsection}{Mixins}
-\gls{mixins} are used throughout the development of this framework in an effort to keep the code \gls{DRY}, (Don't Repeat Yourself). As seen in the example below, instead of having to write the border radius property for each browser, \gls{mixins} were written to do this automatically. In the code, the \gls{mixins} are called using the include statement @include border-radius. In the compiled \gls{CSS}, the border radius property for each browser is added in automatically, 
+\gls{mixins} are used throughout the development of this framework in an effort to keep the code \gls{DRY} (Don't Repeat Yourself). What is meant by keeping your code DRY, is that you are removing elements that are repeated into one section and then just calling on that section. As seen in the example below, instead of having to write the border radius property for each browser, \gls{mixins} were written to do this automatically. In the code, the \gls{mixins} are called using the include statement @include border-radius. In the compiled \gls{CSS}, the border radius property for each browser is added in automatically, 
 
 \begin{lstlisting}[language=CSS3]
 @mixin border-radius($radius) {
@@ -317,28 +334,43 @@ Five different alert types were created, each with their own significance. All t
 }
 \end{lstlisting}
 
+
 \newpage
-\addcontentsline{toc}{section}{Boilerplates, and Partials}
-\section*{Boilerplates, and Partials}
+\subsection*{Forms}
+\addcontentsline{toc}{subsection}{Forms}
+A \gls{HTML} form defines a form field that is used as a tool to gather user input. A \gls{HTML} form is made up of various input elements such as checkboxes, text areas, submit buttons, password fields, and mailto links. 
 
-A total of three boilerplate templates were made; a blog, portfolio, a product page. The templates were broken into partials so that there was no repetition of code, and for reusability. The boilerplates themselves are bare, and have the look of a wireframe, as they are intended to be. The boilerplates have been added to the framework as a learning tool, for the end user to manipulate with their own stylings, learning by doing. 
+All types of input elements were considered, and one of each type has been added to the framework. By having one type of each input, it also allows the end user to build the element they require, using the form in the framework as their template. 
 
-To build the partials, Gulp, and Nunjucks was used in tandem along with a plugin called gulp-nunjucks-render \citep{PLUG17} . A gulp file was created that contained a script that is given the partial, and layout locations, and then compiles it into a html file using the command gulp nunjuks.
+All the individual element stylings are covered under the one class of form-styling. This ensures that all the elements are following the parents style. 
+
+To style the inputs, [] are used to select the type of input to style, as seen below: 
+
+\begin{lstlisting}[language=CSS3]
+input[type="radio"]
+\end{lstlisting}
+
+\newpage
+\addcontentsline{toc}{section}{Templates, and Partials}
+\section*{Templates, and Partials}
+
+A total of three templates were made; a blog, portfolio, a product page. The templates were broken into partials so that there was no repetition of code, and for reusability. The templates themselves are bare, and have the look of a wireframe, as they are intended to be. The templates have been added to the framework as a learning tool, for the end user to manipulate with their own stylings, learning by doing. 
+
+To build the partials, Gulp, and Nunjucks was used in tandem along with a plugin called gulp-nunjucks-render \citep*{PLUG17} . A gulp file was created that contained a script that is given the partial, and layout locations, and then compiles it into a \gls{HTML} file using the command gulp nunjuks.
 
 \begin{lstlisting}[language=CSS3]
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
-  return gulp.src('boilerplate/blog/pages/**/*.+(html|nunjucks)')
+  return gulp.src('template/blog/pages/**/*.+(html|nunjucks)')
   // Renders template with nunjucks
   .pipe(nunjucksRender({
-      path: ['boilerplate/blog/templates']
+      path: ['templates/blog/templates']
     }))
   // output files in app folder
-  .pipe(gulp.dest('boilerplate/blog'));
+  .pipe(gulp.dest('templates/blog'));
 });
 
 \end{lstlisting}
-
 
 In an effort to remove any repetition, a loop was created in the layout file that repeated a certain partial for a set number of times, instead of having to recreate those elements multiple times. 
 
@@ -433,6 +465,21 @@ To solve this issue, the query had to be writing using different syntax. The var
 @media #{$breakpoint-mobile} 
 \end{lstlisting}
 
+Another issue in development was that the panels background were not taking the colour of the alert class specified. The classes were checked to ensure that nothing was out of place. The next step was to use Chrome Developer tools to see which backgrounds were been used. All the backgrounds were from the parent class. The code was checked again and the $<$ was included in the class, reaffirming that the alert colour was to take precedence. As of now, the panel background colours have not been fixed.
+
+\begin{lstlisting}[language=CSS3]
+.panel-info {
+  border-color: $info-border-bottom-color;
+
+  .panel-title {
+    @include panel-title($default-color-background, $default-panel-text, 
+    $default-border-bottom-color);
+  }
+}
+\end{lstlisting}
+
+One issue that appeared time, and time again in the framework was the the default font colour. Whenever the variable was called, the returning colour was blue, never black as the variable suggested. Changing the colour variable short code from \#000 to \#000000 did not solve the issue. As a work around the hex value was added to where the text needed to be black instead of using the colour variable. 
+
 \newpage
 \section*{Project Plan}
 \addcontentsline{toc}{section}{Project Plan}
@@ -446,7 +493,7 @@ To solve this issue, the query had to be writing using different syntax. The var
 	\item Iteration Two: (23rd of January - 6th of February) \begin{itemize}
 	\item Started development of the framework. Created the file structure, and a partial called base that will contain all the variables of the framework
 	\item Decided on the colours and fonts that will be used in the framework
-	\item Created the body partial that contains a generic layout for a html file
+	\item Created the body partial that contains a generic layout for a gls{HTML} file
 	\end{itemize}
 	\item Iteration Three: (6th of February to 20th of February)\begin{itemize}
 	\item Created the button partial

@@ -5,8 +5,8 @@
 .button-label {
 	vertical-align: middle;
 	display: inline-block;
-	padding: 0.025rem .25rem;
-	background-color: $foundation-color;
+	padding: 0.40rem .40rem;
+	background-color: #000;
 	color: $foundation-white;
 	@include rem(font-size, 12);
 	margin: .5rem 0;

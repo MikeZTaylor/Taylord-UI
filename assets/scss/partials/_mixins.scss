@@ -29,8 +29,8 @@
 }
 
 @mixin buttons($color, $background) {
-  color: $foundation-white;
-  background-color: $foundation-color-e6e6;
+  color: #000;
+  background-color: lighten($foundation-color-e6e6, 5%);
 
   &:hover {
     background-color: darken($foundation-color-e6e6, 10%);

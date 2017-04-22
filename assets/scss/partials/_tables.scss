@@ -128,6 +128,6 @@
 // Table row is Danger
 .table > tbody > tr.is-danger > td,
 .table > tbody > tr:hover.is-danger > td {
-  background-color: lighten($danger-color, 40.5%);
+  background-color: lighten(red, 44%);
   color: darken($danger-color, 10%);
 }

@@ -8,7 +8,6 @@
   display: block;
   padding: 1.5rem;
   background-color: $success-color;
-  @include border-radius($border-radius);
 
   .alert > h4 {
     color: inherit;

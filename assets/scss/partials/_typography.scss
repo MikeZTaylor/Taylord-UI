@@ -9,12 +9,13 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
+  font-weight: $heading-font-weight;
   text-rendering: auto;
   color: $foundation-color-1a1a;
   margin-bottom: 0;
 }
 
-h4, h5, h6{
+h4, h5, h6 {
   color: $foundation-color-4d4d;
 }
 
@@ -29,69 +30,80 @@ h1.title, h3.title, h1.heading, h3.heading {
 }
 
 h1, .h1 {
-  @include rem(font-size, 34);
+  @include rem(font-size, $font-h1);
 	line-height: 1.4;
 }
 
 h2, .h2 {
-  font-size: 30px;
-  font-size: 2.143rem;
+  @include rem(font-size, $font-h2);
   line-height: 1.2;
 }
 
 h3, .h3 {
-  font-size: 22px;
-  font-size: 1.571rem;
+  @include rem(font-size, $font-h3);
   line-height: 1;
 }
 
 h4, .h4 {
-  font-size: 14px;
-  font-size: 1rem;
+  @include rem(font-size, $font-h4);
   line-height: 1.2;
 }
 
 h5, .h5 {
-  font-size: 12px;
-  font-size: 0.8751rem;
+  @include rem(font-size, $font-h5);
   line-height: 1;
 }
 
 h6, .h6 {
-  font-size: 11px;
-  font-size: 0.7857rem;
+  @include rem(font-size, $font-h6);
   line-height: 0.875;
-}
-
-.subheader {
-  color: inherit;
-  text-transform: uppercase;
 }
 
 p {
   color: inherit;
   font-family: $font-stack;
-  font-size: 14px;
-  font-size: 1rem;
+  @include rem(font-size, $font-size);
   line-height: 1.5;
 
   &.lead {
-    font-size: 20px;
-    font-size: 1.429rem;
+    @include rem(font-size, $font-size-large);
     font-weight: bold;
   }
 }
 
 .lead {
-  font-size: 20px;
-  font-size: 1.429rem;
+  @include rem(font-size, $font-size-large);
   font-weight: bold;
+}
+
+.extra-small-p{
+  font-size: $font-size-extra-small;
+}
+
+.small-p{
+  font-size: $font-size-small;
+}
+
+.large-p{
+  font-size: $font-size-large;
+}
+
+.extra-large-p{
+  font-size: $font-size-extra-large;
+}
+
+.thin-p{
+  font-weight: $font-weight-300;
+}
+
+.bold-p{
+  font-weight: $label-font-weight;
 }
 
 blockquote {
   font-family: $font-stack;
-  font-size: 14px;
-  font-size: 1rem;
+  @include rem(font-size, $font-size-small);
+  font-weight: $font-family-weight;
   margin-top: 10px;
   margin-top: 0.625rem;
   margin-bottom: 10px;
@@ -105,6 +117,18 @@ blockquote {
   cite {
     font-weight: bold;
   }
+}
+
+.left-align-text {
+    text-align: left;
+}
+
+.right-align-text {
+    text-align: right;
+}
+
+.justified-text {
+    text-align: justify;
 }
 
 blockquote p {

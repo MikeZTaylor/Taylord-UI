@@ -25,23 +25,24 @@
 /*------------------------------------*\
  * Common Variables */
 /*------------------------------------ */
-/* Colors */
-/* Colors */
-/* Colors */
-/* Background Colors */
-/* Link Colors */
+/*------------------------------------*\
+ * Colours */
+/*------------------------------------ */
 /*------------------------------------*\
  * Typography */
 /*------------------------------------ */
 /* Font weighting */
+/* Font sizes */
+/* Line height */
 /*------------------------------------*\
  * Components */
 /*------------------------------------ */
+/* Padding */
 /*------------------------------------*\
  * border-radius */
 /*------------------------------------ */
 /*------------------------------------*\
- * border-radius */
+ * Button backgrounds*/
 /*------------------------------------ */
 /*------------------------------------*\
  * Media Query Breakpoints */
@@ -615,6 +616,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
+  font-weight: 500;
   text-rendering: auto;
   color: #1a1a1a;
   margin-bottom: 0; }
@@ -631,59 +633,74 @@ h1.title, h3.title, h1.heading, h3.heading {
   color: inherit; }
 
 h1, .h1 {
-  font-size: 34px;
-  font-size: 2.125rem;
+  font-size: 2.25rempx;
+  font-size: 0.140625remrem;
   line-height: 1.4; }
 
 h2, .h2 {
-  font-size: 30px;
-  font-size: 2.143rem;
+  font-size: 1.875rempx;
+  font-size: 0.1171875remrem;
   line-height: 1.2; }
 
 h3, .h3 {
-  font-size: 22px;
-  font-size: 1.571rem;
+  font-size: 1.5rempx;
+  font-size: 0.09375remrem;
   line-height: 1; }
 
 h4, .h4 {
-  font-size: 14px;
-  font-size: 1rem;
+  font-size: 1.125rempx;
+  font-size: 0.0703125remrem;
   line-height: 1.2; }
 
 h5, .h5 {
-  font-size: 12px;
-  font-size: 0.8751rem;
+  font-size: 1rempx;
+  font-size: 0.0625remrem;
   line-height: 1; }
 
 h6, .h6 {
-  font-size: 11px;
-  font-size: 0.7857rem;
+  font-size: 0.875rempx;
+  font-size: 0.0546875remrem;
   line-height: 0.875; }
-
-.subheader {
-  color: inherit;
-  text-transform: uppercase; }
 
 p {
   color: inherit;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 14px;
-  font-size: 1rem;
+  font-size: 1rempx;
+  font-size: 0.0625remrem;
   line-height: 1.5; }
   p.lead {
-    font-size: 20px;
-    font-size: 1.429rem;
+    font-size: 1.25rempx;
+    font-size: 0.078125remrem;
     font-weight: bold; }
 
 .lead {
-  font-size: 20px;
-  font-size: 1.429rem;
+  font-size: 1.25rempx;
+  font-size: 0.078125remrem;
   font-weight: bold; }
+
+.extra-small-p {
+  font-size: 0.75rem; }
+
+.small-p {
+  font-size: 0.875rem; }
+
+.large-p {
+  font-size: 1.25rem; }
+
+.extra-large-p {
+  font-size: 1.5rem; }
+
+.thin-p {
+  font-weight: 300; }
+
+.bold-p {
+  font-weight: 700; }
 
 blockquote {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 14px;
-  font-size: 1rem;
+  font-size: 0.875rempx;
+  font-size: 0.0546875remrem;
+  font-weight: 400;
   margin-top: 10px;
   margin-top: 0.625rem;
   margin-bottom: 10px;
@@ -695,6 +712,15 @@ blockquote {
   border-left: 5px solid #666666; }
   blockquote cite {
     font-weight: bold; }
+
+.left-align-text {
+  text-align: left; }
+
+.right-align-text {
+  text-align: right; }
+
+.justified-text {
+  text-align: justify; }
 
 blockquote p {
   display: inline; }
@@ -717,8 +743,8 @@ a.button-primary {
   color: #e6e6e6; }
 
 .button {
-  color: #fff;
-  background-color: #e6e6e6;
+  color: #000;
+  background-color: #f2f2f2;
   padding: 0.5rem 0.875rem;
   font-size: 1rem;
   text-transform: uppercase;
@@ -743,8 +769,8 @@ a.button-primary {
     outline: 0; }
 
 .button-small {
-  color: #fff;
-  background-color: #e6e6e6;
+  color: #000;
+  background-color: #f2f2f2;
   padding: 0.5rem 0.95rem;
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -759,12 +785,12 @@ a.button-primary {
     outline: 0; }
 
 .button-large {
-  color: #fff;
-  background-color: #e6e6e6;
+  color: #000;
+  background-color: #f2f2f2;
   padding: 0.875rem 1.5rem;
   font-size: 0.8rem;
   text-transform: uppercase;
-  line-height: 1.69;
+  line-height: 1.70625;
   border: none; }
   .button-large:hover {
     background-color: #cccccc; }
@@ -775,8 +801,8 @@ a.button-primary {
     outline: 0; }
 
 .button-pill {
-  color: #fff;
-  background-color: #e6e6e6;
+  color: #000;
+  background-color: #f2f2f2;
   border-radius: 24px;
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
@@ -917,7 +943,6 @@ a.button-primary {
   .form-styling input[type="radio"] + label span,
   .form-styling input[type="radio"]:checked + label span {
     -webkit-transition: background-color 0.4s linear;
-    -o-transition: background-color 0.4s linear;
     -moz-transition: background-color 0.4s linear;
     transition: background-color 0.4s linear; }
   .form-styling input[type="checkbox"],
@@ -1179,22 +1204,24 @@ li {
 
 .table > tbody > tr.is-danger > td,
 .table > tbody > tr:hover.is-danger > td {
-  background-color: white;
+  background-color: #ffe0e0;
   color: #f5240f; }
 
 .jumbotron {
+  1rem: 2.25rempx;
+  1rem: 0.140625remrem;
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   background-color: #e6e6e6;
-  border-radius: 0.3rem; }
+  height: 300px;
+  text-align: center; }
 
 .jumbotron-hr {
   border-top-color: #666666; }
 
 .jumbotron-fluid {
   padding-right: 0;
-  padding-left: 0;
-  border-radius: 0; }
+  padding-left: 0; }
 
 /*------------------------------------*\
  * Lbaels */
@@ -1202,8 +1229,8 @@ li {
 .button-label {
   vertical-align: middle;
   display: inline-block;
-  padding: 0.025rem .25rem;
-  background-color: #3474db;
+  padding: 0.40rem .40rem;
+  background-color: #000;
   color: #fff;
   font-size: 12px;
   font-size: 0.75rem;
@@ -1237,11 +1264,7 @@ li {
   border: 0.5px solid transparent;
   display: block;
   padding: 1.5rem;
-  background-color: #40d17e;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px; }
+  background-color: #40d17e; }
   .alert .alert > h4 {
     color: inherit;
     margin-top: 0; }
@@ -1314,11 +1337,7 @@ li {
 /*------------------------------------ */
 .panel {
   border: 1px solid transparent;
-  background-color: #fff;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px; }
+  background-color: #fff; }
 
 .panel-title {
   padding: 1.5rem, 1.5rem;

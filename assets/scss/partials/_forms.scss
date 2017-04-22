@@ -54,7 +54,6 @@
   input[type="radio"] + label span,
   input[type="radio"]:checked + label span {
     -webkit-transition:background-color 0.4s linear;
-    -o-transition:background-color 0.4s linear;
     -moz-transition:background-color 0.4s linear;
     transition:background-color 0.4s linear;
   }
