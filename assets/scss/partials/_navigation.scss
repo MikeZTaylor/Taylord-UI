@@ -36,7 +36,7 @@ nav {
   margin-top: 15px;
 	width: 40px;
 	height: 40px;
-	background: lighten($foundation-color-e6e6, 20%) $url_menu-icon center;
+	background: darken($foundation-color-e6e6, 20%) $url_menu-icon center;
 }
 
 ul {

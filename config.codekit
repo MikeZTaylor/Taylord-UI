@@ -493,6 +493,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/documentation\/images\/collapsed.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31054,
+		"inputAbbreviatedPath": "\/documentation\/images\/collapsed.png",
+		"outputAbbreviatedPath": "\/documentation\/images\/collapsed.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/documentation\/images\/columnlayout.png": {
 		"fileType": 32768,
 		"ignore": 0,
