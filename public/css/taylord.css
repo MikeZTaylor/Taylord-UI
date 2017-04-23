@@ -534,19 +534,19 @@ header {
   float: left;
   width: 200px;
   height: 40px;
-  background: url(../assets/images/logo_placeholder.png) no-repeat center;
+  background: url(../images/logo_placeholder.png) no-repeat center;
   display: block; }
 
 nav {
   float: right;
-  padding: 2%; }
+  padding: 1%; }
 
 #menu-icon {
   display: hidden;
   margin-top: 15px;
   width: 40px;
   height: 40px;
-  background: white url(../assets/images/menu-icon.png) center; }
+  background: white url(../images/menu-icon.png) center; }
 
 ul {
   list-style: none; }

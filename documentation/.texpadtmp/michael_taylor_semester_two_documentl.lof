@@ -1,23 +1,26 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces Font size range\relax }}{53}{figure.caption.544}
-\contentsline {figure}{\numberline {2}{\ignorespaces Text Alignments\relax }}{54}{figure.caption.545}
-\contentsline {figure}{\numberline {3}{\ignorespaces Font Weighting\relax }}{54}{figure.caption.546}
-\contentsline {figure}{\numberline {4}{\ignorespaces Generic Button Types\relax }}{54}{figure.caption.547}
-\contentsline {figure}{\numberline {5}{\ignorespaces Button Modifiers\relax }}{54}{figure.caption.548}
-\contentsline {figure}{\numberline {6}{\ignorespaces Alerts\relax }}{54}{figure.caption.549}
-\contentsline {figure}{\numberline {7}{\ignorespaces Alert Modifiers\relax }}{55}{figure.caption.550}
-\contentsline {figure}{\numberline {8}{\ignorespaces Tables with Modifiers\relax }}{55}{figure.caption.551}
-\contentsline {figure}{\numberline {9}{\ignorespaces Table With Other Class Modifiers\relax }}{55}{figure.caption.552}
-\contentsline {figure}{\numberline {10}{\ignorespaces Default Panel\relax }}{56}{figure.caption.553}
-\contentsline {figure}{\numberline {11}{\ignorespaces Panel with modifiers\relax }}{56}{figure.caption.554}
-\contentsline {figure}{\numberline {12}{\ignorespaces Labels\relax }}{56}{figure.caption.555}
-\contentsline {figure}{\numberline {13}{\ignorespaces Jumbotron\relax }}{56}{figure.caption.556}
-\contentsline {figure}{\numberline {14}{\ignorespaces Default Button Group\relax }}{56}{figure.caption.557}
-\contentsline {figure}{\numberline {15}{\ignorespaces Button Group Sizes\relax }}{57}{figure.caption.558}
-\contentsline {figure}{\numberline {16}{\ignorespaces Button Group With Modifiers\relax }}{57}{figure.caption.559}
-\contentsline {figure}{\numberline {17}{\ignorespaces Form elements\relax }}{57}{figure.caption.560}
-\contentsline {figure}{\numberline {18}{\ignorespaces Radio Buttons and Checkboxes\relax }}{57}{figure.caption.561}
-\contentsline {figure}{\numberline {19}{\ignorespaces 12 Column Layout\relax }}{58}{figure.caption.562}
-\contentsline {figure}{\numberline {20}{\ignorespaces Blockquote\relax }}{58}{figure.caption.563}
-\contentsline {figure}{\numberline {21}{\ignorespaces Nunjucks File Structure\relax }}{58}{figure.caption.564}
-\contentsline {figure}{\numberline {22}{\ignorespaces 12 grid layout with the 960 grid\relax }}{59}{figure.caption.565}
-\contentsline {figure}{\numberline {23}{\ignorespaces Chrome Developer Tools\relax }}{59}{figure.caption.566}
+\contentsline {figure}{\numberline {1}{\ignorespaces Font size range\relax }}{14}{figure.caption.18}
+\contentsline {figure}{\numberline {2}{\ignorespaces Text Alignments\relax }}{15}{figure.caption.24}
+\contentsline {figure}{\numberline {3}{\ignorespaces Font Weighting\relax }}{15}{figure.caption.29}
+\contentsline {figure}{\numberline {4}{\ignorespaces Generic Button Types\relax }}{16}{figure.caption.38}
+\contentsline {figure}{\numberline {5}{\ignorespaces Button Modifiers\relax }}{16}{figure.caption.42}
+\contentsline {figure}{\numberline {6}{\ignorespaces Alerts\relax }}{17}{figure.caption.55}
+\contentsline {figure}{\numberline {7}{\ignorespaces Alert Modifiers\relax }}{17}{figure.caption.62}
+\contentsline {figure}{\numberline {8}{\ignorespaces Tables with Modifiers\relax }}{19}{figure.caption.96}
+\contentsline {figure}{\numberline {9}{\ignorespaces Table with other Class Modifiers\relax }}{20}{figure.caption.123}
+\contentsline {figure}{\numberline {10}{\ignorespaces Default Panel\relax }}{21}{figure.caption.150}
+\contentsline {figure}{\numberline {11}{\ignorespaces Panel with Modifiers\relax }}{21}{figure.caption.159}
+\contentsline {figure}{\numberline {12}{\ignorespaces Labels\relax }}{22}{figure.caption.170}
+\contentsline {figure}{\numberline {13}{\ignorespaces Jumbotron\relax }}{23}{figure.caption.179}
+\contentsline {figure}{\numberline {14}{\ignorespaces Jumbotron with Modifier\relax }}{23}{figure.caption.182}
+\contentsline {figure}{\numberline {15}{\ignorespaces Default Button Group\relax }}{24}{figure.caption.186}
+\contentsline {figure}{\numberline {16}{\ignorespaces Button Group Sizes\relax }}{24}{figure.caption.193}
+\contentsline {figure}{\numberline {17}{\ignorespaces Button Group With Modifiers\relax }}{25}{figure.caption.200}
+\contentsline {figure}{\numberline {18}{\ignorespaces Form elements\relax }}{25}{figure.caption.210}
+\contentsline {figure}{\numberline {19}{\ignorespaces Radio Buttons and Checkboxes\relax }}{26}{figure.caption.222}
+\contentsline {figure}{\numberline {20}{\ignorespaces Navigation Bar\relax }}{27}{figure.caption.232}
+\contentsline {figure}{\numberline {21}{\ignorespaces 12 Column Layout\relax }}{28}{figure.caption.248}
+\contentsline {figure}{\numberline {22}{\ignorespaces Generic Template\relax }}{35}{figure.caption.336}
+\contentsline {figure}{\numberline {23}{\ignorespaces Template with theme\relax }}{35}{figure.caption.337}
+\contentsline {figure}{\numberline {24}{\ignorespaces Nunjucks File Structure\relax }}{61}{figure.caption.559}
+\contentsline {figure}{\numberline {25}{\ignorespaces 12 grid layout with the 960 grid\relax }}{61}{figure.caption.560}
+\contentsline {figure}{\numberline {26}{\ignorespaces Chrome Developer Tools\relax }}{62}{figure.caption.561}

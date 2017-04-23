@@ -5,6 +5,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+nav {
+    padding: 0.5%;
+}
+
 small {
   font-family: 'Nunito', sans-serif;
   font-size: 15px;

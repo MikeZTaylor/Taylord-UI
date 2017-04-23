@@ -1,6 +1,6 @@
 \newpage
 \chapter*{Taylor'd UI}
-\addcontentsline{toc}{chapter}{Taylor'd UI}
+\addcontentsline{toc}{chapter}{1. Taylor'd UI}
 % Chapter for each research question
 % how we validated it and proved it worked
 
@@ -12,7 +12,7 @@ The vocabulary used in Taylor'd UI has been designed to be user friendly so that
 <button class="pill-shaped-button">Button</button>
 \end{lstlisting}
 
-Taylor'd UI has minimal styling, the author has only added styling where it is needed, and that styling is kept to basic colours. This was to ensure the framework does not carry the author's design opinions. Being non-opinionated, Taylor'd UI is intensionally bare so that the end user is encouraged to not rely upon the built-in styling, but instead to use it as a starting point to build upon it. 
+Taylor'd UI has minimal styling, styling has only been added where needed. That styling is kept to basic colours. This was to ensure the framework does not carry the design opinions of the developer. Being non-opinionated, Taylor'd UI is intensionally bare so that the end user is encouraged to not rely upon the built-in styling, but instead to use it as a starting point to build upon it. 
 
 One of the aims is to make the library as small as possible to ensure it loads quickly on mobile devices and in situations where fast network connectivity is not available. This also ensures that the data used on mobile devices is not unnecessarily burdened.
 
@@ -22,8 +22,17 @@ Taylor'd UI is made up of the following features; typography, buttons, alerts, t
 
 \newpage
 \subsection*{Typography}
-\addcontentsline{toc}{subsection}{Typography}
-The typography used in Taylor'd UI is Open Sans. The default font size throughout the document is 16. There are text modifiers such as extra-small-p, and extra-large-p that decrease or increase the font size, a visual can be seen on Figure.~\ref{fig:fontSize} on  page~\pageref{fig:fontSize}. An example on how to call these classes: 
+\addcontentsline{toc}{subsection}{1.1 Typography}
+The typography used in Taylor'd UI is Open Sans. The default font size throughout the document is 16. There are text modifiers such as extra-small-p, and extra-large-p that decrease or increase the font size as seen on Figure.~\ref{fig:fontSize} on  page~\pageref{fig:fontSize}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{images/fontsizes}
+	\caption{Font size range}
+ 	\label{fig:fontSize}
+\end{figure}
+
+These classes can be called using the following methods: 
 
 \begin{lstlisting}[language=HTML]
 <p class="extra-small-p">Text</p>      
@@ -32,7 +41,16 @@ The typography used in Taylor'd UI is Open Sans. The default font size throughou
 <p class="extra-large-p">Text</p>
 \end{lstlisting}
 
-The text can be aligned; left aligned, right aligned or justified. These classes can be called directly from the paragraph tag. A visual can be seen on Figure.~\ref{fig:textalign} on  page~\pageref{fig:textalign}. An example on how to call these classes: 
+The text can be aligned; left aligned, right aligned or justified as seen on Figure.~\ref{fig:textalign} on  page~\pageref{fig:textalign}. These classes can be called directly from the paragraph tag.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.2]{images/text-align}
+	\caption{Text Alignments}
+    \label{fig:textalign}
+\end{figure}
+
+These classes can be called using the following methods:
 
  \begin{lstlisting}[language=HTML]
 <p class="left-align-text"></p>
@@ -40,7 +58,16 @@ The text can be aligned; left aligned, right aligned or justified. These classes
 <p class="justified-text"></p>
 \end{lstlisting}
 
-There are four different types of font weightings as seen on Figure.~\ref{fig:fontweight} on  page~\pageref{fig:fontweight}. these font weightings can be used on paragraph, label, and heading texts. These weightings range from thin to bold.
+There are four different types of font weightings as seen on Figure.~\ref{fig:fontweight} on  page~\pageref{fig:fontweight}. These font weightings can be used on paragraph, label, and heading texts.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{images/font-weighting}
+	\caption{Font Weighting}
+  	\label{fig:fontweight}
+\end{figure}
+
+These weightings range from thin to bold. These classes can be called using the following methods:
 
 \begin{lstlisting}[language=HTML]
 <p class="thin-p">Text</p>
@@ -59,18 +86,36 @@ $font-weight-400: 700; //bolder
 
 \newpage
 \subsection*{Buttons}
-\addcontentsline{toc}{subsection}{Buttons}
+\addcontentsline{toc}{subsection}{1.2 Buttons}
 
-There are four button types in Taylor'd UI as seen in Figure.~\ref{fig:genButtons} on  page~\pageref{fig:genButtons}. These button types are styled in a similar way to how a browser would display a button. Below is the syntax used to call these classes: 
+There are four button types in Taylor'd UI as seen in Figure.~\ref{fig:genButtons} on  page~\pageref{fig:genButtons}. These button types are styled in a similar way to how a browser would display a button. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{images/generic-buttonsa}
+\caption{Generic Button Types}
+  \label{fig:genButtons}
+\end{figure}
+
+These classes can be called using the following methods:
 
 \begin{lstlisting}[language=HTML]
  <button class="button">Test Button</button>
-<button class="large-button">Test Button</button>
-<button class="small-button">Test Button</button>
 <button class="pill-shaped-button">Test Button</button>
 \end{lstlisting}
 
-Additionally, a button can be styled using modifier classes. These modifiers are based on the primary colours as seen in Figure.~\ref{fig:buttonMods} on  page~\pageref{fig:buttonMods}. These colours are colours that a user would have seen in other applications used for alerts such warning, and success actions. The code snippet below shows the different types.
+Additionally, a button can be styled using modifier classes. These modifiers are based on the primary colours as seen in Figure.~\ref{fig:buttonMods} on  page~\pageref{fig:buttonMods}. These colours are colours that a user would have seen in other applications used for alerts such warning, and success actions. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{images/button-modifiers}
+\caption{Button Modifiers}
+  \label{fig:buttonMods}
+\centering
+\end{figure}
+
+
+These classes can be called using the following methods:
 
 \begin{lstlisting}[language=HTML]
 <button class="button default-button">default</button>
@@ -91,8 +136,17 @@ The button modifiers can be used with the generic button classes. An example on 
 
 \newpage
 \subsection*{Alerts}
-\addcontentsline{toc}{subsection}{Alerts}
-Alerts provide user feedback based on certain actions performed by them. An alert is built using the .alert class, and styled with modifier classes such as seen in Figure.~\ref{fig:alerts} on  page~\pageref{fig:alerts}. The code snippet below shows an example.
+\addcontentsline{toc}{subsection}{1.3 Alerts}
+Alerts provide user feedback based on certain actions performed by them. An alert is built using the \latinword{.alert} class, and styled with modifier classes such as seen in Figure.~\ref{fig:alerts} on  page~\pageref{fig:alerts}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.2]{images/alertd}
+\caption{Alerts}
+  \label{fig:alerts}
+\end{figure}
+
+An example on how these classes can be called using the following methods: 
 
 \begin{lstlisting}[language=HTML]
 <div class="alert info-alert">
@@ -102,8 +156,17 @@ Alerts provide user feedback based on certain actions performed by them. An aler
 so please pay attention.</p></div>
 \end{lstlisting}
 
-An alert class can be built upon by adding buttons, see Figure.~\ref{fig:AlertModifiers} on  page~\pageref{fig:AlertModifiers} as well as links. The code snippet below shows an example.
- 
+An alert class can be built upon by adding buttons, see Figure.~\ref{fig:AlertModifiers} on  page~\pageref{fig:AlertModifiers} as well as links.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.2]{images/addtoalert}
+\caption{Alert Modifiers}
+  \label{fig:AlertModifiers}
+\end{figure}
+
+An example on how these classes can be called using the following methods: 
+
 \begin{lstlisting}[language=HTML]
 <div class="alert alert-primary">
 <p>Lorem ipsum dolor sit ame</p>
@@ -112,8 +175,8 @@ An alert class can be built upon by adding buttons, see Figure.~\ref{fig:AlertMo
 \end{lstlisting}
 
 \subsection*{Tables}
-\addcontentsline{toc}{subsection}{Tables}
-A table allow web authors to arrange data such as text, images, links, even other tables into rows and columns of cells. The tables are created using the table tag in which the tr tag is used to create table rows and td tag is used to create data cells.
+\addcontentsline{toc}{subsection}{1.4 Tables}
+A table allow web authors to arrange data such as text, images, links, even other tables into rows and columns of cells. The tables are created using the table tag in which the \latinword{tr} tag is used to create table rows and td tag is used to create data cells.
 
 A default table was created for Taylor'd UI. The default table is simple, with clear emphasis on the headings of the table. 
 
@@ -146,7 +209,18 @@ A default table was created for Taylor'd UI. The default table is simple, with c
 </table>
 \end{lstlisting}
 
-There are four modifiers see  Figure.~\ref{fig:tableMod} on  page~\pageref{fig:tableMod} that can be added to the table class for a different look as seen below. The other modifiers are hover-on-table,  bordered-table. Below is an example of how to call one of the modifiers. 
+There are four modifiers see Figure.~\ref{fig:tableMod} on  page~\pageref{fig:tableMod} that can be added to the table class for a different look as seen below. The other modifiers are hover-on-table,  bordered-table.
+
+\newpage
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.24]{images/tables}
+\caption{Tables with Modifiers}
+  \label{fig:tableMod}
+\end{figure}
+
+Below is an example of how to call one of the modifiers. 
 
 \begin{lstlisting}[language=HTML]
 <table class="table striped-table">
@@ -173,11 +247,21 @@ There are four modifiers see  Figure.~\ref{fig:tableMod} on  page~\pageref{fig:t
 			<td>inquam</td>
 			<td>Piso</td>
 		</tr>
-	</tbody>
-</table>
+</tbody></table>
 \end{lstlisting}
 
-Modifiers from other components such as alerts can be used on table elements, for a visual see Figure.~\ref{fig:tableClass} on  page~\pageref{fig:tableClass}. The code snippet below shows you how to call the different modifiers. 
+
+\newpage
+Modifiers from other components such as alerts can be used on table elements, as seen on Figure.~\ref{fig:tableClass} on  page~\pageref{fig:tableClass}. 
+
+\begin{figure}[h]
+\centering
+  \includegraphics[scale=0.2]{images/tableClass}
+\caption{Table with other Class Modifiers}
+  \label{fig:tableClass}
+\end{figure}
+
+The code snippet below shows you how to call the different modifiers. 
 
 \begin{lstlisting}[language=HTML]
 <table class="table">
@@ -208,8 +292,16 @@ Modifiers from other components such as alerts can be used on table elements, fo
 
 \newpage
 \subsection*{Panels}
-\addcontentsline{toc}{subsection}{Panels}
-A panel in Taylor'd UI is a bordered box with some padding around its content. The basic panel is just that see Figure.~\ref{fig:panel} on  page~\pageref{fig:panel}. Other attributes such as heading tags can be added to a panel as seen below: 
+\addcontentsline{toc}{subsection}{1.5 Panels}
+A panel in Taylor'd UI is a bordered box with some padding around its content. The basic panel is just that, see Figure.~\ref{fig:panel} on  page~\pageref{fig:panel}. Other attributes such as heading tags can be added to a panel as seen below: 
+
+\begin{figure}[h]
+\centering
+  \includegraphics[scale=0.28]{images/panel}
+  \caption{Default Panel}
+  \label{fig:panel}
+\end{figure}
+
 
 \begin{lstlisting}[language=HTML]
 <div class="panel default-panel">
@@ -223,6 +315,13 @@ A panel in Taylor'd UI is a bordered box with some padding around its content. T
 
 Modifiers from other components such as alerts see Figure.~\ref{fig:panelmod} on  page~\pageref{fig:panelmod} can be added to a panel. The code snippet below shows you one example: 
 
+\begin{figure}[h]
+\centering
+  \includegraphics[scale=0.27]{images/panelmod}
+\caption{Panel with Modifiers}
+  \label{fig:panelmod}
+\end{figure}
+
 \begin{lstlisting}[language=HTML]
 <div class="panel panel-info">
 	<div class="panel-title">orem Ipsum</div>
@@ -234,7 +333,7 @@ Modifiers from other components such as alerts see Figure.~\ref{fig:panelmod} on
 
 
 \subsection*{Labels}
-\addcontentsline{toc}{subsection}{Labels}
+\addcontentsline{toc}{subsection}{1.6 Labels}
 
 Labels are built with button-label class, the default label does not need the button class, as seen below: 
 
@@ -242,7 +341,17 @@ Labels are built with button-label class, the default label does not need the bu
 <span class="button-label">Default Label</span>
 \end{lstlisting}
 
-Modifiers can be added to the label for more impact Figure.~\ref{fig:label} on  page~\pageref{fig:label}. The below code is all of the label classes:
+Modifiers can be added to the label see Figure.~\ref{fig:label} on  page~\pageref{fig:label} for more impact.
+
+\begin{figure}[h]
+\centering
+  \includegraphics[scale=0.5]{images/labels}
+\caption{Labels}
+  \label{fig:label}
+\end{figure}
+
+
+An example on how these classes can be called using the following methods: 
 
 \begin{lstlisting}[language=HTML]
 <span class="button-label">Default Label</span>
@@ -255,22 +364,49 @@ Modifiers can be added to the label for more impact Figure.~\ref{fig:label} on  
 
 \newpage
 \subsection*{Jumbotron}
-\addcontentsline{toc}{subsection}{Jumbotron}
-Jumbotrons can be treated as large panels, the default panel has the text entered in the centre with lots of padding all round, as seen in Figure.~\ref{fig:jumbo} on  page~\pageref{fig:jumbo}. Below is the code snippet on how to create a jumbotron: 
+\addcontentsline{toc}{subsection}{1.7 Jumbotron}
+Jumbotrons can be treated as large panels, the default panel has the text entered in the centre with lots of padding all round, as seen in Figure.~\ref{fig:jumbo} on  page~\pageref{fig:jumbo}. 
+
+
+\begin{figure}[h]
+\centering
+  \includegraphics[scale=0.4]{images/jumbrotron}
+  \caption{Jumbotron}
+  \label{fig:jumbo}
+\end{figure}
+
+Below is the code needed to create a jumbotron: 
 
 \begin{lstlisting}[language=HTML]
 <div class="jumbotron"><h1>Lorem Ipsum</h1></div>
 \end{lstlisting}
 
-As jumbotrons share similar attributes to panels, the same modifiers that apply to panels can also be applied here. 
+As jumbotrons share similar attributes to panels, the same modifiers that apply to panels can also be applied here as seen in Figure.~\ref{fig:jumbowithmod} on  page~\pageref{fig:jumbowithmod}. 
+
+ \begin{figure}[h]
+\centering
+  \includegraphics[scale=0.4]{images/jumbowithmod}
+  \caption{Jumbotron with Modifier}
+  \label{fig:jumbo}
+\end{figure}
 
 \begin{lstlisting}[language=HTML]
 <div class="jumbotron alert-primary"><h1>Lorem Ipsum</h1></div>
 \end{lstlisting}
 
 \subsection*{Button Groups / Pagination}
-\addcontentsline{toc}{subsection}{Button Groups / Pagination}
-Button groups are a collection of buttons on the same line. Button groups work in the same way that buttons work. To group a collection of buttons, add the class button-group around the collection as seen in Figure.~\ref{fig:defualtgroup} on  page~\pageref{fig:defualtgroup}. Below is an example of the default button group: 
+\addcontentsline{toc}{subsection}{1.8 Button Groups / Pagination}
+Button groups are a collection of buttons on the same line. Button groups work in the same way that buttons work as seen in Figure.~\ref{fig:defualtgroup} on  page~\pageref{fig:defualtgroup}. To group a collection of buttons, add the class button-group around the collection . 
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{images/button-group=defualt}
+\caption{Default Button Group}
+  \label{fig:defualtgroup}
+\end{figure}
+
+Below is an example of the default button group: 
 
 \begin{lstlisting}[language=HTML]
 <div class="button-group"><button class="button button-default">
@@ -280,7 +416,17 @@ Button One</button>
 </div>
 \end{lstlisting}
 
-As with buttons, the same modifiers, see Figure.~\ref{fig:groupSize} on  page~\pageref{fig:groupSize} can be added to either increase the button-group size. The code snippet below shows you the large button group:
+As with buttons, the same modifiers, see Figure.~\ref{fig:groupSize} on  page~\pageref{fig:groupSize} can be added to either increase the button-group size. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{images/button-group-size}
+\caption{Button Group Sizes}
+  \label{fig:groupSize}
+\end{figure}
+
+
+The code snippet below shows you the large button group:
 
 \begin{lstlisting}[language=HTML]
 <div class="button-group large-button-group">
@@ -290,7 +436,16 @@ As with buttons, the same modifiers, see Figure.~\ref{fig:groupSize} on  page~\p
 </div>
 \end{lstlisting}
 
-Or adding colour to the group see Figure.~\ref{fig:modButtonGroup} on  page~\pageref{fig:modButtonGroup}. Below is one example of modifiers:  
+Or adding colour to the group see Figure.~\ref{fig:modButtonGroup} on  page~\pageref{fig:modButtonGroup}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{images/buttongroups}
+\caption{Button Group With Modifiers}
+  \label{fig:modButtonGroup}
+\end{figure}
+
+Below is one example of modifiers:  
 
 \begin{lstlisting}[language=HTML]
 <div class="button-group">
@@ -301,13 +456,22 @@ Or adding colour to the group see Figure.~\ref{fig:modButtonGroup} on  page~\pag
 \end{lstlisting}
 
 \subsection*{Forms}
-\addcontentsline{toc}{subsection}{Forms}
+\addcontentsline{toc}{subsection}{1.9 Forms}
 There are multiple elements that make up a form. Taylor'd UI caters for all these elements. The overall styling for the form comes from the form-styling class as seen below:
+
 \begin{lstlisting}[language=HTML]
 <div class="form-styling"></div>
 \end{lstlisting}
 
 The following inputs make the overall form see Figure.~\ref{fig:form} on  page~\pageref{fig:form}. Passwords are not entered in as plain text as the type has been set to passwords, allowing for asterisks to appear instead. All form elements have placeholder text contained that when a user starts typing, the placeholder text disappears.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{images/form}
+\caption{Form elements}
+  \label{fig:form}
+\end{figure}
+
 
 \begin{lstlisting}[language=HTML]
 <input type="text" name="field1" placeholder="Full Name" />
@@ -322,7 +486,16 @@ onkeyup="adjust_textarea(this)"></textarea>
 <input class="button button-primary" value="Send Message" />
 \end{lstlisting}
 
-Other features such as radio and check boxes see figure Figure.~\ref{fig:radio} on  page~\pageref{fig:radio} have specific id's so that only one option can be checked at any given time. Below is the two types: 
+Other features such as radio and check boxes see figure Figure.~\ref{fig:radio} on  page~\pageref{fig:radio} have specific id's so that only one option can be checked at any given time. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{images/radio}
+\caption{Radio Buttons and Checkboxes}
+  \label{fig:radio}
+\end{figure}
+
+Below is the two types: 
 
 \begin{lstlisting}[language=HTML]
 <input type="radio" id="radio01" name="radio" />
@@ -334,47 +507,53 @@ Other features such as radio and check boxes see figure Figure.~\ref{fig:radio} 
 <label><input type="checkbox"> Check this box</label>
 \end{lstlisting}
 
+\newpage
+\subsection*{Navigation}
+\addcontentsline{toc}{subsection}{1.10 Navigation}
+
+The \latinword{nav} tag defines a set of navigation links. The \latinword{nav} tag is only intended for a block of high level links, this helps screen readers determine whether or not to render the content.
+
+The navigation bar in Taylor'd UI is kept simple in keeping with the ethos of non-opinionated design as seen in Figure.~\ref{fig:nav} on  page~\pageref{fig:nav}. The nav bar has been designed to always stay on top when a user is browsing a site on Desktop type devices. On mobile devices, the navigation bar disappears as the user scrolls a website. 
+
+\begin{figure}[h]
+\centering
+  \includegraphics[scale=0.2]{images/nav}
+  \caption{Navigation Bar}
+  \label{fig:nav}
+\end{figure} 
+
+In keeping with best practices, the nav should be called within a header tag as seen below:
+
+\begin{lstlisting}[language=HTML]
+  <header>
+    <a href="#" id="logo"></a>
+    <nav>
+      <a href="#" id="menu-icon"></a>
+      <ul>
+        <li><a href="#" class="current">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+\end{lstlisting}
 
 \newpage
 \subsection*{960 grid, 12 column system}
-\addcontentsline{toc}{subsection}{960 grid, 12 column system}
+\addcontentsline{toc}{subsection}{1.11 960 grid, 12 column system}
 Taylor'd UI is based on a 960 grid system. The grid system of 12 grids. 12 columns is used as each column can be evenly divided by 960. This allows the end user to build a seamless experience from desktops to mobile devices.
 
-The columns are also used to layout the content of a web page. When using columns, it is important to remember that the columns in the section you are using them in, always match up to 12, see Figure.~\ref{fig:columnlayout} on  page~\pageref{fig:columnlayout} for an example. 
+The columns are also used to layout the content of a web page as seen in Figure.~\ref{fig:columnlayout} on  page~\pageref{fig:columnlayout}. When using columns, it is important to remember that the columns in the section you are using them in, always match up to 12.
+
+\begin{figure}[h]
+\centering
+  \includegraphics[scale=0.4]{images/columnlayout}
+  \caption{12 Column Layout}
+  \label{fig:columnlayout}
+\end{figure} 
 
 The class row-fluid is used to make the layout more fluid across devices. Media queries are also used to ensure that Taylor'd UI components collapse when they need to. 
 
-\begin{lstlisting}[language=HTML]
-<div class="row-fluid">
-          <div class="col12 showcasing_grid">.col12</div>
-          <div class="row-fluid">
-            <div class="col6 showcasing_grid">.col6</div>
-            <div class="col6 showcasing_grid">.col6</div>
-          </div>
-          <div class="row-fluid">
-            <div class="col4 showcasing_grid">.col4</div>
-            <div class="col4 showcasing_grid">.col4</div>
-            <div class="col4 showcasing_grid">.col4</div>
-          </div>
-          <div class="row-fluid">
-            <div class="col8 showcasing_grid">.col8</div>
-            <div class="col4 showcasing_grid">.col4</div>
-          </div>
-          <div class="row-fluid">
-            <div class="col3 showcasing_grid">.col3</div>
-            <div class="col3 showcasing_grid">.col3</div>
-            <div class="col3 showcasing_grid">.col3</div>
-            <div class="col3 showcasing_grid">.col3</div>
-          </div>
-          <div class="row-fluid">
-            <div class="col7 showcasing_grid">.col7</div>
-            <div class="col5 showcasing_grid">.col5</div>
-          </div>
-          <div class="row-fluid">
-            <div class="col1 showcasing_grid">.col1</div>
-            <div class="col10 showcasing_grid">.col10</div>
-            <div class="col1 showcasing_grid">.col1</div>
-          </div>
-        </div>
-\end{lstlisting}
 

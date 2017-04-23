@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA;sBACsB;AACtB,yCAAyC;AAEzC,YAAY;AAaZ,YAAY;AAQZ,YAAY;AAOZ,uBAAuB;AAKvB,uBAAuB;AAKvB,iBAAiB;AAIjB;gBACgB;AAChB,yCAAyC;AAKzC,oBAAoB;AA8CpB;gBACgB;AAChB,yCAAyC;AAqBzC;mBACmB;AACnB,yCAAyC;AAMzC;mBACmB;AACnB,yCAAyC",
-"sources": ["../partials/_base.scss"],
-"names": [],
-"file": "_base.css"
-}
