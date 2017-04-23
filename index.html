@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Taylor'd UI Framework| A framework designed for entry level users with a focus on easy to understand terminology, introducing templating, and partials with clear, concise, customisable themes | built using SCSS.</title>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  <link rel="stylesheet" href="public/css/taylord.css" />
+</head>
+
+<body>
+  <header>
+    <a href="#" id="logo"></a>
+    <nav>
+      <a href="#" id="menu-icon"></a>
+      <ul>
+        <li><a href="#" class="current">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <div class="container">
+    <div class="row-fluid">
+      <div class="col12">
+        <h1>Heading One</h1>
+        <h2>Heading Two</h2>
+        <h3>Heading Three</h3>
+        <h4>Heading Four</h4>
+        <h5>Heading Five</h5>
+        <h6>Heading Six</h6>
+        <br />
+        <blockquote>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <cite>Lorem Ipsum</cite>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="col12">
+        <h4>Extra small font size - 12px</h4>
+        <p class="extra-small-p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h4>Small font size - 14px</h4>
+        <p class="small-p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h4>Regular font size - 16px</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h4>Large font size - 20px</h4>
+        <p class="large-p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h4>Extra large font size - 24px</h4>
+        <p class="extra-large-p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h4>Font weightings</h4>
+        <p class="thin-p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        </p>
+        <p class="bold-p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        </p>
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="col12">
+      <div class="col4">
+        <h4 class="left-align-text">Left Aligned</h4>
+        <p class="left-align-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="col4">
+        <h4 class="left-align-text">Right Aligned</h4>
+        <p class="right-align-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="col4">
+        <h4 class="left-align-text">Justified</h4>
+        <p class="justified-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+    </div>
+
+    <hr />
+
+    <div class="row-fluid">
+      <div class="col12">
+        <button class="button button-default">default</button>
+        <button class="button button-primary">primary</button>
+        <button class="button button-success">Success</button>
+        <button class="button button-info">Info</button>
+        <button class="button button-warning">Warning</button>
+        <button class="button button-danger">Danger</button>
+        <button class="button button-link">button Link</button>
+
+        <br />  <br />
+
+        <button class="button">Test Button</button>
+        <button class="button-large">Test Button</button>
+        <button class="button-small">Test Button</button>
+        <button class="button-pill">Test Button</button>
+      </div>
+    </div>
+
+    <hr />
+
+    <br />
+
+    <div class="row-fluid">
+      <div class="col12">
+        <div class="alert alert-info">
+          <p>Lorem ipsum dolor sit ame</p>
+        </div>
+        <div class="alert alert-success">
+          <p>Lorem ipsum dolor sit ame</p>
+        </div>
+        <div class="alert alert-danger">
+          <p>Lorem ipsum dolor sit ame</p>
+        </div>
+        <div class="alert alert-warning">
+          <p>Lorem ipsum dolor sit ame</p>
+        </div>
+        <div class="alert alert-primary">
+          <p>Lorem ipsum dolor sit ame</p>
+        </div>
+        <br />
+        <div class="alert alert-primary">
+          <p>Lorem ipsum dolor sit ame</p>
+          <button class="button button-primary">Perform Action</button>
+ <button class="button button-link">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="col12">
+        <h1>Labels</h1>
+        <div class="row-fluid">
+          <span class="button-label">Default Label</span>
+          <span class="button-label primary">Default Primary</span>
+          <span class="button-label success">Success Label</span>
+          <span class="button-label info">Info Label</span>
+          <span class="button-label warning">Warning Label</span>
+          <span class="button-label danger">Danger Label</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="col12">
+        <h1>Jumbotron</h1>
+        <div class="row-fluid">
+          <div class="jumbotron">
+            <h1>Lorem Ipsum</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="col12">
+        <h1>Jumbotron with modifier</h1>
+        <div class="row-fluid">
+          <div class="jumbotron alert-primary">
+            <h1>Lorem Ipsum</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row-fluid">
+      <div class="col12">
+        <h1>Tables</h1>
+        <p>
+          The HTML tables allow web authors to arrange data like text, images, links, other tables, etc. into rows and columns of cells. The HTML tables are created using the table tag in which the tr tag is used to create table rows and td tag is used to create
+          data cells
+        </p>
+
+        <hr />
+
+        <h1>Default Table</h1>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Lorem ipsum dolor sit ame</th>
+              <th>consectetur adipiscing elit</th>
+              <th>Quasi vero</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>inquit</td>
+              <td>perpetua oratio rhetorum solum</td>
+              <td>non etiam philosophorum sit</td>
+            </tr>
+            <tr>
+              <td>magna dissensio</td>
+              <td>In contemplatione et cognitione</td>
+              <td>Num igitur dubium es</td>
+            </tr>
+            <tr>
+              <td>Non est ista</td>
+              <td>inquam</td>
+              <td>Piso</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr />
+
+        <h1>Hover Table </h1>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Lorem ipsum dolor sit ame</th>
+              <th>consectetur adipiscing elit</th>
+              <th>Quasi vero</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>inquit</td>
+              <td>perpetua oratio rhetorum solum</td>
+              <td>non etiam philosophorum sit</td>
+            </tr>
+            <tr>
+              <td>magna dissensio</td>
+              <td>In contemplatione et cognitione</td>
+              <td>Num igitur dubium es</td>
+            </tr>
+            <tr>
+              <td>Non est ista</td>
+              <td>inquam</td>
+              <td>Piso</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr />
+
+        <h1>Striped Table</h1>
+        <table class="table table-stripe">
+          <thead>
+            <tr>
+              <th>Lorem ipsum dolor sit ame</th>
+              <th>consectetur adipiscing elit</th>
+              <th>Quasi vero</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>inquit</td>
+              <td>perpetua oratio rhetorum solum</td>
+              <td>non etiam philosophorum sit</td>
+            </tr>
+            <tr>
+              <td>magna dissensio</td>
+              <td>In contemplatione et cognitione</td>
+              <td>Num igitur dubium es</td>
+            </tr>
+            <tr>
+              <td>Non est ista</td>
+              <td>inquam</td>
+              <td>Piso</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr />
+
+        <h1>Border Table</h1>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Lorem ipsum dolor sit ame</th>
+              <th>consectetur adipiscing elit</th>
+              <th>Quasi vero</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>inquit</td>
+              <td>perpetua oratio rhetorum solum</td>
+              <td>non etiam philosophorum sit</td>
+            </tr>
+            <tr>
+              <td>magna dissensio</td>
+              <td>In contemplatione et cognitione</td>
+              <td>Num igitur dubium es</td>
+            </tr>
+            <tr>
+              <td>Non est ista</td>
+              <td>inquam</td>
+              <td>Piso</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr />
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Class</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="is-success">
+              <td>success</td>
+            </tr>
+            <tr class="is-primary">
+              <td>primary</td>
+            </tr>
+            <tr class="is-info">
+              <td>info</td>
+            </tr>
+            <tr class="is-warning">
+              <td>warning</td>
+            </tr>
+            <tr class="is-danger">
+              <td>danger</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="row-fluid">
+      <div class="col12">
+        <h1>Panels</h1>
+        <p>
+          A panel in bootstrap is a bordered box with some padding around its content
+        </p>
+
+        <hr />
+
+        <h1>Basic panel</h1>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu
+          </div>
+        </div>
+
+        <hr />
+
+        <h1>Panel With Heading</h1>
+
+        <div class="panel panel-default">
+          <div class="panel-title">
+            Lorem Ipsum
+          </div>
+          <div class="panel-body">
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu
+          </div>
+        </div>
+
+        <h1>Panel Modifiers</h1>
+        <p>Assign panel modifiers to give some styling to the panels.</p>
+
+        <div class="panel panel-primary">
+          <div class="panel-title">
+            Lorem Ipsum
+          </div>
+          <div class="panel-body">
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu
+          </div>
+        </div>
+
+        <br />
+
+        <div class="panel panel-success">
+          <div class="panel-title">
+            Lorem Ipsum
+          </div>
+          <div class="panel-body">
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu
+          </div>
+        </div>
+
+        <br />
+
+        <div class="panel panel-info">
+          <div class="panel-title">
+            Lorem Ipsum
+          </div>
+          <div class="panel-body">
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu
+          </div>
+        </div>
+
+        <br />
+
+        <div class="panel panel-warning">
+          <div class="panel-title">
+            Lorem Ipsum
+          </div>
+          <div class="panel-body">
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu
+          </div>
+        </div>
+
+        <br />
+
+        <div class="panel panel-danger">
+          <div class="panel-title">
+            Lorem Ipsum
+          </div>
+          <div class="panel-body">
+            Body
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="col12">
+        <h1>Button Groups</h1>
+        <p>
+          Group multiple buttons in a single line by adding the class button-group
+        </p>
+
+        <hr />
+
+        <h1>Basic Button Group</h1>
+        <p>
+          Button groups are essentially just a group of button's
+        </p>
+        <div class="button-group">
+          <button class="button button-default">Button One</button>
+          <button class="button button-default">Button Two</button>
+          <button class="button button-default">Button Three</button>
+        </div>
+        <br /><br />
+        <hr />
+
+        <h1>Button Group With Modifiers</h1>
+        <p>
+          Add button modifiers to get different results.
+        </p>
+
+        <div class="button-group">
+          <button class="button button-primary">Button One</button>
+          <button class="button button-primary">Button Two</button>
+          <button class="button button-primary">Button Three</button>
+        </div>
+        <br /><br />
+        <hr />
+
+        <h1>Button Group Sizes</h1>
+        <p>
+          Add -large and -small at the end of button-group for large or small button groups
+        </p>
+
+        <div class="button-group button-group-large">
+          <button class="button button-default">Button One</button>
+          <button class="button button-default">Button Two</button>
+          <button class="button button-default">Button Three</button>
+        </div>
+        <br /><br /><br /><br />
+        <div class="button-group button-group-small">
+          <button class="button button-default">Button One</button>
+          <button class="button button-default">Button Two</button>
+          <button class="button button-default">Button Three</button>
+        </div>
+
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="row-fluid">
+      <div class="col12">
+        <h1>Up To 12 Columns</h1>
+        <p>12 column grid based on 960 grid system</p>
+        <div class="row-fluid">
+          <div class="col12 showcasing_grid">.col12</div>
+          <div class="row-fluid">
+            <div class="col1 showcasing_grid">.col1</div>
+            <div class="col11 showcasing_grid">.col11</div>
+          </div>
+          <div class="row-fluid">
+            <div class="col2 showcasing_grid">.col2</div>
+            <div class="col10 showcasing_grid">.col10</div>
+          </div>
+          <div class="row-fluid">
+            <div class="col3 showcasing_grid">.col3</div>
+            <div class="col9 showcasing_grid">.col9</div>
+          </div>
+          <div class="row-fluid">
+            <div class="col4 showcasing_grid">.col4</div>
+            <div class="col8 showcasing_grid">.col8</div>
+          </div>
+          <div class="row-fluid">
+            <div class="col5 showcasing_grid">.col5</div>
+            <div class="col7 showcasing_grid">.col7</div>
+          </div>
+          <div class="row-fluid">
+            <div class="col6 showcasing_grid">.col6</div>
+            <div class="col6 showcasing_grid">.col6</div>
+          </div>
+          <div class="row-fluid">
+            <div class="col3 showcasing_grid">.col3</div>
+            <div class="col3 showcasing_grid">.col3</div>
+            <div class="col3 showcasing_grid">.col3</div>
+            <div class="col3 showcasing_grid">.col3</div>
+          </div>
+          <div class="row-fluid">
+            <div class="col4 showcasing_grid">.col4</div>
+            <div class="col4 showcasing_grid">.col4</div>
+            <div class="col4 showcasing_grid">.col4</div>
+          </div>
+          <div class="row-fluid">
+            <div class="col2 showcasing_grid">.col2</div>
+            <div class="col1 showcasing_grid">.col1</div>
+            <div class="col9 showcasing_grid">.col9</div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="feature-section-sm">
+        <h1>Up To 12 Columns</h1>
+        <p>12 column grid based on 960 grid system</p>
+        <div class="row-fluid">
+          <div class="col12 showcasing_grid">.col12</div>
+          <div class="row-fluid">
+            <div class="col6 showcasing_grid">.col6</div>
+            <div class="col6 showcasing_grid">.col6</div>
+          </div>
+          <div class="row-fluid">
+            <div class="col4 showcasing_grid">.col4</div>
+            <div class="col4 showcasing_grid">.col4</div>
+            <div class="col4 showcasing_grid">.col4</div>
+          </div>
+          <div class="row-fluid">
+            <div class="col8 showcasing_grid">.col8</div>
+            <div class="col4 showcasing_grid">.col4</div>
+          </div>
+          <div class="row-fluid">
+            <div class="col3 showcasing_grid">.col3</div>
+            <div class="col3 showcasing_grid">.col3</div>
+            <div class="col3 showcasing_grid">.col3</div>
+            <div class="col3 showcasing_grid">.col3</div>
+          </div>
+          <div class="row-fluid">
+            <div class="col7 showcasing_grid">.col7</div>
+            <div class="col5 showcasing_grid">.col5</div>
+          </div>
+          <div class="row-fluid">
+            <div class="col1 showcasing_grid">.col1</div>
+            <div class="col10 showcasing_grid">.col10</div>
+            <div class="col1 showcasing_grid">.col1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-styling">
+        <h2>Login to your account</h2>
+        <form class="form-group">
+          <input type="text" name="field1" placeholder="Full Name" />
+          <input type="email" name="field2" placeholder="Email" />
+          <input type="url" name="field3" placeholder="Website" />
+          <input type="password" id="password_id" placeholder="Password">
+          <input type="number" name="field4" placeholder="Website" />
+          <label for="someFile">File input</label>
+          <input type="file" id="fileUpload">
+          <textarea placeholder=" Your Message" onkeyup="adjust_textarea(this)"></textarea>
+          <input class="button button-primary" value="Send Message" />
+          <br /> <br />
+          <input type="radio" id="radio01" name="radio" />
+          <label for="radio01"><span></span>Radio Button 1</label>
+          <input type="radio" id="radio02" name="radio" />
+          <label for="radio02"><span></span>Radio Button 2</label>
+          <br /><br />
+          <label><input type="checkbox"> Check this box</label>
+          <label><input type="checkbox"> Check this box</label>
+          <label><input type="checkbox"> Check this box</label>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
