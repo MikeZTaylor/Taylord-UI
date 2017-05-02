@@ -1,22 +1,22 @@
 /*------------------------------------*\
-* Buttons*/
+* Buttons */
 /*------------------------------------ */
 .button
 {
   border: none;
 }
 
-a.button-success,
-a.button-warning,
-a.button-info,
-a.button-danger,
-a.button-primary {
+a.success-button,
+a.warning-button,
+a.info-button,
+a.danger-button,
+a.primary-button {
   text-decoration: none;
   color: $foundation-color-e6e6;
 }
 
 .button {
-  @include buttons($button-primary-color, $button-primary-background);
+  @include buttons($primary-button-color, $primary-button-background);
   @include button-size($foundation-padding-vertical, $foundation-padding-horizontal, $button-font-size, $foundation-line-height);
   display: inline-block;
   font-family: $font-stack;
@@ -30,22 +30,22 @@ a.button-primary {
   transition: all 0.25s ease;
 }
 
-.button-small {
-  @include buttons($button-primary-color, $button-primary-background);
+.small-button {
+  @include buttons($primary-button-color, $primary-button-background);
   @include button-size($foundation-padding-small-vertical, $foundation-padding-small-horizontal, $button-font-size-small, $line-height-small);
 }
 
-.button-large {
-  @include buttons($button-primary-color, $button-primary-background);
+.large-button {
+  @include buttons($primary-button-color, $primary-button-background);
   @include button-size($foundation-padding-large-vertical, $foundation-padding-large-horizontal, $button-font-size-small, $line-height-large);
 }
 
-.button-pill {
-  @include buttons($button-primary-color, $button-primary-background);
+.pill-button {
+  @include buttons($primary-button-color, $primary-button-background);
   @include border-radius($border-radius * 4);
 }
 
-.button-link {
+.link-button {
   @include disable-selection;
   background: transparent;
   background-color: transparent;
@@ -54,36 +54,36 @@ a.button-primary {
   pointer-events:none;
 }
 
-.button-full {
+.full-button {
   display: block;
   width: 100%;
 }
 
-.button-default {
-  @include button-version($button-default-color, $button-default-background);
-  color: #000;
+.default-button {
+  @include button-version($default-button-color, $default-button-background);
+  color: $foundation-white;
   text-decoration: none;
   border: $foundation-color-cccc;
   border-style: solid;
   border-width: thin;
 }
 
-.button-primary {
-  @include button-version($button-primary-color, $button-primary-background);
+.primary-button {
+  @include button-version($primary-button-color, $primary-button-background);
 }
 
-.button-danger {
-  @include button-version($button-danger-color, $button-danger-background);
+.danger-button {
+  @include button-version($danger-button-color, $danger-button-background);
 }
 
-.button-info {
-  @include button-version($button-info-color, $button-info-background);
+.info-button {
+  @include button-version($info-button-color, $info-button-background);
 }
 
-.button-warning{
-  @include button-version($button-warning-color, $button-warning-background);
+.warning-button{
+  @include button-version($warning-button-color, $warning-button-background);
 }
 
-.button-success {
-  @include button-version($button-primary-color, $button-success-background);
+.success-button {
+  @include button-version($success-button-colour, $success-button-background);
 }

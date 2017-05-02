@@ -1,3 +1,6 @@
+/*------------------------------------*\
+ * Navigation */
+/*------------------------------------ */
 a {
 	@include links($link-color, $link-color-visited, $link-color-hover, $link-color-active);
 }

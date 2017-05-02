@@ -50,12 +50,12 @@
   margin-left: 0;
 }
 
-/* .button-group > .button:last-child, */
 .pagination > ul > li:last-child > .button,
 .pagination > ul > li:last-child > button {
   margin-left: 0;
 }
-// The active state
+
+
 .button-group > .button.active,
 .pagination > ul > li.active,
 .pagination > ul > li > .active {
@@ -64,7 +64,6 @@
   border-color: $info-color;
 }
 
-/* Pagination Large Size */
 .button-group-large > .button,
 .pagination-large > ul > li > a.button {
   padding: $foundation-padding-large-vertical $foundation-padding-large-horizontal;
@@ -72,7 +71,7 @@
   float: left;
   display: inline-block;
 }
-/* Pagination smallall Size */
+
 .button-group-small > .button,
 .pagination-small > ul > li > a.button {
   padding: $foundation-padding-small-vertical $foundation-padding-small-horizontal;
@@ -81,7 +80,6 @@
   display: inline-block;
 }
 
-/* Removes the border */
 .button-group.no-b > .button,
 .button-group-large.no-b > .button,
 .button-group-small.no-b > .button,

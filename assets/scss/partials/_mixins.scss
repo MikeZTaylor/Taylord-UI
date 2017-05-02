@@ -1,10 +1,9 @@
-// =============================================================
-//
-//  REM to Pixel Mixin.
-//  This mixin gives a REM value
-//  and provides a pixel fallback.
-//
-// =============================================================
+/*------------------------------------*\
+ * Mixins */
+
+ // all mixins from http://compass-style.org/index/mixins/
+/*------------------------------------ */
+
 
 @mixin rem($property, $sizeValue) {
   $pxValue: $sizeValue;

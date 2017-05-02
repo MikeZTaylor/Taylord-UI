@@ -1,5 +1,5 @@
 /*------------------------------------*\
- * The grid */
+ * Tables */
 /*------------------------------------ */
 
 .table {
@@ -8,30 +8,29 @@
   border-spacing: 0;
   border-collapse: collapse;
   display: table;
-  //@include transition(all .25s ease);
   color: $table-text-color;
 }
     // Gives a table a border
-    .table-bordered {
-      border: 1px solid $table-border-color;
+    .bordered-table {
+      border: 0.5px solid $bordered-table-color;
     }
 
     // Every odd table row is Striped
-    .table-stripe > tbody > tr:nth-child(odd) > td {
-      background-color: $table-hover-color;
+    .striped-table > tbody > tr:nth-child(odd) > td {
+      background-color: $hover-table-color;
     }
 
-    .table-stripe.table-bordered > thead > tr > th {
-      background-color: $table-bg-color;
+    .striped-table.bordered-table > thead > tr > th {
+      background-color: $table-background-color;
     }
 
     // Table Condensed
-    .table.table-condensed > thead > tr > th,
-    .table.table-condensed > tbody > tr > td {
-      padding-top: $baseline-size / 2.4; // 5px
-      padding-bottom: $baseline-size / 2.4;  // 5px
-      padding-left: $baseline-size / 1.5;  // 8px
-      padding-right: $baseline-size / 1.5; // 8px
+    .table.condensed-table > thead > tr > th,
+    .table.condensed-table > tbody > tr > td {
+      padding-top: $baseline-size / 2.4;
+      padding-bottom: $baseline-size / 2.4;
+      padding-left: $baseline-size / 1.5;
+      padding-right: $baseline-size / 1.5;
     }
 
 .table > tr {
@@ -40,19 +39,19 @@
   border-color: inherit;
 }
 
-  .table-bordered > thead > tr > th,
-  .table-bordered > tbody > tr > td {
-      border: 1px solid $table-border-color;
+  .bordered-table > thead > tr > th,
+  .bordered-table > tbody > tr > td {
+      border: 1px solid $bordered-table-color;
    }
 
-      .table-bordered > thead > tr > th {
-        background-color: $table-hover-color;
+      .bordered-table > thead > tr > th {
+        background-color: $hover-table-color;
         box-shadow: inset 0 2px 0 rgba(255,255,255,.92);
       }
 
 .table > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid $table-border-color;
+  border-bottom: 2px solid $bordered-table-color;
   color: $table-head-text-color;
 }
 
@@ -69,19 +68,18 @@
   padding: $table-padding;
   line-height: $foundation-line-height;
   vertical-align: middle;
-  border-top: 1px solid $table-border-color;
+  border-top: 1px solid $bordered-table-color;
   text-align: left;
 }
 
-    .table-hover > tbody > tr:hover,
-    .table-hover > tfoot > tr:hover,
-    .table-hover > thead > tr:hover > td,
-    .table-hover > tbody > tr:hover > td,
-    .table-hover > tfoot > tr:hover > td,
-    .table-hover > tbody > tr > td:hover,
-    .table-hover > tfoot > tr > td:hover {
-      background-color: $table-hover-color;
-      //@include transition(all .25s ease);
+    .hover-table > tbody > tr:hover,
+    .hover-table  > tfoot > tr:hover,
+    .hover-table  > thead > tr:hover > td,
+    .hover-table  > tbody > tr:hover > td,
+    .hover-table  > tfoot > tr:hover > td,
+    .hover-table  > tbody > tr > td:hover,
+    .hover-table  > tfoot > tr > td:hover {
+      background-color: $hover-table-color;
     }
 
 .table > caption + thead > tr:first-child > th,
@@ -92,10 +90,6 @@
 .table > thead:first-child > tr:first-child > td {
   border-top: 0;
 }
-
-//
-// Assign colors to each Table row.
-//
 
 // Table row is Primary
 .table > tbody > tr.is-primary > td,

@@ -68,7 +68,6 @@ $font-size-small: ($baseline-size * 0.875);
 $font-size-extra-small: ($baseline-size * 0.75);
 $font-size-extra-large: ($baseline-size * 1.5);
 $font-size-large: ($baseline-size * 1.25);
-$font-size-small: ($baseline-size * 0.875);
 
 $typeset-margin: 1.3125rem 0;
 
@@ -127,27 +126,24 @@ $border-radius-large: 8px;
 /*------------------------------------ */
 
 $button-font-weight: $font-family-weight;
-$button-default-color: $foundation-color;
-$button-default-background: $foundation-teal;
-$button-default-border: $foundation-color-e6e6;
+$default-button-color: $foundation-color;
+$default-button-background: $primary-color;
+$default-button-border: $foundation-color-e6e6;
 
-$button-default-color: 	$foundation-color;
-$button-default-background: $foundation-white;
+$primary-button-color: 	$foundation-color;
+$primary-button-background: $primary-color;
 
-$button-primary-color: 	$foundation-color;
-$button-primary-background: $primary-color;
+$danger-button-color: $foundation-color;
+$danger-button-background: $danger-color;
 
-$button-danger-color: $foundation-color;
-$button-danger-background: $danger-color;
+$info-button-color: $foundation-color;
+$info-button-background: $info-color;
 
-$button-info-color: $foundation-color;
-$button-info-background: $info-color;
+$warning-button-color: $foundation-color;
+$warning-button-background: $warning-color;
 
-$button-warning-color: $foundation-color;
-$button-warning-background: $warning-color;
-
-$button-success-colour: $foundation-color;
-$button-success-background: $success-color;
+$success-button-colour: $foundation-color;
+$success-button-background: $success-color;
 
 
 /*------------------------------------*\
@@ -165,13 +161,13 @@ $breakpoint-mobile: "screen and (max-width: 29.9375rem)";
 /*------------------------------------ */
 
 $table-width: 100%;
-$table-bg-color: $foundation-white;
-$table-hover-color: $foundation-off-white;
-$table-border-color: $foundation-color-8080;
+$table-background-color: $foundation-white;
+$hover-table-color: $foundation-off-white;
+$bordered-table-color: $foundation-color-8080;
 $table-head-text-color: $foundation-color-4d4d;
 $table-text-color: $foundation-color-6666;
 
-$table-padding: ($baseline-size * 0.75); // 12px // 0.75rem;
+$table-padding: ($baseline-size * 0.75);
 
 /*------------------------------------*\
  * Panels */
