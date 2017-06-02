@@ -2,6 +2,14 @@
 
 ### npm install taylord-ui
 
+###### Kitchen Sink example: [Demo](_http://project.michaeltaylor.ie)
+
+###### Blog Template: [Demo](http://project.michaeltaylor.ie/templates/blog/index.html)
+
+###### Product Template: [Demo](http://project.michaeltaylor.ie/templates/product/index.html)
+
+###### Portfolio Template: [Demo](http://project.michaeltaylor.ie/templates/portfolio/index.html) -- uses custom theme also built for the project
+
 _Taylor'd UI_ is a framework designed for entry level users to help them in their understanding of web development. Frameworks are a dime a dozen, However none of these frameworks are intended for entry level users like college students.
 
 This is why I built _Taylor'd UI_, I wanted to build a non opinionated framework that college students or Coderdojo members could use as a teaching tool at the start of their web development journey. _Taylor'd UI_ only weighs 4kb and is responsive.
