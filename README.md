@@ -2,7 +2,7 @@
 
 ### npm install taylord-ui
 
-###### Kitchen Sink example: [Demo](_http://project.michaeltaylor.ie)
+###### Kitchen Sink example: [Demo](http://project.michaeltaylor.ie)
 
 ###### Blog Template: [Demo](http://project.michaeltaylor.ie/templates/blog/index.html)
 
